@@ -9,10 +9,10 @@ Conversational food finder for special diets. Built for Team 11.
 4. Frontend: `cd frontend && npm install`
 
 ## Structure
-- `backend/` — FastAPI service
-- `frontend/` — React chat app
-- `data/` — diet rules, personas, golden eval sets
-- `pipelines/` — OFF/USDA bulk data import scripts
-- `evals/`, `tests/` — rule, contract, conversation tests
-- `infra/` — GCP deployment config
-- `docs/` — project plan, architecture diagrams
+- `backend/` - FastAPI service
+- `frontend/` - React chat app
+- `data/` - diet rules, personas, golden eval sets
+- `pipelines/` - OFF/USDA bulk data import scripts
+- `evals/`, `tests/` - rule, contract, conversation tests
+- `infra/` - GCP deployment config
+- `docs/` - project plan, architecture diagrams
