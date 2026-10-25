@@ -28,6 +28,7 @@ common = importlib.import_module("pantrypath_common")
 PARALLEL_TASKS = {
     "download_off", "filter_off", "validate_off",
     "download_foodcom", "clean_recipes", "group_dishes", "select_dishes", "dish_ids",
+    "pull_llm_cache",
     "refine_dish", "assemble_catalog", "validate_catalog",
     "load_sqlite", "compute_stats", "check_drift", "bias_report", "dvc_version", "notify",
 }
@@ -158,7 +159,8 @@ def test_parallel_dag_graph(dagbag):
     # Two independent branches...
     assert up["download_off"] == set() and up["download_foodcom"] == set()
     assert up["filter_off"] == {"download_off"} and up["validate_off"] == {"filter_off"}
-    assert up["dish_ids"] == {"select_dishes"} and up["refine_dish"] == {"dish_ids"}
+    assert up["dish_ids"] == {"select_dishes"} and up["pull_llm_cache"] == set()
+    assert up["refine_dish"] == {"dish_ids", "pull_llm_cache"}  # saved replies first
     assert up["assemble_catalog"] == {"refine_dish"}
     # ...that join before loading
     assert up["load_sqlite"] == {"validate_off", "validate_catalog"}

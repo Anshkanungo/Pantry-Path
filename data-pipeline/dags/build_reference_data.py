@@ -5,6 +5,8 @@ Two branches run in parallel, then join:
     Open Food Facts:  download_off -> filter_off -> validate_off
     Food.com:         download_foodcom -> clean_recipes -> group_dishes -> select_dishes
                       -> dish_ids -> refine_dish (one mapped task per dish; LLM)
+    Saved replies:    pull_llm_cache -> refine_dish (the LLM replies saved in DVC, so a
+                      run replays them instead of calling the LLM again)
                       -> assemble_catalog -> validate_catalog
     then:             load_sqlite -> compute_stats -> check_drift -> bias_report
                       -> dvc_version -> notify
@@ -90,11 +92,14 @@ def build_dag(dag_id: str, *, serial: bool) -> DAG:
         tail = [step(s) for s in ("load-sqlite", "compute-stats", "check-drift",
                                   "bias-report", "dvc-version", "notify")]
 
+        pull = step("pull-llm-cache")
+
         if serial:
-            chain(*off, *foodcom, ids, refine, *catalog, *tail)
+            chain(*off, *foodcom, pull, ids, refine, *catalog, *tail)
         else:
             chain(*off, tail[0])
             chain(*foodcom, ids, refine, *catalog, tail[0])
+            chain(pull, refine)
             chain(*tail)
     return dag
 

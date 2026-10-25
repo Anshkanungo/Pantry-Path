@@ -39,6 +39,7 @@ STEP_TIMEOUT_MIN = {
     "clean-recipes": 30,
     "group-dishes": 20,
     "select-dishes": 15,
+    "pull-llm-cache": 15,
     "refine-dish": 10,
     "assemble-catalog": 15,
     "validate-catalog": 15,
