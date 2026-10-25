@@ -66,9 +66,49 @@ def test_step_that_already_alerted_is_not_alerted_twice(monkeypatch, cfg):
 
 
 def test_alert_without_email_is_logged_only(cfg, caplog):
-    with caplog.at_level(logging.WARNING):
+    with caplog.at_level(logging.INFO):
         assert alerts.send_alert("row count dropped", "off: -35%", cfg=cfg) is False
     assert "row count dropped" in caplog.text
+    assert "ALERT_SMTP_PASSWORD" in caplog.text  # says what's missing
+
+
+def test_alert_recipient_comes_from_config_and_env_overrides_it(cfg, monkeypatch):
+    assert alerts.email_settings(cfg)[0] == cfg["alerts"]["email_to"]
+    assert alerts.email_configured(cfg) is False  # no password in tests
+    monkeypatch.setenv("ALERT_EMAIL_TO", "team@example.com")
+    monkeypatch.setenv("ALERT_SMTP_PASSWORD", "app-password")
+    assert alerts.email_settings(cfg)[0] == "team@example.com"
+    assert alerts.email_configured(cfg) is True
+
+
+def test_alert_is_emailed_when_configured(cfg, monkeypatch):
+    sent = []
+
+    class FakeSMTP:
+        def __init__(self, host, port, timeout):
+            sent.append(("connect", host, port))
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *exc):
+            return False
+
+        def starttls(self):
+            pass
+
+        def login(self, user, password):
+            sent.append(("login", user))
+
+        def send_message(self, msg):
+            sent.append(("send", msg["To"], msg["Subject"]))
+
+    monkeypatch.setenv("ALERT_SMTP_PASSWORD", "app-password")
+    monkeypatch.setattr(alerts.smtplib, "SMTP", FakeSMTP)
+    assert alerts.send_alert("drift", "rows -35%", level="error", cfg=cfg) is True
+    to = cfg["alerts"]["email_to"]
+    assert sent == [("connect", "smtp.gmail.com", 587), ("login", cfg["alerts"]["smtp_user"]),
+                    ("send", to, "[Pantry Path pipeline] ERROR: drift")]
 
 
 def test_unknown_step_is_rejected():
