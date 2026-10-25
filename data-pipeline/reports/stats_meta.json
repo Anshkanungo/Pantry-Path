@@ -1,0 +1,15 @@
+{
+  "generated_at": "2026-10-25T01:50:18.402765+00:00",
+  "inputs": {
+    "off_products.parquet": [
+      31883358,
+      1792892582281536650
+    ],
+    "dish_profiles.json": [
+      242346,
+      1792893010712399329
+    ]
+  },
+  "off": "/opt/pantrypath/data-pipeline/data/processed/off_products.parquet",
+  "catalog": "/opt/pantrypath/data-pipeline/data/processed/dish_profiles.json"
+}

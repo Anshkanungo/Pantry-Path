@@ -1,0 +1,44 @@
+{
+  "_note": "Synthetic, hand-written in the shape of Kroger's Locations API. Not real Kroger data (their terms forbid storing it).",
+  "data": [
+    {
+      "locationId": "70100001",
+      "chain": "KROGER",
+      "name": "Kroger - Testville Main",
+      "address": {"addressLine1": "1 Example St", "city": "Testville", "state": "OH", "zipCode": "45202", "county": "Test"},
+      "geolocation": {"latitude": 39.11, "longitude": -84.51, "latLng": "39.11,-84.51"},
+      "departments": [{"departmentId": "01", "name": "Deli"}, {"departmentId": "02", "name": "Pickup"}]
+    },
+    {
+      "locationId": "70100002",
+      "chain": "KROGER",
+      "name": "Kroger - Forecast Shed",
+      "address": {"addressLine1": "2 Warehouse Rd", "city": "Testville", "state": "OH", "zipCode": "45202"},
+      "geolocation": {"latitude": 39.101, "longitude": -84.511},
+      "departments": []
+    },
+    {
+      "locationId": "70100003",
+      "chain": "HART",
+      "name": "Harris Teeter - Testville North",
+      "address": {"addressLine1": "3 Sample Ave", "city": "Testville", "state": "OH", "zipCode": "45216"},
+      "geolocation": {"latitude": 39.16, "longitude": -84.45},
+      "departments": [{"departmentId": "03", "name": "Pharmacy"}]
+    },
+    {
+      "locationId": "70100004",
+      "chain": "KROGER",
+      "name": "Kroger - Far Away",
+      "address": {"addressLine1": "4 Distant Pkwy", "city": "Elsewhere", "state": "OH", "zipCode": "45999"},
+      "geolocation": {"latitude": 39.40, "longitude": -84.20},
+      "departments": [{"departmentId": "01", "name": "Deli"}]
+    },
+    {
+      "locationId": "70100005",
+      "chain": "KROGER",
+      "name": "Kroger - No Coordinates",
+      "address": {"addressLine1": "5 Unknown Ln", "city": "Testville", "state": "OH", "zipCode": "45202"},
+      "departments": [{"departmentId": "01", "name": "Deli"}]
+    }
+  ]
+}

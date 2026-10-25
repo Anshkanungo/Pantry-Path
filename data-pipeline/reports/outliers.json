@@ -1,0 +1,67 @@
+{
+  "off_ingredients_text_length": {
+    "count": 88,
+    "low": null,
+    "high": 2632.071956881292,
+    "examples": [
+      {
+        "id": "8711327624764",
+        "value": 9280,
+        "product_name": "SOFT STRACCIATELLA & CARAMEL"
+      },
+      {
+        "id": "8721274816396",
+        "value": 8696,
+        "product_name": "KIDS MIX"
+      },
+      {
+        "id": "8801047416661",
+        "value": 8246,
+        "product_name": "Spicy and sweet topokki"
+      },
+      {
+        "id": "5905386401678",
+        "value": 7225,
+        "product_name": "Sushi Tomi"
+      },
+      {
+        "id": "4897878800025",
+        "value": 6699,
+        "product_name": "TONKOTSU FLAVOR RAMEN NOODLES"
+      }
+    ]
+  },
+  "catalog_ingredients_per_dish": {
+    "count": 7,
+    "low": 5.5,
+    "high": 17.5,
+    "examples": [
+      {
+        "id": "chicken-tikka-masala",
+        "value": 22
+      },
+      {
+        "id": "chicken-vindaloo",
+        "value": 21
+      },
+      {
+        "id": "chicken-tortilla-soup",
+        "value": 18
+      },
+      {
+        "id": "pad-thai",
+        "value": 18
+      },
+      {
+        "id": "moroccan-chicken",
+        "value": 18
+      }
+    ]
+  },
+  "catalog_recipe_count": {
+    "count": 0,
+    "low": 3.8638135823943527,
+    "high": 1573.5795752672875,
+    "examples": []
+  }
+}

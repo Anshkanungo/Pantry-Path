@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-10-25T01:50:10+00:00",
+  "prices_checked": "2026-10-24",
+  "note": "Tokens from the providers' usage fields; cached replies cost nothing in this run. est_cost_usd is null when a rate is missing.",
+  "totals": {
+    "calls_real": 0,
+    "calls_cached": 254,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "est_cost_usd": 0.0
+  },
+  "models": {
+    "claude-opus-5-5": {
+      "calls_real": 0,
+      "calls_cached": 254,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "rates_usd_per_mtok": {
+        "input": 4.0,
+        "output": 20.0,
+        "cache_read": 0.2,
+        "cache_write": 5.0
+      },
+      "est_cost_usd": 0.0
+    }
+  }
+}

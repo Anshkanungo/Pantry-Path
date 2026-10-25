@@ -1,0 +1,528 @@
+{
+  "suite": "catalog_dishes",
+  "validated_at": "2026-10-25T01:50:14.023158+00:00",
+  "rows": 100,
+  "success": true,
+  "critical_failures": 0,
+  "warnings": 0,
+  "checks": [
+    {
+      "expectation": "expect_table_row_count_to_be_between",
+      "column": null,
+      "severity": "critical",
+      "success": true,
+      "observed_value": 100,
+      "unexpected_count": null,
+      "unexpected_percent": null,
+      "examples": [],
+      "error": null
+    },
+    {
+      "expectation": "expect_column_values_to_not_be_null",
+      "column": "dish_id",
+      "severity": "critical",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0,
+      "examples": [],
+      "error": null
+    },
+    {
+      "expectation": "expect_column_values_to_be_unique",
+      "column": "dish_id",
+      "severity": "critical",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0,
+      "examples": [],
+      "error": null
+    },
+    {
+      "expectation": "expect_column_values_to_match_regex",
+      "column": "dish_id",
+      "severity": "critical",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0,
+      "examples": [],
+      "error": null
+    },
+    {
+      "expectation": "expect_column_values_to_not_be_null",
+      "column": "name",
+      "severity": "critical",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0,
+      "examples": [],
+      "error": null
+    },
+    {
+      "expectation": "expect_column_values_to_be_unique",
+      "column": "name",
+      "severity": "critical",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0,
+      "examples": [],
+      "error": null
+    },
+    {
+      "expectation": "expect_column_values_to_be_in_set",
+      "column": "cuisine",
+      "severity": "critical",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0,
+      "examples": [],
+      "error": null
+    },
+    {
+      "expectation": "expect_column_values_to_not_be_null",
+      "column": "cuisine",
+      "severity": "critical",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0,
+      "examples": [],
+      "error": null
+    },
+    {
+      "expectation": "expect_column_values_to_be_between",
+      "column": "n_ingredients",
+      "severity": "critical",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0,
+      "examples": [],
+      "error": null
+    },
+    {
+      "expectation": "expect_column_values_to_be_between",
+      "column": "n_core",
+      "severity": "critical",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0,
+      "examples": [],
+      "error": null
+    },
+    {
+      "expectation": "expect_column_values_to_be_between",
+      "column": "recipe_count",
+      "severity": "critical",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0,
+      "examples": [],
+      "error": null
+    },
+    {
+      "expectation": "expect_column_values_to_be_between",
+      "column": "llm_added_share",
+      "severity": "warning",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0,
+      "examples": [],
+      "error": null
+    }
+  ],
+  "great_expectations": {
+    "success": true,
+    "results": [
+      {
+        "success": true,
+        "expectation_config": {
+          "type": "expect_table_row_count_to_be_between",
+          "kwargs": {
+            "batch_id": "catalog_dishes_source-catalog_dishes",
+            "min_value": 90,
+            "max_value": 100
+          },
+          "meta": {},
+          "severity": "critical"
+        },
+        "result": {
+          "observed_value": 100
+        },
+        "meta": {},
+        "exception_info": {
+          "raised_exception": false,
+          "exception_traceback": null,
+          "exception_message": null
+        }
+      },
+      {
+        "success": true,
+        "expectation_config": {
+          "type": "expect_column_values_to_not_be_null",
+          "kwargs": {
+            "batch_id": "catalog_dishes_source-catalog_dishes",
+            "column": "dish_id"
+          },
+          "meta": {},
+          "severity": "critical"
+        },
+        "result": {
+          "element_count": 100,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0,
+          "partial_unexpected_list": [],
+          "partial_unexpected_counts": [],
+          "partial_unexpected_index_list": []
+        },
+        "meta": {},
+        "exception_info": {
+          "raised_exception": false,
+          "exception_traceback": null,
+          "exception_message": null
+        }
+      },
+      {
+        "success": true,
+        "expectation_config": {
+          "type": "expect_column_values_to_be_unique",
+          "kwargs": {
+            "batch_id": "catalog_dishes_source-catalog_dishes",
+            "column": "dish_id"
+          },
+          "meta": {},
+          "severity": "critical"
+        },
+        "result": {
+          "element_count": 100,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0,
+          "partial_unexpected_list": [],
+          "missing_count": 0,
+          "missing_percent": 0.0,
+          "unexpected_percent_total": 0.0,
+          "unexpected_percent_nonmissing": 0.0,
+          "partial_unexpected_counts": [],
+          "partial_unexpected_index_list": []
+        },
+        "meta": {},
+        "exception_info": {
+          "raised_exception": false,
+          "exception_traceback": null,
+          "exception_message": null
+        }
+      },
+      {
+        "success": true,
+        "expectation_config": {
+          "type": "expect_column_values_to_match_regex",
+          "kwargs": {
+            "batch_id": "catalog_dishes_source-catalog_dishes",
+            "column": "dish_id",
+            "regex": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "meta": {},
+          "severity": "critical"
+        },
+        "result": {
+          "element_count": 100,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0,
+          "partial_unexpected_list": [],
+          "missing_count": 0,
+          "missing_percent": 0.0,
+          "unexpected_percent_total": 0.0,
+          "unexpected_percent_nonmissing": 0.0,
+          "partial_unexpected_counts": [],
+          "partial_unexpected_index_list": []
+        },
+        "meta": {},
+        "exception_info": {
+          "raised_exception": false,
+          "exception_traceback": null,
+          "exception_message": null
+        }
+      },
+      {
+        "success": true,
+        "expectation_config": {
+          "type": "expect_column_values_to_not_be_null",
+          "kwargs": {
+            "batch_id": "catalog_dishes_source-catalog_dishes",
+            "column": "name"
+          },
+          "meta": {},
+          "severity": "critical"
+        },
+        "result": {
+          "element_count": 100,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0,
+          "partial_unexpected_list": [],
+          "partial_unexpected_counts": [],
+          "partial_unexpected_index_list": []
+        },
+        "meta": {},
+        "exception_info": {
+          "raised_exception": false,
+          "exception_traceback": null,
+          "exception_message": null
+        }
+      },
+      {
+        "success": true,
+        "expectation_config": {
+          "type": "expect_column_values_to_be_unique",
+          "kwargs": {
+            "batch_id": "catalog_dishes_source-catalog_dishes",
+            "column": "name"
+          },
+          "meta": {},
+          "severity": "critical"
+        },
+        "result": {
+          "element_count": 100,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0,
+          "partial_unexpected_list": [],
+          "missing_count": 0,
+          "missing_percent": 0.0,
+          "unexpected_percent_total": 0.0,
+          "unexpected_percent_nonmissing": 0.0,
+          "partial_unexpected_counts": [],
+          "partial_unexpected_index_list": []
+        },
+        "meta": {},
+        "exception_info": {
+          "raised_exception": false,
+          "exception_traceback": null,
+          "exception_message": null
+        }
+      },
+      {
+        "success": true,
+        "expectation_config": {
+          "type": "expect_column_values_to_be_in_set",
+          "kwargs": {
+            "batch_id": "catalog_dishes_source-catalog_dishes",
+            "column": "cuisine",
+            "value_set": [
+              "american",
+              "european",
+              "latin_american",
+              "east_se_asian",
+              "south_asian",
+              "middle_eastern_african"
+            ]
+          },
+          "meta": {},
+          "severity": "critical"
+        },
+        "result": {
+          "element_count": 100,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0,
+          "partial_unexpected_list": [],
+          "missing_count": 0,
+          "missing_percent": 0.0,
+          "unexpected_percent_total": 0.0,
+          "unexpected_percent_nonmissing": 0.0,
+          "partial_unexpected_counts": [],
+          "partial_unexpected_index_list": []
+        },
+        "meta": {},
+        "exception_info": {
+          "raised_exception": false,
+          "exception_traceback": null,
+          "exception_message": null
+        }
+      },
+      {
+        "success": true,
+        "expectation_config": {
+          "type": "expect_column_values_to_not_be_null",
+          "kwargs": {
+            "batch_id": "catalog_dishes_source-catalog_dishes",
+            "column": "cuisine"
+          },
+          "meta": {},
+          "severity": "critical"
+        },
+        "result": {
+          "element_count": 100,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0,
+          "partial_unexpected_list": [],
+          "partial_unexpected_counts": [],
+          "partial_unexpected_index_list": []
+        },
+        "meta": {},
+        "exception_info": {
+          "raised_exception": false,
+          "exception_traceback": null,
+          "exception_message": null
+        }
+      },
+      {
+        "success": true,
+        "expectation_config": {
+          "type": "expect_column_values_to_be_between",
+          "kwargs": {
+            "batch_id": "catalog_dishes_source-catalog_dishes",
+            "column": "n_ingredients",
+            "min_value": 3.0
+          },
+          "meta": {},
+          "severity": "critical"
+        },
+        "result": {
+          "element_count": 100,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0,
+          "partial_unexpected_list": [],
+          "missing_count": 0,
+          "missing_percent": 0.0,
+          "unexpected_percent_total": 0.0,
+          "unexpected_percent_nonmissing": 0.0,
+          "partial_unexpected_counts": [],
+          "partial_unexpected_index_list": []
+        },
+        "meta": {},
+        "exception_info": {
+          "raised_exception": false,
+          "exception_traceback": null,
+          "exception_message": null
+        }
+      },
+      {
+        "success": true,
+        "expectation_config": {
+          "type": "expect_column_values_to_be_between",
+          "kwargs": {
+            "batch_id": "catalog_dishes_source-catalog_dishes",
+            "column": "n_core",
+            "min_value": 1.0
+          },
+          "meta": {},
+          "severity": "critical"
+        },
+        "result": {
+          "element_count": 100,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0,
+          "partial_unexpected_list": [],
+          "missing_count": 0,
+          "missing_percent": 0.0,
+          "unexpected_percent_total": 0.0,
+          "unexpected_percent_nonmissing": 0.0,
+          "partial_unexpected_counts": [],
+          "partial_unexpected_index_list": []
+        },
+        "meta": {},
+        "exception_info": {
+          "raised_exception": false,
+          "exception_traceback": null,
+          "exception_message": null
+        }
+      },
+      {
+        "success": true,
+        "expectation_config": {
+          "type": "expect_column_values_to_be_between",
+          "kwargs": {
+            "batch_id": "catalog_dishes_source-catalog_dishes",
+            "column": "recipe_count",
+            "min_value": 0.0
+          },
+          "meta": {},
+          "severity": "critical"
+        },
+        "result": {
+          "element_count": 100,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0,
+          "partial_unexpected_list": [],
+          "missing_count": 0,
+          "missing_percent": 0.0,
+          "unexpected_percent_total": 0.0,
+          "unexpected_percent_nonmissing": 0.0,
+          "partial_unexpected_counts": [],
+          "partial_unexpected_index_list": []
+        },
+        "meta": {},
+        "exception_info": {
+          "raised_exception": false,
+          "exception_traceback": null,
+          "exception_message": null
+        }
+      },
+      {
+        "success": true,
+        "expectation_config": {
+          "type": "expect_column_values_to_be_between",
+          "kwargs": {
+            "batch_id": "catalog_dishes_source-catalog_dishes",
+            "column": "llm_added_share",
+            "min_value": 0.0,
+            "max_value": 0.3
+          },
+          "meta": {},
+          "severity": "warning"
+        },
+        "result": {
+          "element_count": 100,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0,
+          "partial_unexpected_list": [],
+          "missing_count": 0,
+          "missing_percent": 0.0,
+          "unexpected_percent_total": 0.0,
+          "unexpected_percent_nonmissing": 0.0,
+          "partial_unexpected_counts": [],
+          "partial_unexpected_index_list": []
+        },
+        "meta": {},
+        "exception_info": {
+          "raised_exception": false,
+          "exception_traceback": null,
+          "exception_message": null
+        }
+      }
+    ],
+    "suite_name": "catalog_dishes",
+    "suite_parameters": {},
+    "statistics": {
+      "evaluated_expectations": 12,
+      "successful_expectations": 12,
+      "unsuccessful_expectations": 0,
+      "success_percent": 100.0
+    },
+    "meta": {
+      "great_expectations_version": "1.24.1",
+      "batch_spec": {
+        "batch_data": "PandasDataFrame"
+      },
+      "batch_markers": {
+        "ge_load_time": "20261025T015013.968682Z",
+        "pandas_data_fingerprint": "658bb878509477e58a5932c2c4bf3a4b"
+      },
+      "active_batch_definition": {
+        "datasource_name": "catalog_dishes_source",
+        "data_connector_name": "fluent",
+        "data_asset_name": "catalog_dishes",
+        "batch_identifiers": {
+          "dataframe": "<DATAFRAME>"
+        }
+      }
+    },
+    "id": null
+  }
+}

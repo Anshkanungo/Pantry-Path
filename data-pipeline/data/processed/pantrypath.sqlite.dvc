@@ -1,0 +1,5 @@
+outs:
+- md5: d00cabbf28d395d788b2ac7a5a426eda
+  size: 217088
+  hash: md5
+  path: pantrypath.sqlite

@@ -1,0 +1,5 @@
+outs:
+- md5: a4e98c329b546093282b442da33591b0
+  size: 31883358
+  hash: md5
+  path: off_products.parquet

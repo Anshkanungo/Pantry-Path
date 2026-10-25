@@ -1,0 +1,81 @@
+{
+  "generated_at": "2026-10-24T00:00:00+00:00",
+  "source": "foodcom",
+  "plain_top100_cuisine_hints": {"american": 89, "european": 4, "unknown": 7},
+  "dishes": [
+    {
+      "dish_id": "lasagna", "name": "lasagna", "cuisine_hint": "european",
+      "recipe_count": 120, "review_count": 5000,
+      "sample_titles": ["Easy Lasagna", "World's Best Lasagna"],
+      "ingredients": [
+        {"name": "mozzarella cheese", "share": 0.9},
+        {"name": "ricotta cheese", "share": 0.81},
+        {"name": "ground beef", "share": 0.7},
+        {"name": "parmesan cheese", "share": 0.6},
+        {"name": "pasta sauce", "share": 0.55},
+        {"name": "egg", "share": 0.5},
+        {"name": "eggs", "share": 0.2},
+        {"name": "salt", "share": 0.4},
+        {"name": "lasagna noodles", "share": 0.02}
+      ]
+    },
+    {
+      "dish_id": "classic-lasagna", "name": "classic lasagna", "cuisine_hint": null,
+      "recipe_count": 10, "review_count": 300,
+      "sample_titles": ["Classic Lasagna"],
+      "ingredients": [
+        {"name": "ricotta cheese", "share": 0.9},
+        {"name": "mozzarella cheese", "share": 0.9},
+        {"name": "ground beef", "share": 0.8}
+      ]
+    },
+    {
+      "dish_id": "quiche-lorraine", "name": "quiche lorraine", "cuisine_hint": "european",
+      "recipe_count": 40, "review_count": 900,
+      "sample_titles": ["Quiche Lorraine"],
+      "ingredients": [
+        {"name": "eggs", "share": 0.95},
+        {"name": "bacon", "share": 0.85},
+        {"name": "heavy cream", "share": 0.7},
+        {"name": "swiss cheese", "share": 0.6},
+        {"name": "onion", "share": 0.3}
+      ]
+    },
+    {
+      "dish_id": "margarita", "name": "margarita", "cuisine_hint": "latin_american",
+      "recipe_count": 30, "review_count": 800,
+      "sample_titles": ["Frozen Margarita"],
+      "ingredients": [
+        {"name": "tequila", "share": 0.9},
+        {"name": "lime juice", "share": 0.8},
+        {"name": "triple sec", "share": 0.6}
+      ]
+    },
+    {
+      "dish_id": "chicken-tikka-masala", "name": "chicken tikka masala",
+      "cuisine_hint": "south_asian", "recipe_count": 25, "review_count": 700,
+      "sample_titles": ["Chicken Tikka Masala"],
+      "ingredients": [
+        {"name": "boneless skinless chicken breasts", "share": 0.9},
+        {"name": "garam masala", "share": 0.8},
+        {"name": "plain yogurt", "share": 0.7},
+        {"name": "tomato sauce", "share": 0.6},
+        {"name": "garlic", "share": 0.6},
+        {"name": "fresh ginger", "share": 0.55},
+        {"name": "heavy cream", "share": 0.5}
+      ]
+    },
+    {
+      "dish_id": "beef-tacos", "name": "beef tacos", "cuisine_hint": "latin_american",
+      "recipe_count": 60, "review_count": 1200,
+      "sample_titles": ["Easy Beef Tacos"],
+      "ingredients": [
+        {"name": "ground beef", "share": 0.9},
+        {"name": "taco seasoning", "share": 0.6},
+        {"name": "cheddar cheese", "share": 0.5},
+        {"name": "lettuce", "share": 0.45},
+        {"name": "tomatoes", "share": 0.4}
+      ]
+    }
+  ]
+}

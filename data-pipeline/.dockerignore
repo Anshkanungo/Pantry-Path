@@ -1,0 +1,4 @@
+# The image only needs requirements.txt; everything else is mounted at run time.
+# (Without this, `docker build` would upload data/, including the ~8 GB raw dump.)
+*
+!requirements.txt

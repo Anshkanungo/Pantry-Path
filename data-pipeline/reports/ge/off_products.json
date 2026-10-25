@@ -1,0 +1,517 @@
+{
+  "suite": "off_products",
+  "validated_at": "2026-10-25T01:43:06.916499+00:00",
+  "rows": 411910,
+  "success": true,
+  "critical_failures": 0,
+  "warnings": 1,
+  "checks": [
+    {
+      "expectation": "expect_table_row_count_to_be_between",
+      "column": null,
+      "severity": "critical",
+      "success": true,
+      "observed_value": 411910,
+      "unexpected_count": null,
+      "unexpected_percent": null,
+      "examples": [],
+      "error": null
+    },
+    {
+      "expectation": "expect_column_values_to_not_be_null",
+      "column": "barcode",
+      "severity": "critical",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0,
+      "examples": [],
+      "error": null
+    },
+    {
+      "expectation": "expect_column_values_to_be_unique",
+      "column": "barcode",
+      "severity": "critical",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0,
+      "examples": [],
+      "error": null
+    },
+    {
+      "expectation": "expect_column_values_to_match_regex",
+      "column": "barcode",
+      "severity": "critical",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0,
+      "examples": [],
+      "error": null
+    },
+    {
+      "expectation": "expect_column_values_to_be_in_set",
+      "column": "has_evidence",
+      "severity": "critical",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0,
+      "examples": [],
+      "error": null
+    },
+    {
+      "expectation": "expect_column_values_to_be_between",
+      "column": "unique_scans_n",
+      "severity": "warning",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0,
+      "examples": [],
+      "error": null
+    },
+    {
+      "expectation": "expect_column_values_to_not_be_null",
+      "column": "unique_scans_n",
+      "severity": "warning",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0,
+      "examples": [],
+      "error": null
+    },
+    {
+      "expectation": "expect_column_values_to_be_between",
+      "column": "completeness",
+      "severity": "warning",
+      "success": false,
+      "observed_value": null,
+      "unexpected_count": 52,
+      "unexpected_percent": 0.012624116918744387,
+      "examples": [
+        1.0625,
+        1.087499976158142,
+        1.100000023841858,
+        1.087499976158142,
+        1.087499976158142
+      ],
+      "error": null
+    },
+    {
+      "expectation": "expect_column_values_to_not_be_null",
+      "column": "product_name",
+      "severity": "warning",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 3976,
+      "unexpected_percent": 0.9652594013255322,
+      "examples": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "error": null
+    }
+  ],
+  "great_expectations": {
+    "success": false,
+    "results": [
+      {
+        "success": true,
+        "expectation_config": {
+          "type": "expect_table_row_count_to_be_between",
+          "kwargs": {
+            "batch_id": "off_products_source-off_products",
+            "min_value": 300000,
+            "max_value": 700000
+          },
+          "meta": {},
+          "severity": "critical"
+        },
+        "result": {
+          "observed_value": 411910
+        },
+        "meta": {},
+        "exception_info": {
+          "raised_exception": false,
+          "exception_traceback": null,
+          "exception_message": null
+        }
+      },
+      {
+        "success": true,
+        "expectation_config": {
+          "type": "expect_column_values_to_not_be_null",
+          "kwargs": {
+            "batch_id": "off_products_source-off_products",
+            "column": "barcode"
+          },
+          "meta": {},
+          "severity": "critical"
+        },
+        "result": {
+          "element_count": 411910,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0,
+          "partial_unexpected_list": [],
+          "partial_unexpected_counts": [],
+          "partial_unexpected_index_list": []
+        },
+        "meta": {},
+        "exception_info": {
+          "raised_exception": false,
+          "exception_traceback": null,
+          "exception_message": null
+        }
+      },
+      {
+        "success": true,
+        "expectation_config": {
+          "type": "expect_column_values_to_be_unique",
+          "kwargs": {
+            "batch_id": "off_products_source-off_products",
+            "column": "barcode"
+          },
+          "meta": {},
+          "severity": "critical"
+        },
+        "result": {
+          "element_count": 411910,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0,
+          "partial_unexpected_list": [],
+          "missing_count": 0,
+          "missing_percent": 0.0,
+          "unexpected_percent_total": 0.0,
+          "unexpected_percent_nonmissing": 0.0,
+          "partial_unexpected_counts": [],
+          "partial_unexpected_index_list": []
+        },
+        "meta": {},
+        "exception_info": {
+          "raised_exception": false,
+          "exception_traceback": null,
+          "exception_message": null
+        }
+      },
+      {
+        "success": true,
+        "expectation_config": {
+          "type": "expect_column_values_to_match_regex",
+          "kwargs": {
+            "batch_id": "off_products_source-off_products",
+            "column": "barcode",
+            "regex": "^\\d{13}$"
+          },
+          "meta": {},
+          "severity": "critical"
+        },
+        "result": {
+          "element_count": 411910,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0,
+          "partial_unexpected_list": [],
+          "missing_count": 0,
+          "missing_percent": 0.0,
+          "unexpected_percent_total": 0.0,
+          "unexpected_percent_nonmissing": 0.0,
+          "partial_unexpected_counts": [],
+          "partial_unexpected_index_list": []
+        },
+        "meta": {},
+        "exception_info": {
+          "raised_exception": false,
+          "exception_traceback": null,
+          "exception_message": null
+        }
+      },
+      {
+        "success": true,
+        "expectation_config": {
+          "type": "expect_column_values_to_be_in_set",
+          "kwargs": {
+            "batch_id": "off_products_source-off_products",
+            "column": "has_evidence",
+            "value_set": [
+              true
+            ]
+          },
+          "meta": {},
+          "severity": "critical"
+        },
+        "result": {
+          "element_count": 411910,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0,
+          "partial_unexpected_list": [],
+          "missing_count": 0,
+          "missing_percent": 0.0,
+          "unexpected_percent_total": 0.0,
+          "unexpected_percent_nonmissing": 0.0,
+          "partial_unexpected_counts": [],
+          "partial_unexpected_index_list": []
+        },
+        "meta": {},
+        "exception_info": {
+          "raised_exception": false,
+          "exception_traceback": null,
+          "exception_message": null
+        }
+      },
+      {
+        "success": true,
+        "expectation_config": {
+          "type": "expect_column_values_to_be_between",
+          "kwargs": {
+            "batch_id": "off_products_source-off_products",
+            "column": "unique_scans_n",
+            "min_value": 0.0
+          },
+          "meta": {},
+          "severity": "warning"
+        },
+        "result": {
+          "element_count": 411910,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0,
+          "partial_unexpected_list": [],
+          "missing_count": 0,
+          "missing_percent": 0.0,
+          "unexpected_percent_total": 0.0,
+          "unexpected_percent_nonmissing": 0.0,
+          "partial_unexpected_counts": [],
+          "partial_unexpected_index_list": []
+        },
+        "meta": {},
+        "exception_info": {
+          "raised_exception": false,
+          "exception_traceback": null,
+          "exception_message": null
+        }
+      },
+      {
+        "success": true,
+        "expectation_config": {
+          "type": "expect_column_values_to_not_be_null",
+          "kwargs": {
+            "batch_id": "off_products_source-off_products",
+            "column": "unique_scans_n"
+          },
+          "meta": {},
+          "severity": "warning"
+        },
+        "result": {
+          "element_count": 411910,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0,
+          "partial_unexpected_list": [],
+          "partial_unexpected_counts": [],
+          "partial_unexpected_index_list": []
+        },
+        "meta": {},
+        "exception_info": {
+          "raised_exception": false,
+          "exception_traceback": null,
+          "exception_message": null
+        }
+      },
+      {
+        "success": false,
+        "expectation_config": {
+          "type": "expect_column_values_to_be_between",
+          "kwargs": {
+            "batch_id": "off_products_source-off_products",
+            "column": "completeness",
+            "min_value": 0.0,
+            "max_value": 1.0
+          },
+          "meta": {},
+          "severity": "warning"
+        },
+        "result": {
+          "element_count": 411910,
+          "unexpected_count": 52,
+          "unexpected_percent": 0.012624116918744387,
+          "partial_unexpected_list": [
+            1.0625,
+            1.087499976158142,
+            1.100000023841858,
+            1.087499976158142,
+            1.087499976158142,
+            1.087499976158142,
+            1.100000023841858,
+            1.087499976158142,
+            1.087499976158142,
+            1.100000023841858,
+            1.087499976158142,
+            1.087499976158142,
+            1.087499976158142,
+            1.087499976158142,
+            1.087499976158142,
+            1.087499976158142,
+            1.087499976158142,
+            1.100000023841858,
+            1.0750000476837158,
+            1.087499976158142
+          ],
+          "missing_count": 0,
+          "missing_percent": 0.0,
+          "unexpected_percent_total": 0.012624116918744387,
+          "unexpected_percent_nonmissing": 0.012624116918744387,
+          "partial_unexpected_counts": [
+            {
+              "value": 1.087499976158142,
+              "count": 14
+            },
+            {
+              "value": 1.100000023841858,
+              "count": 4
+            },
+            {
+              "value": 1.0625,
+              "count": 1
+            },
+            {
+              "value": 1.0750000476837158,
+              "count": 1
+            }
+          ],
+          "partial_unexpected_index_list": [
+            376,
+            5249,
+            5792,
+            9789,
+            27123,
+            29662,
+            29669,
+            35659,
+            43930,
+            52143,
+            76080,
+            94398,
+            94503,
+            115760,
+            166706,
+            168461,
+            176409,
+            211846,
+            244794,
+            249000
+          ]
+        },
+        "meta": {},
+        "exception_info": {
+          "raised_exception": false,
+          "exception_traceback": null,
+          "exception_message": null
+        }
+      },
+      {
+        "success": true,
+        "expectation_config": {
+          "type": "expect_column_values_to_not_be_null",
+          "kwargs": {
+            "batch_id": "off_products_source-off_products",
+            "column": "product_name",
+            "mostly": 0.9
+          },
+          "meta": {},
+          "severity": "warning"
+        },
+        "result": {
+          "element_count": 411910,
+          "unexpected_count": 3976,
+          "unexpected_percent": 0.9652594013255322,
+          "partial_unexpected_list": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "partial_unexpected_counts": [
+            {
+              "value": null,
+              "count": 20
+            }
+          ],
+          "partial_unexpected_index_list": [
+            22,
+            288,
+            397,
+            426,
+            449,
+            480,
+            710,
+            1183,
+            1689,
+            1993,
+            2155,
+            2250,
+            2503,
+            2665,
+            2696,
+            3106,
+            3140,
+            3295,
+            3296,
+            3420
+          ]
+        },
+        "meta": {},
+        "exception_info": {
+          "raised_exception": false,
+          "exception_traceback": null,
+          "exception_message": null
+        }
+      }
+    ],
+    "suite_name": "off_products",
+    "suite_parameters": {},
+    "statistics": {
+      "evaluated_expectations": 9,
+      "successful_expectations": 8,
+      "unsuccessful_expectations": 1,
+      "success_percent": 88.88888888888889
+    },
+    "meta": {
+      "great_expectations_version": "1.24.1",
+      "batch_spec": {
+        "batch_data": "PandasDataFrame"
+      },
+      "batch_markers": {
+        "ge_load_time": "20261025T014306.402252Z",
+        "pandas_data_fingerprint": "e21006365087386cfeeabb66a7e41e98"
+      },
+      "active_batch_definition": {
+        "datasource_name": "off_products_source",
+        "data_connector_name": "fluent",
+        "data_asset_name": "off_products",
+        "batch_identifiers": {
+          "dataframe": "<DATAFRAME>"
+        }
+      }
+    },
+    "id": null
+  }
+}

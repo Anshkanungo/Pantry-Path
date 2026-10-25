@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pantrypath-pipeline"
+version = "0.1.0"
+description = "Pantry Path data pipeline: dish catalog, allergen snapshot, request flow"
+requires-python = ">=3.11"
+# Dependencies are pinned in requirements.txt (generated from requirements.in)
+dependencies = []
+
+[project.scripts]
+pantrypath = "pantrypath_pipeline.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "live: calls a real external API (skipped unless RUN_LIVE_TESTS=1)",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = ["data", "logs"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B"]
+# (str, Enum) keeps the style of schema.py; StrEnum would change str() output
+ignore = ["UP042"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["pantrypath_core", "pantrypath_pipeline"]

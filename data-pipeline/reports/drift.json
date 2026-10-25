@@ -1,0 +1,368 @@
+{
+  "status": "ok",
+  "baseline_available": true,
+  "thresholds": {
+    "warn_row_change": 0.1,
+    "fail_row_change": 0.3,
+    "warn_rate_shift": 0.05
+  },
+  "checks": [
+    {
+      "metric": "off.rows",
+      "kind": "row_count",
+      "previous": 411910,
+      "current": 411910,
+      "change": 0.0,
+      "warn_above": 0.1,
+      "fail_above": 0.3,
+      "status": "ok"
+    },
+    {
+      "metric": "catalog.dishes",
+      "kind": "row_count",
+      "previous": 100,
+      "current": 100,
+      "change": 0.0,
+      "warn_above": 0.1,
+      "fail_above": 0.3,
+      "status": "ok"
+    },
+    {
+      "metric": "catalog.ingredients_total",
+      "kind": "row_count",
+      "previous": 1171,
+      "current": 1171,
+      "change": 0.0,
+      "warn_above": 0.1,
+      "fail_above": 0.3,
+      "status": "ok"
+    },
+    {
+      "metric": "off.null_rate.barcode",
+      "kind": "rate",
+      "previous": 0.0,
+      "current": 0.0,
+      "change": 0.0,
+      "warn_above": 0.05,
+      "status": "ok"
+    },
+    {
+      "metric": "off.null_rate.code",
+      "kind": "rate",
+      "previous": 0.0,
+      "current": 0.0,
+      "change": 0.0,
+      "warn_above": 0.05,
+      "status": "ok"
+    },
+    {
+      "metric": "off.null_rate.product_name",
+      "kind": "rate",
+      "previous": 0.009653,
+      "current": 0.009653,
+      "change": 0.0,
+      "warn_above": 0.05,
+      "status": "ok"
+    },
+    {
+      "metric": "off.null_rate.brands",
+      "kind": "rate",
+      "previous": 0.312753,
+      "current": 0.312753,
+      "change": 0.0,
+      "warn_above": 0.05,
+      "status": "ok"
+    },
+    {
+      "metric": "off.null_rate.categories_tags",
+      "kind": "rate",
+      "previous": 0.15768,
+      "current": 0.15768,
+      "change": 0.0,
+      "warn_above": 0.05,
+      "status": "ok"
+    },
+    {
+      "metric": "off.null_rate.allergens_tags",
+      "kind": "rate",
+      "previous": 0.387602,
+      "current": 0.387602,
+      "change": 0.0,
+      "warn_above": 0.05,
+      "status": "ok"
+    },
+    {
+      "metric": "off.null_rate.traces_tags",
+      "kind": "rate",
+      "previous": 0.977245,
+      "current": 0.977245,
+      "change": 0.0,
+      "warn_above": 0.05,
+      "status": "ok"
+    },
+    {
+      "metric": "off.null_rate.ingredients_text",
+      "kind": "rate",
+      "previous": 0.000272,
+      "current": 0.000272,
+      "change": 0.0,
+      "warn_above": 0.05,
+      "status": "ok"
+    },
+    {
+      "metric": "off.null_rate.ingredients_lang",
+      "kind": "rate",
+      "previous": 0.000272,
+      "current": 0.000272,
+      "change": 0.0,
+      "warn_above": 0.05,
+      "status": "ok"
+    },
+    {
+      "metric": "off.null_rate.labels_tags",
+      "kind": "rate",
+      "previous": 0.814219,
+      "current": 0.814219,
+      "change": 0.0,
+      "warn_above": 0.05,
+      "status": "ok"
+    },
+    {
+      "metric": "off.null_rate.ingredients_analysis_tags",
+      "kind": "rate",
+      "previous": 0.000595,
+      "current": 0.000595,
+      "change": 0.0,
+      "warn_above": 0.05,
+      "status": "ok"
+    },
+    {
+      "metric": "off.null_rate.unique_scans_n",
+      "kind": "rate",
+      "previous": 0.0,
+      "current": 0.0,
+      "change": 0.0,
+      "warn_above": 0.05,
+      "status": "ok"
+    },
+    {
+      "metric": "off.null_rate.completeness",
+      "kind": "rate",
+      "previous": 0.0,
+      "current": 0.0,
+      "change": 0.0,
+      "warn_above": 0.05,
+      "status": "ok"
+    },
+    {
+      "metric": "off.null_rate.last_modified_t",
+      "kind": "rate",
+      "previous": 0.0,
+      "current": 0.0,
+      "change": 0.0,
+      "warn_above": 0.05,
+      "status": "ok"
+    },
+    {
+      "metric": "off.evidence_rate.ingredients",
+      "kind": "rate",
+      "previous": 0.999728,
+      "current": 0.999728,
+      "change": 0.0,
+      "warn_above": 0.05,
+      "status": "ok"
+    },
+    {
+      "metric": "off.evidence_rate.allergens",
+      "kind": "rate",
+      "previous": 0.612398,
+      "current": 0.612398,
+      "change": 0.0,
+      "warn_above": 0.05,
+      "status": "ok"
+    },
+    {
+      "metric": "off.evidence_rate.both",
+      "kind": "rate",
+      "previous": 0.612126,
+      "current": 0.612126,
+      "change": 0.0,
+      "warn_above": 0.05,
+      "status": "ok"
+    },
+    {
+      "metric": "off.evidence_rate.either",
+      "kind": "rate",
+      "previous": 1.0,
+      "current": 1.0,
+      "change": 0.0,
+      "warn_above": 0.05,
+      "status": "ok"
+    },
+    {
+      "metric": "off.allergen_coverage.milk",
+      "kind": "rate",
+      "previous": 0.302675,
+      "current": 0.302675,
+      "change": 0.0,
+      "warn_above": 0.05,
+      "status": "ok"
+    },
+    {
+      "metric": "off.allergen_coverage.egg",
+      "kind": "rate",
+      "previous": 0.091855,
+      "current": 0.091855,
+      "change": 0.0,
+      "warn_above": 0.05,
+      "status": "ok"
+    },
+    {
+      "metric": "off.allergen_coverage.fish",
+      "kind": "rate",
+      "previous": 0.015533,
+      "current": 0.015533,
+      "change": 0.0,
+      "warn_above": 0.05,
+      "status": "ok"
+    },
+    {
+      "metric": "off.allergen_coverage.shellfish",
+      "kind": "rate",
+      "previous": 0.009548,
+      "current": 0.009548,
+      "change": 0.0,
+      "warn_above": 0.05,
+      "status": "ok"
+    },
+    {
+      "metric": "off.allergen_coverage.tree_nuts",
+      "kind": "rate",
+      "previous": 0.070345,
+      "current": 0.070345,
+      "change": 0.0,
+      "warn_above": 0.05,
+      "status": "ok"
+    },
+    {
+      "metric": "off.allergen_coverage.peanuts",
+      "kind": "rate",
+      "previous": 0.044311,
+      "current": 0.044311,
+      "change": 0.0,
+      "warn_above": 0.05,
+      "status": "ok"
+    },
+    {
+      "metric": "off.allergen_coverage.soy",
+      "kind": "rate",
+      "previous": 0.270117,
+      "current": 0.270117,
+      "change": 0.0,
+      "warn_above": 0.05,
+      "status": "ok"
+    },
+    {
+      "metric": "off.allergen_coverage.sesame",
+      "kind": "rate",
+      "previous": 0.02652,
+      "current": 0.02652,
+      "change": 0.0,
+      "warn_above": 0.05,
+      "status": "ok"
+    },
+    {
+      "metric": "off.allergen_coverage.gluten",
+      "kind": "rate",
+      "previous": 0.236066,
+      "current": 0.236066,
+      "change": 0.0,
+      "warn_above": 0.05,
+      "status": "ok"
+    },
+    {
+      "metric": "off.scans_tier.0",
+      "kind": "rate",
+      "previous": 0.786094,
+      "current": 0.786094,
+      "change": 0.0,
+      "warn_above": 0.05,
+      "status": "ok"
+    },
+    {
+      "metric": "off.scans_tier.1_9",
+      "kind": "rate",
+      "previous": 0.206234,
+      "current": 0.206234,
+      "change": 0.0,
+      "warn_above": 0.05,
+      "status": "ok"
+    },
+    {
+      "metric": "off.scans_tier.10_plus",
+      "kind": "rate",
+      "previous": 0.007672,
+      "current": 0.007672,
+      "change": 0.0,
+      "warn_above": 0.05,
+      "status": "ok"
+    },
+    {
+      "metric": "catalog.llm_added_share",
+      "kind": "rate",
+      "previous": 0.037575,
+      "current": 0.037575,
+      "change": 0.0,
+      "warn_above": 0.05,
+      "status": "ok"
+    },
+    {
+      "metric": "catalog.cuisine.american",
+      "kind": "quota",
+      "expected": 60,
+      "current": 60,
+      "change": 0,
+      "status": "ok"
+    },
+    {
+      "metric": "catalog.cuisine.european",
+      "kind": "quota",
+      "expected": 10,
+      "current": 10,
+      "change": 0,
+      "status": "ok"
+    },
+    {
+      "metric": "catalog.cuisine.latin_american",
+      "kind": "quota",
+      "expected": 10,
+      "current": 10,
+      "change": 0,
+      "status": "ok"
+    },
+    {
+      "metric": "catalog.cuisine.east_se_asian",
+      "kind": "quota",
+      "expected": 10,
+      "current": 10,
+      "change": 0,
+      "status": "ok"
+    },
+    {
+      "metric": "catalog.cuisine.south_asian",
+      "kind": "quota",
+      "expected": 5,
+      "current": 5,
+      "change": 0,
+      "status": "ok"
+    },
+    {
+      "metric": "catalog.cuisine.middle_eastern_african",
+      "kind": "quota",
+      "expected": 5,
+      "current": 5,
+      "change": 0,
+      "status": "ok"
+    }
+  ]
+}

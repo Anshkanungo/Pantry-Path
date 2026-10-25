@@ -1,0 +1,59 @@
+prompt_version: refine_dish/1
+
+You are cleaning up a dish catalog for Pantry Path, a US app that takes a dish name,
+lists the dish's ingredients, and finds those ingredients at nearby grocery stores.
+Every ingredient you return becomes a grocery-store product search, so name things the
+way they are sold on a US grocery shelf.
+
+The candidate dish at the end was grouped from Food.com recipes. Each raw ingredient
+comes with its share: the fraction of the dish's recipes that list it. Food.com often
+leaves out packaged staples (lasagna noodles, pie crust, tortillas), so a key ingredient
+can be missing or have a low share.
+
+Return one JSON object with these fields:
+
+keep: false when the candidate is not a dish someone shops for and cooks as a meal, side
+  or dessert: a drink or cocktail; a sauce, dressing, condiment or spice mix on its own;
+  something too generic ("chicken", "salad"); or not food. Otherwise true.
+merge_into: when the candidate is the same dish as one listed under "More popular
+  candidates" (another name for it, or a version a shopper buys the same groceries for,
+  such as "classic lasagna" and "lasagna"), that dish's dish_id; otherwise null.
+  Different dishes stay separate even when they sound alike (chicken curry and chickpea
+  curry).
+name: the dish's usual US name, lowercase, without words like easy, best, homemade or
+  copycat.
+aliases: up to 5 other names people type for this dish, lowercase (may be empty).
+cuisine: one of $cuisines, by the dish's culinary origin:
+  american = US home, regional, diner and barbecue cooking (incl. Southern and Cajun);
+  european = Italian (incl. Italian-American), French, Greek, Spanish, German, British,
+  Eastern European; latin_american = Mexican, Tex-Mex, Caribbean, Central and South
+  American; east_se_asian = Chinese (incl. American-Chinese), Japanese, Korean, Thai,
+  Vietnamese, Filipino and other Southeast Asian; south_asian = Indian, Pakistani,
+  Bangladeshi, Sri Lankan, Nepali; middle_eastern_african = Middle Eastern, Turkish,
+  Persian, and North, West and East African.
+ingredients: the dish's ingredients, built from the raw list. For each one:
+  name: what a shopper searches for, lowercase (for example "all-purpose flour",
+    "ground beef", "parmesan cheese", "eggs"): no amounts, no preparation words
+    (chopped, minced, softened, beaten), no brand names.
+  from_raw: the raw names this ingredient covers, copied exactly from the raw list.
+    Merge raw variants of one item ("flour" and "all-purpose flour"). Each raw name goes
+    in at most one ingredient.
+  role: "core" when the dish isn't itself without it (usually share >= $core_share),
+    "common" when many versions use it (usually share >= $common_share). Leave out rarer
+    raw ingredients unless they are core to the dish.
+  category: one of $categories.
+  Leave out water, ice, and plain salt and black pepper (every kitchen has them).
+added: key ingredients the dish needs that the raw list is missing (for example lasagna
+  noodles for lasagna, pie crust for quiche, tortillas for enchiladas), each with name,
+  role, category and why (one short sentence). Only what a cook would actually buy for
+  this dish, no optional garnishes; an empty list when nothing is missing. Never repeat
+  an ingredient that is already in ingredients.
+
+If the raw list is empty (a dish typed by a user, with no recipe data), put the dish's
+typical ingredients in ingredients with an empty from_raw, and leave added empty.
+
+Candidate dish:
+$dish
+
+More popular candidates (dish_id: name), for merge_into:
+$merge_candidates

@@ -1,0 +1,117 @@
+{
+  "suite": "off_allergen_tags",
+  "validated_at": "2026-10-25T01:43:07.124430+00:00",
+  "rows": 506828,
+  "success": true,
+  "critical_failures": 0,
+  "warnings": 0,
+  "checks": [
+    {
+      "expectation": "expect_column_values_to_match_regex",
+      "column": "tag",
+      "severity": "critical",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0,
+      "examples": [],
+      "error": null
+    },
+    {
+      "expectation": "expect_table_row_count_to_be_between",
+      "column": null,
+      "severity": "warning",
+      "success": true,
+      "observed_value": 506828,
+      "unexpected_count": null,
+      "unexpected_percent": null,
+      "examples": [],
+      "error": null
+    }
+  ],
+  "great_expectations": {
+    "success": true,
+    "results": [
+      {
+        "success": true,
+        "expectation_config": {
+          "type": "expect_column_values_to_match_regex",
+          "kwargs": {
+            "batch_id": "off_allergen_tags_source-off_allergen_tags",
+            "column": "tag",
+            "mostly": 0.99,
+            "regex": "^[a-z]{2,3}:\\S"
+          },
+          "meta": {},
+          "severity": "critical"
+        },
+        "result": {
+          "element_count": 506828,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0,
+          "partial_unexpected_list": [],
+          "missing_count": 0,
+          "missing_percent": 0.0,
+          "unexpected_percent_total": 0.0,
+          "unexpected_percent_nonmissing": 0.0,
+          "partial_unexpected_counts": [],
+          "partial_unexpected_index_list": []
+        },
+        "meta": {},
+        "exception_info": {
+          "raised_exception": false,
+          "exception_traceback": null,
+          "exception_message": null
+        }
+      },
+      {
+        "success": true,
+        "expectation_config": {
+          "type": "expect_table_row_count_to_be_between",
+          "kwargs": {
+            "batch_id": "off_allergen_tags_source-off_allergen_tags",
+            "min_value": 1
+          },
+          "meta": {},
+          "severity": "warning"
+        },
+        "result": {
+          "observed_value": 506828
+        },
+        "meta": {},
+        "exception_info": {
+          "raised_exception": false,
+          "exception_traceback": null,
+          "exception_message": null
+        }
+      }
+    ],
+    "suite_name": "off_allergen_tags",
+    "suite_parameters": {},
+    "statistics": {
+      "evaluated_expectations": 2,
+      "successful_expectations": 2,
+      "unsuccessful_expectations": 0,
+      "success_percent": 100.0
+    },
+    "meta": {
+      "great_expectations_version": "1.24.1",
+      "batch_spec": {
+        "batch_data": "PandasDataFrame"
+      },
+      "batch_markers": {
+        "ge_load_time": "20261025T014306.948791Z",
+        "pandas_data_fingerprint": "6b791e99a5f70e936ba76da1726888f6"
+      },
+      "active_batch_definition": {
+        "datasource_name": "off_allergen_tags_source",
+        "data_connector_name": "fluent",
+        "data_asset_name": "off_allergen_tags",
+        "batch_identifiers": {
+          "dataframe": "<DATAFRAME>"
+        }
+      }
+    },
+    "id": null
+  }
+}

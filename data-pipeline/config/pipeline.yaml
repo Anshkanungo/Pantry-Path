@@ -1,0 +1,260 @@
+# Pantry Path data pipeline settings.
+# Paths are relative to data-pipeline/. Secrets (API keys, email password) never go
+# here: they live in the repo-root .env (see .env.example for the names).
+
+paths:
+  raw: data/raw
+  interim: data/interim
+  processed: data/processed
+  reports: reports
+  logs: logs
+  results: results
+
+# Open Food Facts: allergen evidence by barcode
+# (quoted: unquoted `off` is the boolean False in YAML 1.1, which PyYAML follows)
+"off":
+  source: download            # download = fetch the daily dump | dvc = `dvc pull` the filtered file
+  hf_repo: openfoodfacts/product-database
+  hf_file: food.parquet
+  raw_dir: data/raw/off
+  output: data/processed/off_products.parquet
+  country_tag: en:united-states
+  keep_raw: false             # delete the ~8 GB dump after filtering
+  min_raw_bytes: 1000000000   # a smaller download is treated as corrupt
+  download_attempts: 3
+  retry_wait_s: 30            # first wait between download attempts (doubles each time)
+  min_output_rows: 300000     # the raw dump is only deleted when the snapshot has at least this many rows
+  duckdb_memory_limit: 4GB    # keeps the filter inside Docker's memory
+
+# Food.com: source recipes for the dish catalog
+foodcom:
+  kaggle_dataset: irkaal/foodcom-recipes-and-reviews
+  kaggle_file: recipes.parquet
+  raw_dir: data/raw/foodcom
+  min_raw_rows: 400000        # fewer rows = a broken download
+  download_attempts: 3
+  download_timeout_s: 1800
+  clean_output: data/interim/recipes_clean.parquet
+  candidates_output: data/interim/dish_candidates.parquet
+  pool_output: data/interim/dish_pool.json
+  min_recipes_per_dish: 5
+  top_ingredients_per_dish: 40
+  hint_min_share: 0.2         # a cuisine tag must cover 20% of a dish's recipes, else "unknown"
+  # Candidates sent to the LLM per cuisine hint (more than the quotas: the LLM drops,
+  # merges and re-assigns cuisine). "unknown" = no cuisine keyword on Food.com; that is
+  # where mainstream American dishes are (banana bread, pot roast, meatloaf), while the
+  # "american" hint is mostly Cajun, Creole and Southwestern. Hence the big unknown share.
+  pool_size:
+    american: 25
+    european: 30
+    latin_american: 25
+    east_se_asian: 25
+    south_asian: 20
+    middle_eastern_african: 20
+    unknown: 100
+  # Dishes always sent to the LLM and kept in the catalog (within their cuisine's quota)
+  # even when they miss the popularity cut: the golden set (data/golden/recipes.json)
+  # by Food.com dish id. Golden "beef lasagna", "beef stew with red wine" and "salmon
+  # avocado sushi rolls" map to lasagna, beef stew and california rolls.
+  always_include:
+    - quiche-lorraine
+    - pad-thai
+    - chicken-tikka-masala
+    - lasagna
+    - pesto-pasta
+    - beef-stew
+    - shrimp-scampi
+    - vegetable-fried-rice
+    - chocolate-chip-cookie
+    - caesar-salad
+    - chili-con-carne
+    - california-roll
+    - buttermilk-pancake
+    - hummus
+    - spaghetti-carbonara
+    - tuna-salad-sandwich
+
+# Dish catalog
+catalog:
+  quotas:
+    american: 60
+    european: 10
+    latin_american: 10
+    east_se_asian: 10
+    south_asian: 5
+    middle_eastern_african: 5
+  min_dishes: 90              # the run fails below this
+  core_share: 0.6             # guidance for the LLM: in >= 60% of recipes -> likely core
+  common_share: 0.2           # in >= 20% of recipes -> likely common
+  max_llm_added_share: 0.3    # warn when > 30% of a dish's ingredients came from the LLM
+  refined_dir: data/interim/refined
+  profiles_output: data/processed/dish_profiles.json
+  sqlite_output: data/processed/pantrypath.sqlite
+  summary_report: reports/catalog_summary.json
+  merge_candidates: 15        # more popular look-alike dishes shown to the LLM for merge_into
+  merge_min_score: 50         # rapidfuzz token_set_ratio needed to count as a look-alike
+
+# LLM used to refine dishes (and for request-time fallback). Any provider works:
+# set LLM_API_KEY in .env; LLM_PROVIDER / LLM_MODEL there override the values below.
+llm:
+  provider: auto              # auto (guess from the key) | gemini | anthropic | openai | replay
+  # Default model per provider (LLM_MODEL in .env wins). Checked 2026-10-24 on
+  # platform.claude.com/docs/en/about-claude/pricing, ai.google.dev/gemini-api/docs/pricing
+  # and developers.openai.com/api/docs/pricing.
+  models:
+    anthropic: claude-opus-5-5
+    gemini: gemini-2.5-flash
+    openai: gpt-5.4-mini
+  temperature: 0              # sent only to the providers listed below: Claude's API rejects
+  temperature_providers: [gemini]  # sampling settings, and OpenAI's GPT-5 models only take 1
+  effort: low                 # Claude only: thinking depth (Opus 5.5 always thinks; default medium)
+  refusal_fallbacks: true     # Claude only: if a request is declined, Anthropic re-runs it on
+                              # its recommended fallback model (beta server-side-fallback)
+  max_output_tokens: 16000    # thinking tokens count toward this on Claude and Gemini
+  timeout_s: 180
+  max_attempts: 4             # tries per call on rate limits, server and network errors
+  retry_wait_max_s: 60
+  concurrency: 4
+  prompt_file: prompts/refine_dish.txt
+  cache_dir: data/processed/llm_cache            # versioned with DVC: replays need no key
+  request_cache_dir: data/interim/llm_request_cache  # request-time fallback replies (not versioned)
+  usage_report: reports/llm_usage.json
+  prices_checked: "2026-10-24"
+  # USD per 1M tokens, standard tier, from the pages above. cache_write = 5-minute cache write.
+  # Opus 5 / Opus 4.8 are listed because a refusal fallback may answer with them.
+  prices_usd_per_mtok:
+    claude-opus-5-5: {input: 4.00, output: 20.00, cache_read: 0.20, cache_write: 5.00}
+    claude-sonnet-5-5: {input: 2.00, output: 10.00, cache_read: 0.10, cache_write: 2.50}
+    claude-haiku-5-5: {input: 0.10, output: 0.50, cache_read: 0.01, cache_write: 0.125}  # <=100K-token prompts
+    claude-opus-5: {input: 5.00, output: 25.00, cache_read: 0.50, cache_write: 6.25}
+    claude-opus-4-8: {input: 5.00, output: 25.00, cache_read: 0.50, cache_write: 6.25}
+    gemini-2.5-flash: {input: 0.30, output: 2.50, cache_read: 0.03}
+    gemini-2.5-flash-lite: {input: 0.10, output: 0.40, cache_read: 0.01}
+    gpt-5.4-mini: {input: 0.75, output: 4.50, cache_read: 0.075}
+    gpt-5.4-nano: {input: 0.20, output: 1.25, cache_read: 0.02}
+
+# Data quality
+validation:
+  results_dir: reports/ge
+  off_expected_rows: [300000, 700000]
+  off_tag_format_mostly: 0.99   # share of allergen tags that must look like "en:milk"
+  off_product_name_mostly: 0.90 # share of products that should have a name (warning only)
+
+stats:
+  output: reports/stats.json
+  previous: reports/stats_prev.json
+  meta_output: reports/stats_meta.json   # when and from which input files stats.json was made
+  outliers_output: reports/outliers.json
+
+drift:
+  warn_row_change: 0.10       # warn when a table's row count moves > 10%
+  fail_row_change: 0.30       # fail when it moves > 30%
+  warn_rate_shift: 0.05       # warn when a null/evidence rate moves > 5 points
+  output: reports/drift.json
+
+outliers:
+  iqr_k: 1.5                  # outside [Q1 - k*IQR, Q3 + k*IQR] = outlier
+  top_offenders: 5            # examples listed per check in outliers.json
+
+# Bias report (data slicing)
+bias:
+  output_json: reports/bias_report.json
+  output_md: reports/bias_report.md
+  seed: 42                     # fixed sample: the same products are evaluated every run
+  coverage_sample_size: 20000  # random products for unknown rates (0 = all)
+  labelled_sample_size: 40000  # products with a ground-truth label or fact (0 = all)
+  min_slice_size: 30           # smaller groups are shown but left out of gap numbers
+  popularity_bins: [0, 1, 10]  # unique scans: 0 | 1-9 | 10+
+  store_brands:
+    - kroger
+    - private selection
+    - simple truth
+    - simple truth organic
+    - heritage farm
+    - great value
+    - market pantry
+    - good & gather
+    - 365 by whole foods market
+    - 365 everyday value
+    - signature select
+    - o organics
+    - kirkland signature
+    - member's mark
+    - trader joe's
+    - publix
+    - h-e-b
+    - hill country fare
+    - food lion
+    - wegmans
+    - meijer
+    - aldi
+    - clancy's
+    - simply nature
+    - happy belly
+    - amazon fresh
+    - sam's choice
+    - archer farms
+    - market basket
+    - lucerne
+    - open nature
+    - signature farms
+    - essential everyday
+    - shoprite
+    - bowl & basket
+    - giant
+    - stop & shop
+    - harris teeter
+    - hy-vee
+    - winco foods
+    - sprouts
+    - whole foods market
+    - "365"
+    - target
+    - walmart
+    - safeway
+
+# Alerts: always logged; emailed when ALERT_EMAIL_TO and ALERT_SMTP_* are set in .env
+alerts:
+  email_enabled: true
+  smtp_host: smtp.gmail.com
+  smtp_port: 587
+  subject_prefix: "[Pantry Path pipeline]"
+
+# Data versioning
+dvc:
+  remote: pantrypath-gcs
+  push: true
+  tracked:
+    - data/processed/off_products.parquet
+    - data/processed/llm_cache
+    - data/processed/dish_profiles.json
+    - data/processed/pantrypath.sqlite
+
+# Request flow (dish + ZIP -> result.json)
+request:
+  providers: [kroger, target]  # in order; later ones are fallbacks
+  parallel_providers: false
+  radius_miles: 10
+  max_stores: 3
+  max_products: 5
+  max_workers: 8
+  result_ttl_hours: 24
+  fuzzy_min_score: 90
+  http_timeout_s: 15
+  http_attempts: 3             # tries per call on HTTP 429 / 5xx / network errors
+  cache_ttl_s: 900             # in-memory only; Kroger data is never written to disk
+
+# Store providers: one class + one entry here. request.providers sets the order.
+providers:
+  kroger:
+    class: pantrypath_pipeline.providers.kroger:KrogerProvider
+    base_url: https://api.kroger.com/v1
+    scope: product.compact
+    locations_fetch: 50          # many nearby "locations" are warehouses; fetch extra, keep real stores
+  target:
+    # EXPERIMENTAL fallback via RedCircle: 1 credit per call, 100 credits on the free plan
+    class: pantrypath_pipeline.providers.target:TargetProvider
+    base_url: https://api.redcircleapi.com/request
+    details_per_term: 1          # product-detail calls per ingredient (barcode + ingredients)
+    max_credits_per_request: 30  # stop calling RedCircle after this many credits in one request
+    store_probe_term: milk       # no store locator: a product lookup reveals the nearest Target

@@ -1,0 +1,4164 @@
+{
+  "generated_at": "2026-10-25 01:51 UTC",
+  "settings": {
+    "seed": 42,
+    "coverage_sample_size": 20000,
+    "labelled_sample_size": 40000,
+    "min_slice_size": 30,
+    "popularity_bins": [
+      0,
+      1,
+      10
+    ],
+    "profiles": [
+      "vegan",
+      "vegetarian",
+      "gluten_free"
+    ],
+    "modes": {
+      "tags_only": "allergen and trace tags only (before)",
+      "tags_and_text": "tags + ingredient text",
+      "full": "tags + ingredient text + name and category checks (after, used by the pipeline)"
+    }
+  },
+  "catalog": {
+    "quotas": {
+      "american": 60,
+      "european": 10,
+      "latin_american": 10,
+      "east_se_asian": 10,
+      "south_asian": 5,
+      "middle_eastern_african": 5
+    },
+    "before": {
+      "american": 1,
+      "european": 13,
+      "latin_american": 7,
+      "east_se_asian": 4,
+      "south_asian": 1,
+      "middle_eastern_african": 1,
+      "unknown": 73
+    },
+    "status": "ok",
+    "catalog_version": "2026-10-25",
+    "dishes": 100,
+    "after": {
+      "american": 60,
+      "european": 10,
+      "latin_american": 10,
+      "east_se_asian": 10,
+      "south_asian": 5,
+      "middle_eastern_african": 5
+    },
+    "per_cuisine": {
+      "american": {
+        "dishes": 60,
+        "ingredients_per_dish": 10.8,
+        "core_per_dish": 4.2833,
+        "llm_added_share": 0.0384,
+        "median_recipes": 127.0,
+        "median_reviews": 792.0
+      },
+      "east_se_asian": {
+        "dishes": 10,
+        "ingredients_per_dish": 13.6,
+        "core_per_dish": 5.1,
+        "llm_added_share": 0.0665,
+        "median_recipes": 43.0,
+        "median_reviews": 338.0
+      },
+      "european": {
+        "dishes": 10,
+        "ingredients_per_dish": 11.7,
+        "core_per_dish": 4.2,
+        "llm_added_share": 0.04,
+        "median_recipes": 67.5,
+        "median_reviews": 849.0
+      },
+      "latin_american": {
+        "dishes": 10,
+        "ingredients_per_dish": 13.1,
+        "core_per_dish": 3.8,
+        "llm_added_share": 0.0225,
+        "median_recipes": 93.0,
+        "median_reviews": 548.0
+      },
+      "middle_eastern_african": {
+        "dishes": 5,
+        "ingredients_per_dish": 12.4,
+        "core_per_dish": 5.0,
+        "llm_added_share": 0.0,
+        "median_recipes": 48.0,
+        "median_reviews": 142.0
+      },
+      "south_asian": {
+        "dishes": 5,
+        "ingredients_per_dish": 15.4,
+        "core_per_dish": 4.6,
+        "llm_added_share": 0.0091,
+        "median_recipes": 45.0,
+        "median_reviews": 521.0
+      }
+    },
+    "gaps": {
+      "ingredients_per_dish": {
+        "difference": 4.6,
+        "ratio": 0.7013
+      },
+      "core_per_dish": {
+        "difference": 1.3,
+        "ratio": 0.7451
+      },
+      "llm_added_share": {
+        "difference": 0.0665,
+        "ratio": 0.0
+      },
+      "median_recipes": {
+        "difference": 84.0,
+        "ratio": 0.3386
+      },
+      "median_reviews": {
+        "difference": 707.0,
+        "ratio": 0.1673
+      }
+    },
+    "american_vs_other": {
+      "american": {
+        "dishes": 60,
+        "ingredients_per_dish": 10.8,
+        "core_per_dish": 4.2833,
+        "llm_added_share": 0.0384,
+        "median_recipes": 127.0,
+        "median_reviews": 792.0
+      },
+      "other cuisines": {
+        "dishes": 40,
+        "ingredients_per_dish": 13.075,
+        "core_per_dish": 4.475,
+        "llm_added_share": 0.0334,
+        "median_recipes": 51.0,
+        "median_reviews": 441.0
+      }
+    },
+    "summary": {
+      "catalog_version": "2026-10-25",
+      "generated_at": "2026-10-25T01:50:10+00:00",
+      "dishes": 100,
+      "min_dishes": 90,
+      "pool_dishes": 254,
+      "per_cuisine": {
+        "american": {
+          "quota": 60,
+          "available": 105,
+          "selected": 60,
+          "always_include": 5
+        },
+        "european": {
+          "quota": 10,
+          "available": 35,
+          "selected": 10,
+          "always_include": 5
+        },
+        "latin_american": {
+          "quota": 10,
+          "available": 23,
+          "selected": 10,
+          "always_include": 1
+        },
+        "east_se_asian": {
+          "quota": 10,
+          "available": 21,
+          "selected": 10,
+          "always_include": 3
+        },
+        "south_asian": {
+          "quota": 5,
+          "available": 16,
+          "selected": 5,
+          "always_include": 1
+        },
+        "middle_eastern_african": {
+          "quota": 5,
+          "available": 14,
+          "selected": 5,
+          "always_include": 1
+        }
+      },
+      "shortfalls": {},
+      "always_include": {
+        "selected": [
+          "pancake",
+          "chili",
+          "chocolate-chip-cookie",
+          "beef-stew",
+          "tuna-salad-sandwich",
+          "lasagna",
+          "shrimp-scampi",
+          "quiche-lorraine",
+          "spaghetti-carbonara",
+          "pesto-pasta",
+          "caesar-salad",
+          "fried-rice",
+          "pad-thai",
+          "california-roll",
+          "chicken-tikka-masala",
+          "hummus"
+        ],
+        "changed_by_llm": [
+          {
+            "dish_id": "buttermilk-pancake",
+            "outcome": "merged by the LLM into pancake"
+          },
+          {
+            "dish_id": "chili-con-carne",
+            "outcome": "merged by the LLM into chili"
+          },
+          {
+            "dish_id": "vegetable-fried-rice",
+            "outcome": "merged by the LLM into fried-rice"
+          }
+        ]
+      },
+      "dropped": [
+        "remoulade-sauce",
+        "tzatziki",
+        "tofu",
+        "tahini",
+        "preserved-lemon",
+        "chicken",
+        "chicken-breast",
+        "fresh-peach-cobbler"
+      ],
+      "merged": [
+        {
+          "dish_id": "spanish-rice",
+          "into": "mexican-rice",
+          "reason": "llm"
+        },
+        {
+          "dish_id": "stove-top-macaroni-and-cheese",
+          "into": "macaroni-and-cheese",
+          "reason": "llm"
+        },
+        {
+          "dish_id": "buttermilk-pancake",
+          "into": "pancake",
+          "reason": "llm"
+        },
+        {
+          "dish_id": "sour-cream-banana-bread",
+          "into": "banana-bread",
+          "reason": "llm"
+        },
+        {
+          "dish_id": "chinese-fried-rice",
+          "into": "fried-rice",
+          "reason": "llm"
+        },
+        {
+          "dish_id": "soft-chocolate-chip-cookie",
+          "into": "chocolate-chip-cookie",
+          "reason": "llm"
+        },
+        {
+          "dish_id": "baked-pork-chop",
+          "into": "pork-chop",
+          "reason": "llm"
+        },
+        {
+          "dish_id": "chocolate-cake",
+          "into": "dark-chocolate-cake",
+          "reason": "llm"
+        },
+        {
+          "dish_id": "meatball",
+          "into": "italian-meatball",
+          "reason": "llm"
+        },
+        {
+          "dish_id": "award-winning-chili",
+          "into": "chili",
+          "reason": "llm"
+        },
+        {
+          "dish_id": "apple-crumble",
+          "into": "apple-crisp",
+          "reason": "llm"
+        },
+        {
+          "dish_id": "soft-peanut-butter-cookie",
+          "into": "peanut-butter-cookie",
+          "reason": "llm"
+        },
+        {
+          "dish_id": "tuna-noodle-casserole",
+          "into": "tuna-casserole",
+          "reason": "llm"
+        },
+        {
+          "dish_id": "chili-con-carne-with-bean",
+          "into": "chili",
+          "reason": "llm"
+        },
+        {
+          "dish_id": "moist-banana-nut-bread",
+          "into": "banana-bread",
+          "reason": "llm"
+        },
+        {
+          "dish_id": "chicken-curry-in-a-hurry",
+          "into": "chicken-curry",
+          "reason": "llm"
+        },
+        {
+          "dish_id": "mexican-casserole",
+          "into": "taco-casserole",
+          "reason": "llm"
+        },
+        {
+          "dish_id": "corned-beef-dinner",
+          "into": "corned-beef-and-cabbage",
+          "reason": "llm"
+        },
+        {
+          "dish_id": "indian-butter-chicken",
+          "into": "butter-chicken",
+          "reason": "llm"
+        },
+        {
+          "dish_id": "naan-bread",
+          "into": "naan",
+          "reason": "llm"
+        },
+        {
+          "dish_id": "chinese-egg-roll",
+          "into": "egg-roll",
+          "reason": "llm"
+        },
+        {
+          "dish_id": "beef-and-broccoli",
+          "into": "beef-and-broccoli-stir-fry",
+          "reason": "llm"
+        },
+        {
+          "dish_id": "curry-chicken",
+          "into": "chicken-curry",
+          "reason": "llm"
+        },
+        {
+          "dish_id": "chicken-makhani",
+          "into": "butter-chicken",
+          "reason": "llm"
+        },
+        {
+          "dish_id": "chili-con-carne",
+          "into": "chili",
+          "reason": "llm"
+        },
+        {
+          "dish_id": "moroccan-chicken-stew",
+          "into": "moroccan-chicken",
+          "reason": "llm"
+        },
+        {
+          "dish_id": "garlic-hummus",
+          "into": "hummus",
+          "reason": "llm"
+        },
+        {
+          "dish_id": "lemon-roast-potato",
+          "into": "greek-potato",
+          "reason": "llm"
+        },
+        {
+          "dish_id": "chicken-gumbo",
+          "into": "gumbo",
+          "reason": "llm"
+        },
+        {
+          "dish_id": "vegetable-fried-rice",
+          "into": "fried-rice",
+          "reason": "llm"
+        },
+        {
+          "dish_id": "tabouli",
+          "into": "tabbouleh",
+          "reason": "llm"
+        },
+        {
+          "dish_id": "red-beans-and-rice",
+          "into": "red-bean",
+          "reason": "same name"
+        }
+      ],
+      "failed": [],
+      "llm_added_share": 0.038,
+      "dishes_over_llm_added_limit": [],
+      "plain_top100_cuisine_hints": {
+        "american": 1,
+        "european": 13,
+        "latin_american": 7,
+        "east_se_asian": 4,
+        "south_asian": 1,
+        "middle_eastern_african": 1,
+        "unknown": 73
+      },
+      "notes": []
+    }
+  },
+  "products": {
+    "status": "ok",
+    "source": "off_products.parquet",
+    "rows_total": 411910,
+    "coverage_products": 20000,
+    "labelled_products": 40000,
+    "skipped_products": 0,
+    "truth_counts": {
+      "vegan": {
+        "safe": 2239,
+        "unsafe": 10921,
+        "conflict_excluded": 187
+      },
+      "vegetarian": {
+        "safe": 2387,
+        "unsafe": 4578,
+        "conflict_excluded": 93
+      },
+      "gluten_free": {
+        "safe": 5536,
+        "unsafe": 23689,
+        "conflict_excluded": 206
+      }
+    },
+    "overall": {
+      "coverage": {
+        "tags_only": {
+          "pooled": 0.7656,
+          "vegan": 0.6157,
+          "vegetarian": 0.9164,
+          "gluten_free": 0.7647
+        },
+        "tags_and_text": {
+          "pooled": 0.0106,
+          "vegan": 0.0042,
+          "vegetarian": 0.0055,
+          "gluten_free": 0.0221
+        },
+        "full": {
+          "pooled": 0.0103,
+          "vegan": 0.004,
+          "vegetarian": 0.0053,
+          "gluten_free": 0.0217
+        }
+      },
+      "correctness": {
+        "tags_only": {
+          "pooled": {
+            "n": 49350,
+            "unknown_rate": 0.3102,
+            "accuracy_decided": 0.997,
+            "false_safe_rate": 0.0,
+            "safe_found_rate": 0.0,
+            "n_decided": 34040,
+            "n_safe": 10162,
+            "n_unsafe": 39188
+          },
+          "vegan": {
+            "n": 13160,
+            "unknown_rate": 0.4061,
+            "accuracy_decided": 0.9917,
+            "false_safe_rate": 0.0,
+            "safe_found_rate": 0.0,
+            "n_decided": 7816,
+            "n_safe": 2239,
+            "n_unsafe": 10921
+          },
+          "vegetarian": {
+            "n": 6965,
+            "unknown_rate": 0.6398,
+            "accuracy_decided": 0.9952,
+            "false_safe_rate": 0.0,
+            "safe_found_rate": 0.0,
+            "n_decided": 2509,
+            "n_safe": 2387,
+            "n_unsafe": 4578
+          },
+          "gluten_free": {
+            "n": 29225,
+            "unknown_rate": 0.1885,
+            "accuracy_decided": 0.9989,
+            "false_safe_rate": 0.0,
+            "safe_found_rate": 0.0,
+            "n_decided": 23715,
+            "n_safe": 5536,
+            "n_unsafe": 23689
+          }
+        },
+        "tags_and_text": {
+          "pooled": {
+            "n": 49350,
+            "unknown_rate": 0.0132,
+            "accuracy_decided": 0.9789,
+            "false_safe_rate": 0.0216,
+            "safe_found_rate": 0.949,
+            "n_decided": 48697,
+            "n_safe": 10162,
+            "n_unsafe": 39188
+          },
+          "vegan": {
+            "n": 13160,
+            "unknown_rate": 0.0055,
+            "accuracy_decided": 0.9586,
+            "false_safe_rate": 0.0409,
+            "safe_found_rate": 0.9348,
+            "n_decided": 13088,
+            "n_safe": 2239,
+            "n_unsafe": 10921
+          },
+          "vegetarian": {
+            "n": 6965,
+            "unknown_rate": 0.0102,
+            "accuracy_decided": 0.9404,
+            "false_safe_rate": 0.0843,
+            "safe_found_rate": 0.9656,
+            "n_decided": 6894,
+            "n_safe": 2387,
+            "n_unsafe": 4578
+          },
+          "gluten_free": {
+            "n": 29225,
+            "unknown_rate": 0.0175,
+            "accuracy_decided": 0.9974,
+            "false_safe_rate": 0.0006,
+            "safe_found_rate": 0.9476,
+            "n_decided": 28715,
+            "n_safe": 5536,
+            "n_unsafe": 23689
+          }
+        },
+        "full": {
+          "pooled": {
+            "n": 49350,
+            "unknown_rate": 0.0126,
+            "accuracy_decided": 0.9931,
+            "false_safe_rate": 0.0037,
+            "safe_found_rate": 0.9498,
+            "n_decided": 48727,
+            "n_safe": 10162,
+            "n_unsafe": 39188
+          },
+          "vegan": {
+            "n": 13160,
+            "unknown_rate": 0.0052,
+            "accuracy_decided": 0.9833,
+            "false_safe_rate": 0.011,
+            "safe_found_rate": 0.933,
+            "n_decided": 13092,
+            "n_safe": 2239,
+            "n_unsafe": 10921
+          },
+          "vegetarian": {
+            "n": 6965,
+            "unknown_rate": 0.009,
+            "accuracy_decided": 0.9939,
+            "false_safe_rate": 0.0024,
+            "safe_found_rate": 0.9631,
+            "n_decided": 6902,
+            "n_safe": 2387,
+            "n_unsafe": 4578
+          },
+          "gluten_free": {
+            "n": 29225,
+            "unknown_rate": 0.0168,
+            "accuracy_decided": 0.9974,
+            "false_safe_rate": 0.0006,
+            "safe_found_rate": 0.9509,
+            "n_decided": 28733,
+            "n_safe": 5536,
+            "n_unsafe": 23689
+          }
+        }
+      }
+    },
+    "slices": {
+      "category_group": {
+        "coverage": {
+          "tags_only": {
+            "by_group": {
+              "bakery_cereals": {
+                "n": 4008,
+                "unknown_rate": 0.6864
+              },
+              "beverages": {
+                "n": 4809,
+                "unknown_rate": 0.9705
+              },
+              "dairy_eggs": {
+                "n": 3477,
+                "unknown_rate": 0.7032
+              },
+              "meals": {
+                "n": 2316,
+                "unknown_rate": 0.513
+              },
+              "meat_seafood": {
+                "n": 2757,
+                "unknown_rate": 0.6017
+              },
+              "other": {
+                "n": 3555,
+                "unknown_rate": 0.6931
+              },
+              "pantry_condiments": {
+                "n": 6333,
+                "unknown_rate": 0.8961
+              },
+              "plant_based_substitutes": {
+                "n": 519,
+                "unknown_rate": 0.8497
+              },
+              "produce_legumes_nuts": {
+                "n": 2814,
+                "unknown_rate": 0.9755
+              },
+              "snacks_sweets": {
+                "n": 15147,
+                "unknown_rate": 0.7091
+              },
+              "uncategorized": {
+                "n": 14265,
+                "unknown_rate": 0.7823
+              }
+            },
+            "gaps": {
+              "unknown_rate": {
+                "difference": 0.4625,
+                "ratio": 0.5258,
+                "max_group": "produce_legumes_nuts",
+                "max": 0.9755,
+                "min_group": "meals",
+                "min": 0.513,
+                "groups_compared": 11
+              }
+            }
+          },
+          "tags_and_text": {
+            "by_group": {
+              "bakery_cereals": {
+                "n": 4008,
+                "unknown_rate": 0.0342
+              },
+              "beverages": {
+                "n": 4809,
+                "unknown_rate": 0.0098
+              },
+              "dairy_eggs": {
+                "n": 3477,
+                "unknown_rate": 0.0081
+              },
+              "meals": {
+                "n": 2316,
+                "unknown_rate": 0.0043
+              },
+              "meat_seafood": {
+                "n": 2757,
+                "unknown_rate": 0.004
+              },
+              "other": {
+                "n": 3555,
+                "unknown_rate": 0.0143
+              },
+              "pantry_condiments": {
+                "n": 6333,
+                "unknown_rate": 0.0038
+              },
+              "plant_based_substitutes": {
+                "n": 519,
+                "unknown_rate": 0.0366
+              },
+              "produce_legumes_nuts": {
+                "n": 2814,
+                "unknown_rate": 0.0082
+              },
+              "snacks_sweets": {
+                "n": 15147,
+                "unknown_rate": 0.0116
+              },
+              "uncategorized": {
+                "n": 14265,
+                "unknown_rate": 0.0078
+              }
+            },
+            "gaps": {
+              "unknown_rate": {
+                "difference": 0.0328,
+                "ratio": 0.1035,
+                "max_group": "plant_based_substitutes",
+                "max": 0.0366,
+                "min_group": "pantry_condiments",
+                "min": 0.0038,
+                "groups_compared": 11
+              }
+            }
+          },
+          "full": {
+            "by_group": {
+              "bakery_cereals": {
+                "n": 4008,
+                "unknown_rate": 0.0337
+              },
+              "beverages": {
+                "n": 4809,
+                "unknown_rate": 0.0098
+              },
+              "dairy_eggs": {
+                "n": 3477,
+                "unknown_rate": 0.0081
+              },
+              "meals": {
+                "n": 2316,
+                "unknown_rate": 0.003
+              },
+              "meat_seafood": {
+                "n": 2757,
+                "unknown_rate": 0.0033
+              },
+              "other": {
+                "n": 3555,
+                "unknown_rate": 0.0143
+              },
+              "pantry_condiments": {
+                "n": 6333,
+                "unknown_rate": 0.0038
+              },
+              "plant_based_substitutes": {
+                "n": 519,
+                "unknown_rate": 0.0366
+              },
+              "produce_legumes_nuts": {
+                "n": 2814,
+                "unknown_rate": 0.0082
+              },
+              "snacks_sweets": {
+                "n": 15147,
+                "unknown_rate": 0.0113
+              },
+              "uncategorized": {
+                "n": 14265,
+                "unknown_rate": 0.0075
+              }
+            },
+            "gaps": {
+              "unknown_rate": {
+                "difference": 0.0336,
+                "ratio": 0.0826,
+                "max_group": "plant_based_substitutes",
+                "max": 0.0366,
+                "min_group": "meals",
+                "min": 0.003,
+                "groups_compared": 11
+              }
+            }
+          }
+        },
+        "correctness": {
+          "tags_only": {
+            "by_group": {
+              "bakery_cereals": {
+                "n": 5271,
+                "n_decided": 4433,
+                "n_safe": 844,
+                "n_unsafe": 4427,
+                "unknown_rate": 0.159,
+                "accuracy_decided": 0.9986,
+                "false_safe_rate": 0.0,
+                "safe_found_rate": 0.0
+              },
+              "beverages": {
+                "n": 638,
+                "n_decided": 62,
+                "n_safe": 577,
+                "n_unsafe": 61,
+                "unknown_rate": 0.9028,
+                "accuracy_decided": 0.9677,
+                "false_safe_rate": 0.0,
+                "safe_found_rate": 0.0
+              },
+              "dairy_eggs": {
+                "n": 6579,
+                "n_decided": 5289,
+                "n_safe": 346,
+                "n_unsafe": 6233,
+                "unknown_rate": 0.1961,
+                "accuracy_decided": 0.9998,
+                "false_safe_rate": 0.0,
+                "safe_found_rate": 0.0
+              },
+              "meals": {
+                "n": 2595,
+                "n_decided": 2258,
+                "n_safe": 343,
+                "n_unsafe": 2252,
+                "unknown_rate": 0.1299,
+                "accuracy_decided": 0.9973,
+                "false_safe_rate": 0.0,
+                "safe_found_rate": 0.0
+              },
+              "meat_seafood": {
+                "n": 10030,
+                "n_decided": 5691,
+                "n_safe": 347,
+                "n_unsafe": 9683,
+                "unknown_rate": 0.4326,
+                "accuracy_decided": 1.0,
+                "false_safe_rate": 0.0,
+                "safe_found_rate": 0.0
+              },
+              "other": {
+                "n": 2929,
+                "n_decided": 1806,
+                "n_safe": 1142,
+                "n_unsafe": 1787,
+                "unknown_rate": 0.3834,
+                "accuracy_decided": 0.9895,
+                "false_safe_rate": 0.0,
+                "safe_found_rate": 0.0
+              },
+              "pantry_condiments": {
+                "n": 2276,
+                "n_decided": 925,
+                "n_safe": 1048,
+                "n_unsafe": 1228,
+                "unknown_rate": 0.5936,
+                "accuracy_decided": 0.9914,
+                "false_safe_rate": 0.0,
+                "safe_found_rate": 0.0
+              },
+              "plant_based_substitutes": {
+                "n": 575,
+                "n_decided": 129,
+                "n_safe": 448,
+                "n_unsafe": 127,
+                "unknown_rate": 0.7757,
+                "accuracy_decided": 0.9845,
+                "false_safe_rate": 0.0,
+                "safe_found_rate": 0.0
+              },
+              "produce_legumes_nuts": {
+                "n": 450,
+                "n_decided": 144,
+                "n_safe": 309,
+                "n_unsafe": 141,
+                "unknown_rate": 0.68,
+                "accuracy_decided": 0.9792,
+                "false_safe_rate": 0.0,
+                "safe_found_rate": 0.0
+              },
+              "snacks_sweets": {
+                "n": 10397,
+                "n_decided": 8123,
+                "n_safe": 2306,
+                "n_unsafe": 8091,
+                "unknown_rate": 0.2187,
+                "accuracy_decided": 0.9958,
+                "false_safe_rate": 0.0,
+                "safe_found_rate": 0.0
+              },
+              "uncategorized": {
+                "n": 7610,
+                "n_decided": 5180,
+                "n_safe": 2452,
+                "n_unsafe": 5158,
+                "unknown_rate": 0.3193,
+                "accuracy_decided": 0.9958,
+                "false_safe_rate": 0.0,
+                "safe_found_rate": 0.0
+              }
+            },
+            "gaps": {
+              "unknown_rate": {
+                "difference": 0.773,
+                "ratio": 0.1438,
+                "max_group": "beverages",
+                "max": 0.9028,
+                "min_group": "meals",
+                "min": 0.1299,
+                "groups_compared": 11
+              },
+              "accuracy_decided": {
+                "difference": 0.0323,
+                "ratio": 0.9677,
+                "max_group": "meat_seafood",
+                "max": 1.0,
+                "min_group": "beverages",
+                "min": 0.9677,
+                "groups_compared": 11
+              },
+              "false_safe_rate": {
+                "difference": 0.0,
+                "ratio": null,
+                "max_group": "bakery_cereals",
+                "max": 0.0,
+                "min_group": "bakery_cereals",
+                "min": 0.0,
+                "groups_compared": 11
+              },
+              "safe_found_rate": {
+                "difference": 0.0,
+                "ratio": null,
+                "max_group": "bakery_cereals",
+                "max": 0.0,
+                "min_group": "bakery_cereals",
+                "min": 0.0,
+                "groups_compared": 11
+              }
+            }
+          },
+          "tags_and_text": {
+            "by_group": {
+              "bakery_cereals": {
+                "n": 5271,
+                "n_decided": 5154,
+                "n_safe": 844,
+                "n_unsafe": 4427,
+                "unknown_rate": 0.0222,
+                "accuracy_decided": 0.9984,
+                "false_safe_rate": 0.0,
+                "safe_found_rate": 0.9064
+              },
+              "beverages": {
+                "n": 638,
+                "n_decided": 622,
+                "n_safe": 577,
+                "n_unsafe": 61,
+                "unknown_rate": 0.0251,
+                "accuracy_decided": 0.9871,
+                "false_safe_rate": 0.0,
+                "safe_found_rate": 0.9653
+              },
+              "dairy_eggs": {
+                "n": 6579,
+                "n_decided": 6555,
+                "n_safe": 346,
+                "n_unsafe": 6233,
+                "unknown_rate": 0.0036,
+                "accuracy_decided": 0.9857,
+                "false_safe_rate": 0.0143,
+                "safe_found_rate": 0.9624
+              },
+              "meals": {
+                "n": 2595,
+                "n_decided": 2587,
+                "n_safe": 343,
+                "n_unsafe": 2252,
+                "unknown_rate": 0.0031,
+                "accuracy_decided": 0.9934,
+                "false_safe_rate": 0.0004,
+                "safe_found_rate": 0.9359
+              },
+              "meat_seafood": {
+                "n": 10030,
+                "n_decided": 9998,
+                "n_safe": 347,
+                "n_unsafe": 9683,
+                "unknown_rate": 0.0032,
+                "accuracy_decided": 0.9276,
+                "false_safe_rate": 0.0747,
+                "safe_found_rate": 0.9942
+              },
+              "other": {
+                "n": 2929,
+                "n_decided": 2878,
+                "n_safe": 1142,
+                "n_unsafe": 1787,
+                "unknown_rate": 0.0174,
+                "accuracy_decided": 0.9903,
+                "false_safe_rate": 0.0011,
+                "safe_found_rate": 0.9501
+              },
+              "pantry_condiments": {
+                "n": 2276,
+                "n_decided": 2238,
+                "n_safe": 1048,
+                "n_unsafe": 1228,
+                "unknown_rate": 0.0167,
+                "accuracy_decided": 0.9857,
+                "false_safe_rate": 0.0171,
+                "safe_found_rate": 0.9561
+              },
+              "plant_based_substitutes": {
+                "n": 575,
+                "n_decided": 536,
+                "n_safe": 448,
+                "n_unsafe": 127,
+                "unknown_rate": 0.0678,
+                "accuracy_decided": 0.9944,
+                "false_safe_rate": 0.0,
+                "safe_found_rate": 0.942
+              },
+              "produce_legumes_nuts": {
+                "n": 450,
+                "n_decided": 439,
+                "n_safe": 309,
+                "n_unsafe": 141,
+                "unknown_rate": 0.0244,
+                "accuracy_decided": 0.9909,
+                "false_safe_rate": 0.0,
+                "safe_found_rate": 0.9579
+              },
+              "snacks_sweets": {
+                "n": 10397,
+                "n_decided": 10207,
+                "n_safe": 2306,
+                "n_unsafe": 8091,
+                "unknown_rate": 0.0183,
+                "accuracy_decided": 0.9949,
+                "false_safe_rate": 0.0011,
+                "safe_found_rate": 0.9458
+              },
+              "uncategorized": {
+                "n": 7610,
+                "n_decided": 7483,
+                "n_safe": 2452,
+                "n_unsafe": 5158,
+                "unknown_rate": 0.0167,
+                "accuracy_decided": 0.9922,
+                "false_safe_rate": 0.0004,
+                "safe_found_rate": 0.9531
+              }
+            },
+            "gaps": {
+              "unknown_rate": {
+                "difference": 0.0647,
+                "ratio": 0.0455,
+                "max_group": "plant_based_substitutes",
+                "max": 0.0678,
+                "min_group": "meals",
+                "min": 0.0031,
+                "groups_compared": 11
+              },
+              "accuracy_decided": {
+                "difference": 0.0709,
+                "ratio": 0.929,
+                "max_group": "bakery_cereals",
+                "max": 0.9984,
+                "min_group": "meat_seafood",
+                "min": 0.9276,
+                "groups_compared": 11
+              },
+              "false_safe_rate": {
+                "difference": 0.0747,
+                "ratio": 0.0,
+                "max_group": "meat_seafood",
+                "max": 0.0747,
+                "min_group": "bakery_cereals",
+                "min": 0.0,
+                "groups_compared": 11
+              },
+              "safe_found_rate": {
+                "difference": 0.0878,
+                "ratio": 0.9117,
+                "max_group": "meat_seafood",
+                "max": 0.9942,
+                "min_group": "bakery_cereals",
+                "min": 0.9064,
+                "groups_compared": 11
+              }
+            }
+          },
+          "full": {
+            "by_group": {
+              "bakery_cereals": {
+                "n": 5271,
+                "n_decided": 5160,
+                "n_safe": 844,
+                "n_unsafe": 4427,
+                "unknown_rate": 0.0211,
+                "accuracy_decided": 0.9981,
+                "false_safe_rate": 0.0,
+                "safe_found_rate": 0.9111
+              },
+              "beverages": {
+                "n": 638,
+                "n_decided": 622,
+                "n_safe": 577,
+                "n_unsafe": 61,
+                "unknown_rate": 0.0251,
+                "accuracy_decided": 0.9871,
+                "false_safe_rate": 0.0,
+                "safe_found_rate": 0.9653
+              },
+              "dairy_eggs": {
+                "n": 6579,
+                "n_decided": 6555,
+                "n_safe": 346,
+                "n_unsafe": 6233,
+                "unknown_rate": 0.0036,
+                "accuracy_decided": 0.9857,
+                "false_safe_rate": 0.0143,
+                "safe_found_rate": 0.9624
+              },
+              "meals": {
+                "n": 2595,
+                "n_decided": 2587,
+                "n_safe": 343,
+                "n_unsafe": 2252,
+                "unknown_rate": 0.0031,
+                "accuracy_decided": 0.9927,
+                "false_safe_rate": 0.0004,
+                "safe_found_rate": 0.93
+              },
+              "meat_seafood": {
+                "n": 10030,
+                "n_decided": 10010,
+                "n_safe": 347,
+                "n_unsafe": 9683,
+                "unknown_rate": 0.002,
+                "accuracy_decided": 0.9978,
+                "false_safe_rate": 0.0022,
+                "safe_found_rate": 0.9942
+              },
+              "other": {
+                "n": 2929,
+                "n_decided": 2878,
+                "n_safe": 1142,
+                "n_unsafe": 1787,
+                "unknown_rate": 0.0174,
+                "accuracy_decided": 0.9896,
+                "false_safe_rate": 0.0011,
+                "safe_found_rate": 0.9483
+              },
+              "pantry_condiments": {
+                "n": 2276,
+                "n_decided": 2238,
+                "n_safe": 1048,
+                "n_unsafe": 1228,
+                "unknown_rate": 0.0167,
+                "accuracy_decided": 0.9844,
+                "false_safe_rate": 0.0171,
+                "safe_found_rate": 0.9532
+              },
+              "plant_based_substitutes": {
+                "n": 575,
+                "n_decided": 536,
+                "n_safe": 448,
+                "n_unsafe": 127,
+                "unknown_rate": 0.0678,
+                "accuracy_decided": 0.9944,
+                "false_safe_rate": 0.0,
+                "safe_found_rate": 0.942
+              },
+              "produce_legumes_nuts": {
+                "n": 450,
+                "n_decided": 439,
+                "n_safe": 309,
+                "n_unsafe": 141,
+                "unknown_rate": 0.0244,
+                "accuracy_decided": 0.9909,
+                "false_safe_rate": 0.0,
+                "safe_found_rate": 0.9579
+              },
+              "snacks_sweets": {
+                "n": 10397,
+                "n_decided": 10216,
+                "n_safe": 2306,
+                "n_unsafe": 8091,
+                "unknown_rate": 0.0174,
+                "accuracy_decided": 0.9949,
+                "false_safe_rate": 0.0011,
+                "safe_found_rate": 0.9497
+              },
+              "uncategorized": {
+                "n": 7610,
+                "n_decided": 7486,
+                "n_safe": 2452,
+                "n_unsafe": 5158,
+                "unknown_rate": 0.0163,
+                "accuracy_decided": 0.9921,
+                "false_safe_rate": 0.0004,
+                "safe_found_rate": 0.9539
+              }
+            },
+            "gaps": {
+              "unknown_rate": {
+                "difference": 0.0658,
+                "ratio": 0.0294,
+                "max_group": "plant_based_substitutes",
+                "max": 0.0678,
+                "min_group": "meat_seafood",
+                "min": 0.002,
+                "groups_compared": 11
+              },
+              "accuracy_decided": {
+                "difference": 0.0137,
+                "ratio": 0.9863,
+                "max_group": "bakery_cereals",
+                "max": 0.9981,
+                "min_group": "pantry_condiments",
+                "min": 0.9844,
+                "groups_compared": 11
+              },
+              "false_safe_rate": {
+                "difference": 0.0171,
+                "ratio": 0.0,
+                "max_group": "pantry_condiments",
+                "max": 0.0171,
+                "min_group": "bakery_cereals",
+                "min": 0.0,
+                "groups_compared": 11
+              },
+              "safe_found_rate": {
+                "difference": 0.0831,
+                "ratio": 0.9164,
+                "max_group": "meat_seafood",
+                "max": 0.9942,
+                "min_group": "bakery_cereals",
+                "min": 0.9111,
+                "groups_compared": 11
+              }
+            }
+          }
+        },
+        "coverage_by_profile": {
+          "vegan": {
+            "by_group": {
+              "bakery_cereals": {
+                "n": 1336,
+                "unknown_rate": 0.0067
+              },
+              "beverages": {
+                "n": 1603,
+                "unknown_rate": 0.0087
+              },
+              "dairy_eggs": {
+                "n": 1159,
+                "unknown_rate": 0.0017
+              },
+              "meals": {
+                "n": 772,
+                "unknown_rate": 0.0013
+              },
+              "meat_seafood": {
+                "n": 919,
+                "unknown_rate": 0.0022
+              },
+              "other": {
+                "n": 1185,
+                "unknown_rate": 0.0059
+              },
+              "pantry_condiments": {
+                "n": 2111,
+                "unknown_rate": 0.0038
+              },
+              "plant_based_substitutes": {
+                "n": 173,
+                "unknown_rate": 0.0173
+              },
+              "produce_legumes_nuts": {
+                "n": 938,
+                "unknown_rate": 0.0075
+              },
+              "snacks_sweets": {
+                "n": 5049,
+                "unknown_rate": 0.0032
+              },
+              "uncategorized": {
+                "n": 4755,
+                "unknown_rate": 0.0025
+              }
+            },
+            "gaps": {
+              "unknown_rate": {
+                "difference": 0.016,
+                "ratio": 0.0747,
+                "max_group": "plant_based_substitutes",
+                "max": 0.0173,
+                "min_group": "meals",
+                "min": 0.0013,
+                "groups_compared": 11
+              }
+            }
+          },
+          "vegetarian": {
+            "by_group": {
+              "bakery_cereals": {
+                "n": 1336,
+                "unknown_rate": 0.0075
+              },
+              "beverages": {
+                "n": 1603,
+                "unknown_rate": 0.0087
+              },
+              "dairy_eggs": {
+                "n": 1159,
+                "unknown_rate": 0.0078
+              },
+              "meals": {
+                "n": 772,
+                "unknown_rate": 0.0013
+              },
+              "meat_seafood": {
+                "n": 919,
+                "unknown_rate": 0.0022
+              },
+              "other": {
+                "n": 1185,
+                "unknown_rate": 0.0084
+              },
+              "pantry_condiments": {
+                "n": 2111,
+                "unknown_rate": 0.0043
+              },
+              "plant_based_substitutes": {
+                "n": 173,
+                "unknown_rate": 0.0231
+              },
+              "produce_legumes_nuts": {
+                "n": 938,
+                "unknown_rate": 0.0075
+              },
+              "snacks_sweets": {
+                "n": 5049,
+                "unknown_rate": 0.0048
+              },
+              "uncategorized": {
+                "n": 4755,
+                "unknown_rate": 0.0034
+              }
+            },
+            "gaps": {
+              "unknown_rate": {
+                "difference": 0.0218,
+                "ratio": 0.056,
+                "max_group": "plant_based_substitutes",
+                "max": 0.0231,
+                "min_group": "meals",
+                "min": 0.0013,
+                "groups_compared": 11
+              }
+            }
+          },
+          "gluten_free": {
+            "by_group": {
+              "bakery_cereals": {
+                "n": 1336,
+                "unknown_rate": 0.0868
+              },
+              "beverages": {
+                "n": 1603,
+                "unknown_rate": 0.0119
+              },
+              "dairy_eggs": {
+                "n": 1159,
+                "unknown_rate": 0.0147
+              },
+              "meals": {
+                "n": 772,
+                "unknown_rate": 0.0065
+              },
+              "meat_seafood": {
+                "n": 919,
+                "unknown_rate": 0.0054
+              },
+              "other": {
+                "n": 1185,
+                "unknown_rate": 0.0287
+              },
+              "pantry_condiments": {
+                "n": 2111,
+                "unknown_rate": 0.0033
+              },
+              "plant_based_substitutes": {
+                "n": 173,
+                "unknown_rate": 0.0694
+              },
+              "produce_legumes_nuts": {
+                "n": 938,
+                "unknown_rate": 0.0096
+              },
+              "snacks_sweets": {
+                "n": 5049,
+                "unknown_rate": 0.0259
+              },
+              "uncategorized": {
+                "n": 4755,
+                "unknown_rate": 0.0166
+              }
+            },
+            "gaps": {
+              "unknown_rate": {
+                "difference": 0.0835,
+                "ratio": 0.0382,
+                "max_group": "bakery_cereals",
+                "max": 0.0868,
+                "min_group": "pantry_condiments",
+                "min": 0.0033,
+                "groups_compared": 11
+              }
+            }
+          }
+        },
+        "correctness_by_profile": {
+          "vegan": {
+            "tags_only": {
+              "by_group": {
+                "bakery_cereals": {
+                  "n": 208,
+                  "n_decided": 2,
+                  "n_safe": 208,
+                  "n_unsafe": 0,
+                  "unknown_rate": 0.9904,
+                  "accuracy_decided": 0.0,
+                  "false_safe_rate": null,
+                  "safe_found_rate": 0.0
+                },
+                "beverages": {
+                  "n": 146,
+                  "n_decided": 1,
+                  "n_safe": 145,
+                  "n_unsafe": 1,
+                  "unknown_rate": 0.9932,
+                  "accuracy_decided": 0.0,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.0
+                },
+                "dairy_eggs": {
+                  "n": 6026,
+                  "n_decided": 5081,
+                  "n_safe": 0,
+                  "n_unsafe": 6026,
+                  "unknown_rate": 0.1568,
+                  "accuracy_decided": 1.0,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": null
+                },
+                "meals": {
+                  "n": 92,
+                  "n_decided": 5,
+                  "n_safe": 92,
+                  "n_unsafe": 0,
+                  "unknown_rate": 0.9457,
+                  "accuracy_decided": 0.0,
+                  "false_safe_rate": null,
+                  "safe_found_rate": 0.0
+                },
+                "meat_seafood": {
+                  "n": 4578,
+                  "n_decided": 2667,
+                  "n_safe": 0,
+                  "n_unsafe": 4578,
+                  "unknown_rate": 0.4174,
+                  "accuracy_decided": 1.0,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": null
+                },
+                "other": {
+                  "n": 274,
+                  "n_decided": 12,
+                  "n_safe": 274,
+                  "n_unsafe": 0,
+                  "unknown_rate": 0.9562,
+                  "accuracy_decided": 0.0,
+                  "false_safe_rate": null,
+                  "safe_found_rate": 0.0
+                },
+                "pantry_condiments": {
+                  "n": 524,
+                  "n_decided": 7,
+                  "n_safe": 211,
+                  "n_unsafe": 313,
+                  "unknown_rate": 0.9866,
+                  "accuracy_decided": 0.2857,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.0
+                },
+                "plant_based_substitutes": {
+                  "n": 159,
+                  "n_decided": 1,
+                  "n_safe": 159,
+                  "n_unsafe": 0,
+                  "unknown_rate": 0.9937,
+                  "accuracy_decided": 0.0,
+                  "false_safe_rate": null,
+                  "safe_found_rate": 0.0
+                },
+                "produce_legumes_nuts": {
+                  "n": 75,
+                  "n_decided": 0,
+                  "n_safe": 75,
+                  "n_unsafe": 0,
+                  "unknown_rate": 1.0,
+                  "accuracy_decided": null,
+                  "false_safe_rate": null,
+                  "safe_found_rate": 0.0
+                },
+                "snacks_sweets": {
+                  "n": 516,
+                  "n_decided": 25,
+                  "n_safe": 513,
+                  "n_unsafe": 3,
+                  "unknown_rate": 0.9516,
+                  "accuracy_decided": 0.04,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.0
+                },
+                "uncategorized": {
+                  "n": 562,
+                  "n_decided": 15,
+                  "n_safe": 562,
+                  "n_unsafe": 0,
+                  "unknown_rate": 0.9733,
+                  "accuracy_decided": 0.0,
+                  "false_safe_rate": null,
+                  "safe_found_rate": 0.0
+                }
+              },
+              "gaps": {
+                "unknown_rate": {
+                  "difference": 0.8432,
+                  "ratio": 0.1568,
+                  "max_group": "produce_legumes_nuts",
+                  "max": 1.0,
+                  "min_group": "dairy_eggs",
+                  "min": 0.1568,
+                  "groups_compared": 11
+                },
+                "accuracy_decided": {
+                  "difference": 0.0,
+                  "ratio": 1.0,
+                  "max_group": "dairy_eggs",
+                  "max": 1.0,
+                  "min_group": "dairy_eggs",
+                  "min": 1.0,
+                  "groups_compared": 2
+                },
+                "false_safe_rate": {
+                  "difference": 0.0,
+                  "ratio": null,
+                  "max_group": "dairy_eggs",
+                  "max": 0.0,
+                  "min_group": "dairy_eggs",
+                  "min": 0.0,
+                  "groups_compared": 3
+                },
+                "safe_found_rate": {
+                  "difference": 0.0,
+                  "ratio": null,
+                  "max_group": "bakery_cereals",
+                  "max": 0.0,
+                  "min_group": "bakery_cereals",
+                  "min": 0.0,
+                  "groups_compared": 9
+                }
+              }
+            },
+            "full": {
+              "by_group": {
+                "bakery_cereals": {
+                  "n": 208,
+                  "n_decided": 206,
+                  "n_safe": 208,
+                  "n_unsafe": 0,
+                  "unknown_rate": 0.0096,
+                  "accuracy_decided": 0.9854,
+                  "false_safe_rate": null,
+                  "safe_found_rate": 0.976
+                },
+                "beverages": {
+                  "n": 146,
+                  "n_decided": 144,
+                  "n_safe": 145,
+                  "n_unsafe": 1,
+                  "unknown_rate": 0.0137,
+                  "accuracy_decided": 0.9792,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.9655
+                },
+                "dairy_eggs": {
+                  "n": 6026,
+                  "n_decided": 6016,
+                  "n_safe": 0,
+                  "n_unsafe": 6026,
+                  "unknown_rate": 0.0017,
+                  "accuracy_decided": 0.9852,
+                  "false_safe_rate": 0.0148,
+                  "safe_found_rate": null
+                },
+                "meals": {
+                  "n": 92,
+                  "n_decided": 90,
+                  "n_safe": 92,
+                  "n_unsafe": 0,
+                  "unknown_rate": 0.0217,
+                  "accuracy_decided": 0.8778,
+                  "false_safe_rate": null,
+                  "safe_found_rate": 0.8587
+                },
+                "meat_seafood": {
+                  "n": 4578,
+                  "n_decided": 4572,
+                  "n_safe": 0,
+                  "n_unsafe": 4578,
+                  "unknown_rate": 0.0013,
+                  "accuracy_decided": 0.9978,
+                  "false_safe_rate": 0.0022,
+                  "safe_found_rate": null
+                },
+                "other": {
+                  "n": 274,
+                  "n_decided": 272,
+                  "n_safe": 274,
+                  "n_unsafe": 0,
+                  "unknown_rate": 0.0073,
+                  "accuracy_decided": 0.9485,
+                  "false_safe_rate": null,
+                  "safe_found_rate": 0.9416
+                },
+                "pantry_condiments": {
+                  "n": 524,
+                  "n_decided": 509,
+                  "n_safe": 211,
+                  "n_unsafe": 313,
+                  "unknown_rate": 0.0286,
+                  "accuracy_decided": 0.943,
+                  "false_safe_rate": 0.0671,
+                  "safe_found_rate": 0.8957
+                },
+                "plant_based_substitutes": {
+                  "n": 159,
+                  "n_decided": 153,
+                  "n_safe": 159,
+                  "n_unsafe": 0,
+                  "unknown_rate": 0.0377,
+                  "accuracy_decided": 0.9869,
+                  "false_safe_rate": null,
+                  "safe_found_rate": 0.9497
+                },
+                "produce_legumes_nuts": {
+                  "n": 75,
+                  "n_decided": 72,
+                  "n_safe": 75,
+                  "n_unsafe": 0,
+                  "unknown_rate": 0.04,
+                  "accuracy_decided": 1.0,
+                  "false_safe_rate": null,
+                  "safe_found_rate": 0.96
+                },
+                "snacks_sweets": {
+                  "n": 516,
+                  "n_decided": 502,
+                  "n_safe": 513,
+                  "n_unsafe": 3,
+                  "unknown_rate": 0.0271,
+                  "accuracy_decided": 0.9422,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.9162
+                },
+                "uncategorized": {
+                  "n": 562,
+                  "n_decided": 556,
+                  "n_safe": 562,
+                  "n_unsafe": 0,
+                  "unknown_rate": 0.0107,
+                  "accuracy_decided": 0.9478,
+                  "false_safe_rate": null,
+                  "safe_found_rate": 0.9377
+                }
+              },
+              "gaps": {
+                "unknown_rate": {
+                  "difference": 0.0387,
+                  "ratio": 0.0328,
+                  "max_group": "produce_legumes_nuts",
+                  "max": 0.04,
+                  "min_group": "meat_seafood",
+                  "min": 0.0013,
+                  "groups_compared": 11
+                },
+                "accuracy_decided": {
+                  "difference": 0.1222,
+                  "ratio": 0.8778,
+                  "max_group": "produce_legumes_nuts",
+                  "max": 1.0,
+                  "min_group": "meals",
+                  "min": 0.8778,
+                  "groups_compared": 11
+                },
+                "false_safe_rate": {
+                  "difference": 0.0649,
+                  "ratio": 0.0326,
+                  "max_group": "pantry_condiments",
+                  "max": 0.0671,
+                  "min_group": "meat_seafood",
+                  "min": 0.0022,
+                  "groups_compared": 3
+                },
+                "safe_found_rate": {
+                  "difference": 0.1173,
+                  "ratio": 0.8798,
+                  "max_group": "bakery_cereals",
+                  "max": 0.976,
+                  "min_group": "meals",
+                  "min": 0.8587,
+                  "groups_compared": 9
+                }
+              }
+            }
+          },
+          "vegetarian": {
+            "tags_only": {
+              "by_group": {
+                "bakery_cereals": {
+                  "n": 218,
+                  "n_decided": 0,
+                  "n_safe": 218,
+                  "n_unsafe": 0,
+                  "unknown_rate": 1.0,
+                  "accuracy_decided": null,
+                  "false_safe_rate": null,
+                  "safe_found_rate": 0.0
+                },
+                "beverages": {
+                  "n": 151,
+                  "n_decided": 0,
+                  "n_safe": 151,
+                  "n_unsafe": 0,
+                  "unknown_rate": 1.0,
+                  "accuracy_decided": null,
+                  "false_safe_rate": null,
+                  "safe_found_rate": 0.0
+                },
+                "dairy_eggs": {
+                  "n": 43,
+                  "n_decided": 0,
+                  "n_safe": 43,
+                  "n_unsafe": 0,
+                  "unknown_rate": 1.0,
+                  "accuracy_decided": null,
+                  "false_safe_rate": null,
+                  "safe_found_rate": 0.0
+                },
+                "meals": {
+                  "n": 101,
+                  "n_decided": 0,
+                  "n_safe": 101,
+                  "n_unsafe": 0,
+                  "unknown_rate": 1.0,
+                  "accuracy_decided": null,
+                  "false_safe_rate": null,
+                  "safe_found_rate": 0.0
+                },
+                "meat_seafood": {
+                  "n": 4578,
+                  "n_decided": 2497,
+                  "n_safe": 0,
+                  "n_unsafe": 4578,
+                  "unknown_rate": 0.4546,
+                  "accuracy_decided": 1.0,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": null
+                },
+                "other": {
+                  "n": 282,
+                  "n_decided": 4,
+                  "n_safe": 282,
+                  "n_unsafe": 0,
+                  "unknown_rate": 0.9858,
+                  "accuracy_decided": 0.0,
+                  "false_safe_rate": null,
+                  "safe_found_rate": 0.0
+                },
+                "pantry_condiments": {
+                  "n": 220,
+                  "n_decided": 2,
+                  "n_safe": 220,
+                  "n_unsafe": 0,
+                  "unknown_rate": 0.9909,
+                  "accuracy_decided": 0.0,
+                  "false_safe_rate": null,
+                  "safe_found_rate": 0.0
+                },
+                "plant_based_substitutes": {
+                  "n": 163,
+                  "n_decided": 1,
+                  "n_safe": 163,
+                  "n_unsafe": 0,
+                  "unknown_rate": 0.9939,
+                  "accuracy_decided": 0.0,
+                  "false_safe_rate": null,
+                  "safe_found_rate": 0.0
+                },
+                "produce_legumes_nuts": {
+                  "n": 77,
+                  "n_decided": 0,
+                  "n_safe": 77,
+                  "n_unsafe": 0,
+                  "unknown_rate": 1.0,
+                  "accuracy_decided": null,
+                  "false_safe_rate": null,
+                  "safe_found_rate": 0.0
+                },
+                "snacks_sweets": {
+                  "n": 549,
+                  "n_decided": 1,
+                  "n_safe": 549,
+                  "n_unsafe": 0,
+                  "unknown_rate": 0.9982,
+                  "accuracy_decided": 0.0,
+                  "false_safe_rate": null,
+                  "safe_found_rate": 0.0
+                },
+                "uncategorized": {
+                  "n": 583,
+                  "n_decided": 4,
+                  "n_safe": 583,
+                  "n_unsafe": 0,
+                  "unknown_rate": 0.9931,
+                  "accuracy_decided": 0.0,
+                  "false_safe_rate": null,
+                  "safe_found_rate": 0.0
+                }
+              },
+              "gaps": {
+                "unknown_rate": {
+                  "difference": 0.5454,
+                  "ratio": 0.4546,
+                  "max_group": "bakery_cereals",
+                  "max": 1.0,
+                  "min_group": "meat_seafood",
+                  "min": 0.4546,
+                  "groups_compared": 11
+                },
+                "safe_found_rate": {
+                  "difference": 0.0,
+                  "ratio": null,
+                  "max_group": "bakery_cereals",
+                  "max": 0.0,
+                  "min_group": "bakery_cereals",
+                  "min": 0.0,
+                  "groups_compared": 10
+                }
+              }
+            },
+            "full": {
+              "by_group": {
+                "bakery_cereals": {
+                  "n": 218,
+                  "n_decided": 215,
+                  "n_safe": 218,
+                  "n_unsafe": 0,
+                  "unknown_rate": 0.0138,
+                  "accuracy_decided": 0.9953,
+                  "false_safe_rate": null,
+                  "safe_found_rate": 0.9817
+                },
+                "beverages": {
+                  "n": 151,
+                  "n_decided": 149,
+                  "n_safe": 151,
+                  "n_unsafe": 0,
+                  "unknown_rate": 0.0132,
+                  "accuracy_decided": 1.0,
+                  "false_safe_rate": null,
+                  "safe_found_rate": 0.9868
+                },
+                "dairy_eggs": {
+                  "n": 43,
+                  "n_decided": 42,
+                  "n_safe": 43,
+                  "n_unsafe": 0,
+                  "unknown_rate": 0.0233,
+                  "accuracy_decided": 0.9524,
+                  "false_safe_rate": null,
+                  "safe_found_rate": 0.9302
+                },
+                "meals": {
+                  "n": 101,
+                  "n_decided": 98,
+                  "n_safe": 101,
+                  "n_unsafe": 0,
+                  "unknown_rate": 0.0297,
+                  "accuracy_decided": 0.9388,
+                  "false_safe_rate": null,
+                  "safe_found_rate": 0.9109
+                },
+                "meat_seafood": {
+                  "n": 4578,
+                  "n_decided": 4572,
+                  "n_safe": 0,
+                  "n_unsafe": 4578,
+                  "unknown_rate": 0.0013,
+                  "accuracy_decided": 0.9976,
+                  "false_safe_rate": 0.0024,
+                  "safe_found_rate": null
+                },
+                "other": {
+                  "n": 282,
+                  "n_decided": 280,
+                  "n_safe": 282,
+                  "n_unsafe": 0,
+                  "unknown_rate": 0.0071,
+                  "accuracy_decided": 0.9821,
+                  "false_safe_rate": null,
+                  "safe_found_rate": 0.9752
+                },
+                "pantry_condiments": {
+                  "n": 220,
+                  "n_decided": 206,
+                  "n_safe": 220,
+                  "n_unsafe": 0,
+                  "unknown_rate": 0.0636,
+                  "accuracy_decided": 0.9806,
+                  "false_safe_rate": null,
+                  "safe_found_rate": 0.9182
+                },
+                "plant_based_substitutes": {
+                  "n": 163,
+                  "n_decided": 155,
+                  "n_safe": 163,
+                  "n_unsafe": 0,
+                  "unknown_rate": 0.0491,
+                  "accuracy_decided": 0.9935,
+                  "false_safe_rate": null,
+                  "safe_found_rate": 0.9448
+                },
+                "produce_legumes_nuts": {
+                  "n": 77,
+                  "n_decided": 74,
+                  "n_safe": 77,
+                  "n_unsafe": 0,
+                  "unknown_rate": 0.039,
+                  "accuracy_decided": 1.0,
+                  "false_safe_rate": null,
+                  "safe_found_rate": 0.961
+                },
+                "snacks_sweets": {
+                  "n": 549,
+                  "n_decided": 534,
+                  "n_safe": 549,
+                  "n_unsafe": 0,
+                  "unknown_rate": 0.0273,
+                  "accuracy_decided": 0.9963,
+                  "false_safe_rate": null,
+                  "safe_found_rate": 0.969
+                },
+                "uncategorized": {
+                  "n": 583,
+                  "n_decided": 577,
+                  "n_safe": 583,
+                  "n_unsafe": 0,
+                  "unknown_rate": 0.0103,
+                  "accuracy_decided": 0.9827,
+                  "false_safe_rate": null,
+                  "safe_found_rate": 0.9726
+                }
+              },
+              "gaps": {
+                "unknown_rate": {
+                  "difference": 0.0623,
+                  "ratio": 0.0206,
+                  "max_group": "pantry_condiments",
+                  "max": 0.0636,
+                  "min_group": "meat_seafood",
+                  "min": 0.0013,
+                  "groups_compared": 11
+                },
+                "accuracy_decided": {
+                  "difference": 0.0612,
+                  "ratio": 0.9388,
+                  "max_group": "beverages",
+                  "max": 1.0,
+                  "min_group": "meals",
+                  "min": 0.9388,
+                  "groups_compared": 11
+                },
+                "safe_found_rate": {
+                  "difference": 0.0759,
+                  "ratio": 0.9231,
+                  "max_group": "beverages",
+                  "max": 0.9868,
+                  "min_group": "meals",
+                  "min": 0.9109,
+                  "groups_compared": 10
+                }
+              }
+            }
+          },
+          "gluten_free": {
+            "tags_only": {
+              "by_group": {
+                "bakery_cereals": {
+                  "n": 4845,
+                  "n_decided": 4431,
+                  "n_safe": 418,
+                  "n_unsafe": 4427,
+                  "unknown_rate": 0.0854,
+                  "accuracy_decided": 0.9991,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.0
+                },
+                "beverages": {
+                  "n": 341,
+                  "n_decided": 61,
+                  "n_safe": 281,
+                  "n_unsafe": 60,
+                  "unknown_rate": 0.8211,
+                  "accuracy_decided": 0.9836,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.0
+                },
+                "dairy_eggs": {
+                  "n": 510,
+                  "n_decided": 208,
+                  "n_safe": 303,
+                  "n_unsafe": 207,
+                  "unknown_rate": 0.5922,
+                  "accuracy_decided": 0.9952,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.0
+                },
+                "meals": {
+                  "n": 2402,
+                  "n_decided": 2253,
+                  "n_safe": 150,
+                  "n_unsafe": 2252,
+                  "unknown_rate": 0.062,
+                  "accuracy_decided": 0.9996,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.0
+                },
+                "meat_seafood": {
+                  "n": 874,
+                  "n_decided": 527,
+                  "n_safe": 347,
+                  "n_unsafe": 527,
+                  "unknown_rate": 0.397,
+                  "accuracy_decided": 1.0,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.0
+                },
+                "other": {
+                  "n": 2373,
+                  "n_decided": 1790,
+                  "n_safe": 586,
+                  "n_unsafe": 1787,
+                  "unknown_rate": 0.2457,
+                  "accuracy_decided": 0.9983,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.0
+                },
+                "pantry_condiments": {
+                  "n": 1532,
+                  "n_decided": 916,
+                  "n_safe": 617,
+                  "n_unsafe": 915,
+                  "unknown_rate": 0.4021,
+                  "accuracy_decided": 0.9989,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.0
+                },
+                "plant_based_substitutes": {
+                  "n": 253,
+                  "n_decided": 127,
+                  "n_safe": 126,
+                  "n_unsafe": 127,
+                  "unknown_rate": 0.498,
+                  "accuracy_decided": 1.0,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.0
+                },
+                "produce_legumes_nuts": {
+                  "n": 298,
+                  "n_decided": 144,
+                  "n_safe": 157,
+                  "n_unsafe": 141,
+                  "unknown_rate": 0.5168,
+                  "accuracy_decided": 0.9792,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.0
+                },
+                "snacks_sweets": {
+                  "n": 9332,
+                  "n_decided": 8097,
+                  "n_safe": 1244,
+                  "n_unsafe": 8088,
+                  "unknown_rate": 0.1323,
+                  "accuracy_decided": 0.9989,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.0
+                },
+                "uncategorized": {
+                  "n": 6465,
+                  "n_decided": 5161,
+                  "n_safe": 1307,
+                  "n_unsafe": 5158,
+                  "unknown_rate": 0.2017,
+                  "accuracy_decided": 0.9994,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.0
+                }
+              },
+              "gaps": {
+                "unknown_rate": {
+                  "difference": 0.7591,
+                  "ratio": 0.0755,
+                  "max_group": "beverages",
+                  "max": 0.8211,
+                  "min_group": "meals",
+                  "min": 0.062,
+                  "groups_compared": 11
+                },
+                "accuracy_decided": {
+                  "difference": 0.0208,
+                  "ratio": 0.9792,
+                  "max_group": "meat_seafood",
+                  "max": 1.0,
+                  "min_group": "produce_legumes_nuts",
+                  "min": 0.9792,
+                  "groups_compared": 11
+                },
+                "false_safe_rate": {
+                  "difference": 0.0,
+                  "ratio": null,
+                  "max_group": "bakery_cereals",
+                  "max": 0.0,
+                  "min_group": "bakery_cereals",
+                  "min": 0.0,
+                  "groups_compared": 11
+                },
+                "safe_found_rate": {
+                  "difference": 0.0,
+                  "ratio": null,
+                  "max_group": "bakery_cereals",
+                  "max": 0.0,
+                  "min_group": "bakery_cereals",
+                  "min": 0.0,
+                  "groups_compared": 11
+                }
+              }
+            },
+            "full": {
+              "by_group": {
+                "bakery_cereals": {
+                  "n": 4845,
+                  "n_decided": 4739,
+                  "n_safe": 418,
+                  "n_unsafe": 4427,
+                  "unknown_rate": 0.0219,
+                  "accuracy_decided": 0.9987,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.8421
+                },
+                "beverages": {
+                  "n": 341,
+                  "n_decided": 329,
+                  "n_safe": 281,
+                  "n_unsafe": 60,
+                  "unknown_rate": 0.0352,
+                  "accuracy_decided": 0.9848,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.9537
+                },
+                "dairy_eggs": {
+                  "n": 510,
+                  "n_decided": 497,
+                  "n_safe": 303,
+                  "n_unsafe": 207,
+                  "unknown_rate": 0.0255,
+                  "accuracy_decided": 0.994,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.967
+                },
+                "meals": {
+                  "n": 2402,
+                  "n_decided": 2399,
+                  "n_safe": 150,
+                  "n_unsafe": 2252,
+                  "unknown_rate": 0.0012,
+                  "accuracy_decided": 0.9992,
+                  "false_safe_rate": 0.0004,
+                  "safe_found_rate": 0.9867
+                },
+                "meat_seafood": {
+                  "n": 874,
+                  "n_decided": 866,
+                  "n_safe": 347,
+                  "n_unsafe": 527,
+                  "unknown_rate": 0.0092,
+                  "accuracy_decided": 0.9988,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.9942
+                },
+                "other": {
+                  "n": 2373,
+                  "n_decided": 2326,
+                  "n_safe": 586,
+                  "n_unsafe": 1787,
+                  "unknown_rate": 0.0198,
+                  "accuracy_decided": 0.9953,
+                  "false_safe_rate": 0.0011,
+                  "safe_found_rate": 0.9386
+                },
+                "pantry_condiments": {
+                  "n": 1532,
+                  "n_decided": 1523,
+                  "n_safe": 617,
+                  "n_unsafe": 915,
+                  "unknown_rate": 0.0059,
+                  "accuracy_decided": 0.9987,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.9854
+                },
+                "plant_based_substitutes": {
+                  "n": 253,
+                  "n_decided": 228,
+                  "n_safe": 126,
+                  "n_unsafe": 127,
+                  "unknown_rate": 0.0988,
+                  "accuracy_decided": 1.0,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.9286
+                },
+                "produce_legumes_nuts": {
+                  "n": 298,
+                  "n_decided": 293,
+                  "n_safe": 157,
+                  "n_unsafe": 141,
+                  "unknown_rate": 0.0168,
+                  "accuracy_decided": 0.9863,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.9554
+                },
+                "snacks_sweets": {
+                  "n": 9332,
+                  "n_decided": 9180,
+                  "n_safe": 1244,
+                  "n_unsafe": 8088,
+                  "unknown_rate": 0.0163,
+                  "accuracy_decided": 0.9977,
+                  "false_safe_rate": 0.0011,
+                  "safe_found_rate": 0.955
+                },
+                "uncategorized": {
+                  "n": 6465,
+                  "n_decided": 6353,
+                  "n_safe": 1307,
+                  "n_unsafe": 5158,
+                  "unknown_rate": 0.0173,
+                  "accuracy_decided": 0.9969,
+                  "false_safe_rate": 0.0004,
+                  "safe_found_rate": 0.9526
+                }
+              },
+              "gaps": {
+                "unknown_rate": {
+                  "difference": 0.0976,
+                  "ratio": 0.0126,
+                  "max_group": "plant_based_substitutes",
+                  "max": 0.0988,
+                  "min_group": "meals",
+                  "min": 0.0012,
+                  "groups_compared": 11
+                },
+                "accuracy_decided": {
+                  "difference": 0.0152,
+                  "ratio": 0.9848,
+                  "max_group": "plant_based_substitutes",
+                  "max": 1.0,
+                  "min_group": "beverages",
+                  "min": 0.9848,
+                  "groups_compared": 11
+                },
+                "false_safe_rate": {
+                  "difference": 0.0011,
+                  "ratio": 0.0,
+                  "max_group": "other",
+                  "max": 0.0011,
+                  "min_group": "bakery_cereals",
+                  "min": 0.0,
+                  "groups_compared": 11
+                },
+                "safe_found_rate": {
+                  "difference": 0.1521,
+                  "ratio": 0.847,
+                  "max_group": "meat_seafood",
+                  "max": 0.9942,
+                  "min_group": "bakery_cereals",
+                  "min": 0.8421,
+                  "groups_compared": 11
+                }
+              }
+            }
+          }
+        }
+      },
+      "brand_type": {
+        "coverage": {
+          "tags_only": {
+            "by_group": {
+              "national_brand": {
+                "n": 35460,
+                "unknown_rate": 0.7753
+              },
+              "no_brand": {
+                "n": 18537,
+                "unknown_rate": 0.7453
+              },
+              "store_brand": {
+                "n": 6003,
+                "unknown_rate": 0.7708
+              }
+            },
+            "gaps": {
+              "unknown_rate": {
+                "difference": 0.0301,
+                "ratio": 0.9612,
+                "max_group": "national_brand",
+                "max": 0.7753,
+                "min_group": "no_brand",
+                "min": 0.7453,
+                "groups_compared": 3
+              }
+            }
+          },
+          "tags_and_text": {
+            "by_group": {
+              "national_brand": {
+                "n": 35460,
+                "unknown_rate": 0.013
+              },
+              "no_brand": {
+                "n": 18537,
+                "unknown_rate": 0.0073
+              },
+              "store_brand": {
+                "n": 6003,
+                "unknown_rate": 0.0065
+              }
+            },
+            "gaps": {
+              "unknown_rate": {
+                "difference": 0.0065,
+                "ratio": 0.4997,
+                "max_group": "national_brand",
+                "max": 0.013,
+                "min_group": "store_brand",
+                "min": 0.0065,
+                "groups_compared": 3
+              }
+            }
+          },
+          "full": {
+            "by_group": {
+              "national_brand": {
+                "n": 35460,
+                "unknown_rate": 0.0128
+              },
+              "no_brand": {
+                "n": 18537,
+                "unknown_rate": 0.0069
+              },
+              "store_brand": {
+                "n": 6003,
+                "unknown_rate": 0.0065
+              }
+            },
+            "gaps": {
+              "unknown_rate": {
+                "difference": 0.0063,
+                "ratio": 0.5074,
+                "max_group": "national_brand",
+                "max": 0.0128,
+                "min_group": "store_brand",
+                "min": 0.0065,
+                "groups_compared": 3
+              }
+            }
+          }
+        },
+        "correctness": {
+          "tags_only": {
+            "by_group": {
+              "national_brand": {
+                "n": 29541,
+                "n_decided": 18775,
+                "n_safe": 7934,
+                "n_unsafe": 21607,
+                "unknown_rate": 0.3644,
+                "accuracy_decided": 0.9957,
+                "false_safe_rate": 0.0,
+                "safe_found_rate": 0.0
+              },
+              "no_brand": {
+                "n": 14473,
+                "n_decided": 11541,
+                "n_safe": 1183,
+                "n_unsafe": 13290,
+                "unknown_rate": 0.2026,
+                "accuracy_decided": 0.9987,
+                "false_safe_rate": 0.0,
+                "safe_found_rate": 0.0
+              },
+              "store_brand": {
+                "n": 5336,
+                "n_decided": 3724,
+                "n_safe": 1045,
+                "n_unsafe": 4291,
+                "unknown_rate": 0.3021,
+                "accuracy_decided": 0.9981,
+                "false_safe_rate": 0.0,
+                "safe_found_rate": 0.0
+              }
+            },
+            "gaps": {
+              "unknown_rate": {
+                "difference": 0.1619,
+                "ratio": 0.5559,
+                "max_group": "national_brand",
+                "max": 0.3644,
+                "min_group": "no_brand",
+                "min": 0.2026,
+                "groups_compared": 3
+              },
+              "accuracy_decided": {
+                "difference": 0.003,
+                "ratio": 0.997,
+                "max_group": "no_brand",
+                "max": 0.9987,
+                "min_group": "national_brand",
+                "min": 0.9957,
+                "groups_compared": 3
+              },
+              "false_safe_rate": {
+                "difference": 0.0,
+                "ratio": null,
+                "max_group": "national_brand",
+                "max": 0.0,
+                "min_group": "national_brand",
+                "min": 0.0,
+                "groups_compared": 3
+              },
+              "safe_found_rate": {
+                "difference": 0.0,
+                "ratio": null,
+                "max_group": "national_brand",
+                "max": 0.0,
+                "min_group": "national_brand",
+                "min": 0.0,
+                "groups_compared": 3
+              }
+            }
+          },
+          "tags_and_text": {
+            "by_group": {
+              "national_brand": {
+                "n": 29541,
+                "n_decided": 29020,
+                "n_safe": 7934,
+                "n_unsafe": 21607,
+                "unknown_rate": 0.0176,
+                "accuracy_decided": 0.9793,
+                "false_safe_rate": 0.0213,
+                "safe_found_rate": 0.944
+              },
+              "no_brand": {
+                "n": 14473,
+                "n_decided": 14367,
+                "n_safe": 1183,
+                "n_unsafe": 13290,
+                "unknown_rate": 0.0073,
+                "accuracy_decided": 0.976,
+                "false_safe_rate": 0.0237,
+                "safe_found_rate": 0.956
+              },
+              "store_brand": {
+                "n": 5336,
+                "n_decided": 5310,
+                "n_safe": 1045,
+                "n_unsafe": 4291,
+                "unknown_rate": 0.0049,
+                "accuracy_decided": 0.9846,
+                "false_safe_rate": 0.0165,
+                "safe_found_rate": 0.9789
+              }
+            },
+            "gaps": {
+              "unknown_rate": {
+                "difference": 0.0128,
+                "ratio": 0.2763,
+                "max_group": "national_brand",
+                "max": 0.0176,
+                "min_group": "store_brand",
+                "min": 0.0049,
+                "groups_compared": 3
+              },
+              "accuracy_decided": {
+                "difference": 0.0086,
+                "ratio": 0.9913,
+                "max_group": "store_brand",
+                "max": 0.9846,
+                "min_group": "no_brand",
+                "min": 0.976,
+                "groups_compared": 3
+              },
+              "false_safe_rate": {
+                "difference": 0.0072,
+                "ratio": 0.6981,
+                "max_group": "no_brand",
+                "max": 0.0237,
+                "min_group": "store_brand",
+                "min": 0.0165,
+                "groups_compared": 3
+              },
+              "safe_found_rate": {
+                "difference": 0.0349,
+                "ratio": 0.9643,
+                "max_group": "store_brand",
+                "max": 0.9789,
+                "min_group": "national_brand",
+                "min": 0.944,
+                "groups_compared": 3
+              }
+            }
+          },
+          "full": {
+            "by_group": {
+              "national_brand": {
+                "n": 29541,
+                "n_decided": 29042,
+                "n_safe": 7934,
+                "n_unsafe": 21607,
+                "unknown_rate": 0.0169,
+                "accuracy_decided": 0.9915,
+                "false_safe_rate": 0.0045,
+                "safe_found_rate": 0.9447
+              },
+              "no_brand": {
+                "n": 14473,
+                "n_decided": 14374,
+                "n_safe": 1183,
+                "n_unsafe": 13290,
+                "unknown_rate": 0.0068,
+                "accuracy_decided": 0.9953,
+                "false_safe_rate": 0.0027,
+                "safe_found_rate": 0.9577
+              },
+              "store_brand": {
+                "n": 5336,
+                "n_decided": 5311,
+                "n_safe": 1045,
+                "n_unsafe": 4291,
+                "unknown_rate": 0.0047,
+                "accuracy_decided": 0.9959,
+                "false_safe_rate": 0.0026,
+                "safe_found_rate": 0.9799
+              }
+            },
+            "gaps": {
+              "unknown_rate": {
+                "difference": 0.0122,
+                "ratio": 0.2774,
+                "max_group": "national_brand",
+                "max": 0.0169,
+                "min_group": "store_brand",
+                "min": 0.0047,
+                "groups_compared": 3
+              },
+              "accuracy_decided": {
+                "difference": 0.0044,
+                "ratio": 0.9956,
+                "max_group": "store_brand",
+                "max": 0.9959,
+                "min_group": "national_brand",
+                "min": 0.9915,
+                "groups_compared": 3
+              },
+              "false_safe_rate": {
+                "difference": 0.002,
+                "ratio": 0.5652,
+                "max_group": "national_brand",
+                "max": 0.0045,
+                "min_group": "store_brand",
+                "min": 0.0026,
+                "groups_compared": 3
+              },
+              "safe_found_rate": {
+                "difference": 0.0352,
+                "ratio": 0.964,
+                "max_group": "store_brand",
+                "max": 0.9799,
+                "min_group": "national_brand",
+                "min": 0.9447,
+                "groups_compared": 3
+              }
+            }
+          }
+        },
+        "coverage_by_profile": {
+          "vegan": {
+            "by_group": {
+              "national_brand": {
+                "n": 11820,
+                "unknown_rate": 0.006
+              },
+              "no_brand": {
+                "n": 6179,
+                "unknown_rate": 0.0013
+              },
+              "store_brand": {
+                "n": 2001,
+                "unknown_rate": 0.001
+              }
+            },
+            "gaps": {
+              "unknown_rate": {
+                "difference": 0.005,
+                "ratio": 0.1664,
+                "max_group": "national_brand",
+                "max": 0.006,
+                "min_group": "store_brand",
+                "min": 0.001,
+                "groups_compared": 3
+              }
+            }
+          },
+          "vegetarian": {
+            "by_group": {
+              "national_brand": {
+                "n": 11820,
+                "unknown_rate": 0.0079
+              },
+              "no_brand": {
+                "n": 6179,
+                "unknown_rate": 0.0016
+              },
+              "store_brand": {
+                "n": 2001,
+                "unknown_rate": 0.0015
+              }
+            },
+            "gaps": {
+              "unknown_rate": {
+                "difference": 0.0064,
+                "ratio": 0.1905,
+                "max_group": "national_brand",
+                "max": 0.0079,
+                "min_group": "store_brand",
+                "min": 0.0015,
+                "groups_compared": 3
+              }
+            }
+          },
+          "gluten_free": {
+            "by_group": {
+              "national_brand": {
+                "n": 11820,
+                "unknown_rate": 0.0245
+              },
+              "no_brand": {
+                "n": 6179,
+                "unknown_rate": 0.0178
+              },
+              "store_brand": {
+                "n": 2001,
+                "unknown_rate": 0.017
+              }
+            },
+            "gaps": {
+              "unknown_rate": {
+                "difference": 0.0075,
+                "ratio": 0.6926,
+                "max_group": "national_brand",
+                "max": 0.0245,
+                "min_group": "store_brand",
+                "min": 0.017,
+                "groups_compared": 3
+              }
+            }
+          }
+        },
+        "correctness_by_profile": {
+          "vegan": {
+            "tags_only": {
+              "by_group": {
+                "national_brand": {
+                  "n": 7684,
+                  "n_decided": 4256,
+                  "n_safe": 1730,
+                  "n_unsafe": 5954,
+                  "unknown_rate": 0.4461,
+                  "accuracy_decided": 0.9885,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.0
+                },
+                "no_brand": {
+                  "n": 3918,
+                  "n_decided": 2574,
+                  "n_safe": 276,
+                  "n_unsafe": 3642,
+                  "unknown_rate": 0.343,
+                  "accuracy_decided": 0.9953,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.0
+                },
+                "store_brand": {
+                  "n": 1558,
+                  "n_decided": 986,
+                  "n_safe": 233,
+                  "n_unsafe": 1325,
+                  "unknown_rate": 0.3671,
+                  "accuracy_decided": 0.9959,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.0
+                }
+              },
+              "gaps": {
+                "unknown_rate": {
+                  "difference": 0.1031,
+                  "ratio": 0.7689,
+                  "max_group": "national_brand",
+                  "max": 0.4461,
+                  "min_group": "no_brand",
+                  "min": 0.343,
+                  "groups_compared": 3
+                },
+                "accuracy_decided": {
+                  "difference": 0.0075,
+                  "ratio": 0.9925,
+                  "max_group": "store_brand",
+                  "max": 0.9959,
+                  "min_group": "national_brand",
+                  "min": 0.9885,
+                  "groups_compared": 3
+                },
+                "false_safe_rate": {
+                  "difference": 0.0,
+                  "ratio": null,
+                  "max_group": "national_brand",
+                  "max": 0.0,
+                  "min_group": "national_brand",
+                  "min": 0.0,
+                  "groups_compared": 3
+                },
+                "safe_found_rate": {
+                  "difference": 0.0,
+                  "ratio": null,
+                  "max_group": "national_brand",
+                  "max": 0.0,
+                  "min_group": "national_brand",
+                  "min": 0.0,
+                  "groups_compared": 3
+                }
+              }
+            },
+            "full": {
+              "by_group": {
+                "national_brand": {
+                  "n": 7684,
+                  "n_decided": 7619,
+                  "n_safe": 1730,
+                  "n_unsafe": 5954,
+                  "unknown_rate": 0.0085,
+                  "accuracy_decided": 0.9793,
+                  "false_safe_rate": 0.0134,
+                  "safe_found_rate": 0.9266
+                },
+                "no_brand": {
+                  "n": 3918,
+                  "n_decided": 3915,
+                  "n_safe": 276,
+                  "n_unsafe": 3642,
+                  "unknown_rate": 0.0008,
+                  "accuracy_decided": 0.9885,
+                  "false_safe_rate": 0.008,
+                  "safe_found_rate": 0.9348
+                },
+                "store_brand": {
+                  "n": 1558,
+                  "n_decided": 1558,
+                  "n_safe": 233,
+                  "n_unsafe": 1325,
+                  "unknown_rate": 0.0,
+                  "accuracy_decided": 0.9897,
+                  "false_safe_rate": 0.0083,
+                  "safe_found_rate": 0.9785
+                }
+              },
+              "gaps": {
+                "unknown_rate": {
+                  "difference": 0.0085,
+                  "ratio": 0.0,
+                  "max_group": "national_brand",
+                  "max": 0.0085,
+                  "min_group": "store_brand",
+                  "min": 0.0,
+                  "groups_compared": 3
+                },
+                "accuracy_decided": {
+                  "difference": 0.0105,
+                  "ratio": 0.9894,
+                  "max_group": "store_brand",
+                  "max": 0.9897,
+                  "min_group": "national_brand",
+                  "min": 0.9793,
+                  "groups_compared": 3
+                },
+                "false_safe_rate": {
+                  "difference": 0.0055,
+                  "ratio": 0.5926,
+                  "max_group": "national_brand",
+                  "max": 0.0134,
+                  "min_group": "no_brand",
+                  "min": 0.008,
+                  "groups_compared": 3
+                },
+                "safe_found_rate": {
+                  "difference": 0.052,
+                  "ratio": 0.9469,
+                  "max_group": "store_brand",
+                  "max": 0.9785,
+                  "min_group": "national_brand",
+                  "min": 0.9266,
+                  "groups_compared": 3
+                }
+              }
+            }
+          },
+          "vegetarian": {
+            "tags_only": {
+              "by_group": {
+                "national_brand": {
+                  "n": 4360,
+                  "n_decided": 1352,
+                  "n_safe": 1852,
+                  "n_unsafe": 2508,
+                  "unknown_rate": 0.6899,
+                  "accuracy_decided": 0.9926,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.0
+                },
+                "no_brand": {
+                  "n": 1898,
+                  "n_decided": 927,
+                  "n_safe": 288,
+                  "n_unsafe": 1610,
+                  "unknown_rate": 0.5116,
+                  "accuracy_decided": 0.9989,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.0
+                },
+                "store_brand": {
+                  "n": 707,
+                  "n_decided": 230,
+                  "n_safe": 247,
+                  "n_unsafe": 460,
+                  "unknown_rate": 0.6747,
+                  "accuracy_decided": 0.9957,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.0
+                }
+              },
+              "gaps": {
+                "unknown_rate": {
+                  "difference": 0.1783,
+                  "ratio": 0.7415,
+                  "max_group": "national_brand",
+                  "max": 0.6899,
+                  "min_group": "no_brand",
+                  "min": 0.5116,
+                  "groups_compared": 3
+                },
+                "accuracy_decided": {
+                  "difference": 0.0063,
+                  "ratio": 0.9937,
+                  "max_group": "no_brand",
+                  "max": 0.9989,
+                  "min_group": "national_brand",
+                  "min": 0.9926,
+                  "groups_compared": 3
+                },
+                "false_safe_rate": {
+                  "difference": 0.0,
+                  "ratio": null,
+                  "max_group": "national_brand",
+                  "max": 0.0,
+                  "min_group": "national_brand",
+                  "min": 0.0,
+                  "groups_compared": 3
+                },
+                "safe_found_rate": {
+                  "difference": 0.0,
+                  "ratio": null,
+                  "max_group": "national_brand",
+                  "max": 0.0,
+                  "min_group": "national_brand",
+                  "min": 0.0,
+                  "groups_compared": 3
+                }
+              }
+            },
+            "full": {
+              "by_group": {
+                "national_brand": {
+                  "n": 4360,
+                  "n_decided": 4299,
+                  "n_safe": 1852,
+                  "n_unsafe": 2508,
+                  "unknown_rate": 0.014,
+                  "accuracy_decided": 0.9916,
+                  "false_safe_rate": 0.0044,
+                  "safe_found_rate": 0.9568
+                },
+                "no_brand": {
+                  "n": 1898,
+                  "n_decided": 1896,
+                  "n_safe": 288,
+                  "n_unsafe": 1610,
+                  "unknown_rate": 0.0011,
+                  "accuracy_decided": 0.9974,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.9757
+                },
+                "store_brand": {
+                  "n": 707,
+                  "n_decided": 707,
+                  "n_safe": 247,
+                  "n_unsafe": 460,
+                  "unknown_rate": 0.0,
+                  "accuracy_decided": 0.9986,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.996
+                }
+              },
+              "gaps": {
+                "unknown_rate": {
+                  "difference": 0.014,
+                  "ratio": 0.0,
+                  "max_group": "national_brand",
+                  "max": 0.014,
+                  "min_group": "store_brand",
+                  "min": 0.0,
+                  "groups_compared": 3
+                },
+                "accuracy_decided": {
+                  "difference": 0.007,
+                  "ratio": 0.993,
+                  "max_group": "store_brand",
+                  "max": 0.9986,
+                  "min_group": "national_brand",
+                  "min": 0.9916,
+                  "groups_compared": 3
+                },
+                "false_safe_rate": {
+                  "difference": 0.0044,
+                  "ratio": 0.0,
+                  "max_group": "national_brand",
+                  "max": 0.0044,
+                  "min_group": "no_brand",
+                  "min": 0.0,
+                  "groups_compared": 3
+                },
+                "safe_found_rate": {
+                  "difference": 0.0391,
+                  "ratio": 0.9607,
+                  "max_group": "store_brand",
+                  "max": 0.996,
+                  "min_group": "national_brand",
+                  "min": 0.9568,
+                  "groups_compared": 3
+                }
+              }
+            }
+          },
+          "gluten_free": {
+            "tags_only": {
+              "by_group": {
+                "national_brand": {
+                  "n": 17497,
+                  "n_decided": 13167,
+                  "n_safe": 4352,
+                  "n_unsafe": 13145,
+                  "unknown_rate": 0.2475,
+                  "accuracy_decided": 0.9983,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.0
+                },
+                "no_brand": {
+                  "n": 8657,
+                  "n_decided": 8040,
+                  "n_safe": 619,
+                  "n_unsafe": 8038,
+                  "unknown_rate": 0.0713,
+                  "accuracy_decided": 0.9998,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.0
+                },
+                "store_brand": {
+                  "n": 3071,
+                  "n_decided": 2508,
+                  "n_safe": 565,
+                  "n_unsafe": 2506,
+                  "unknown_rate": 0.1833,
+                  "accuracy_decided": 0.9992,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.0
+                }
+              },
+              "gaps": {
+                "unknown_rate": {
+                  "difference": 0.1762,
+                  "ratio": 0.288,
+                  "max_group": "national_brand",
+                  "max": 0.2475,
+                  "min_group": "no_brand",
+                  "min": 0.0713,
+                  "groups_compared": 3
+                },
+                "accuracy_decided": {
+                  "difference": 0.0014,
+                  "ratio": 0.9986,
+                  "max_group": "no_brand",
+                  "max": 0.9998,
+                  "min_group": "national_brand",
+                  "min": 0.9983,
+                  "groups_compared": 3
+                },
+                "false_safe_rate": {
+                  "difference": 0.0,
+                  "ratio": null,
+                  "max_group": "national_brand",
+                  "max": 0.0,
+                  "min_group": "national_brand",
+                  "min": 0.0,
+                  "groups_compared": 3
+                },
+                "safe_found_rate": {
+                  "difference": 0.0,
+                  "ratio": null,
+                  "max_group": "national_brand",
+                  "max": 0.0,
+                  "min_group": "national_brand",
+                  "min": 0.0,
+                  "groups_compared": 3
+                }
+              }
+            },
+            "full": {
+              "by_group": {
+                "national_brand": {
+                  "n": 17497,
+                  "n_decided": 17124,
+                  "n_safe": 4352,
+                  "n_unsafe": 13145,
+                  "unknown_rate": 0.0213,
+                  "accuracy_decided": 0.9969,
+                  "false_safe_rate": 0.0005,
+                  "safe_found_rate": 0.9467
+                },
+                "no_brand": {
+                  "n": 8657,
+                  "n_decided": 8563,
+                  "n_safe": 619,
+                  "n_unsafe": 8038,
+                  "unknown_rate": 0.0109,
+                  "accuracy_decided": 0.998,
+                  "false_safe_rate": 0.0009,
+                  "safe_found_rate": 0.9596
+                },
+                "store_brand": {
+                  "n": 3071,
+                  "n_decided": 3046,
+                  "n_safe": 565,
+                  "n_unsafe": 2506,
+                  "unknown_rate": 0.0081,
+                  "accuracy_decided": 0.9984,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.9735
+                }
+              },
+              "gaps": {
+                "unknown_rate": {
+                  "difference": 0.0132,
+                  "ratio": 0.3819,
+                  "max_group": "national_brand",
+                  "max": 0.0213,
+                  "min_group": "store_brand",
+                  "min": 0.0081,
+                  "groups_compared": 3
+                },
+                "accuracy_decided": {
+                  "difference": 0.0015,
+                  "ratio": 0.9985,
+                  "max_group": "store_brand",
+                  "max": 0.9984,
+                  "min_group": "national_brand",
+                  "min": 0.9969,
+                  "groups_compared": 3
+                },
+                "false_safe_rate": {
+                  "difference": 0.0009,
+                  "ratio": 0.0,
+                  "max_group": "no_brand",
+                  "max": 0.0009,
+                  "min_group": "store_brand",
+                  "min": 0.0,
+                  "groups_compared": 3
+                },
+                "safe_found_rate": {
+                  "difference": 0.0268,
+                  "ratio": 0.9725,
+                  "max_group": "store_brand",
+                  "max": 0.9735,
+                  "min_group": "national_brand",
+                  "min": 0.9467,
+                  "groups_compared": 3
+                }
+              }
+            }
+          }
+        }
+      },
+      "popularity_tier": {
+        "coverage": {
+          "tags_only": {
+            "by_group": {
+              "0 scans": {
+                "n": 46674,
+                "unknown_rate": 0.7578
+              },
+              "1-9 scans": {
+                "n": 12825,
+                "unknown_rate": 0.7922
+              },
+              "10+ scans": {
+                "n": 501,
+                "unknown_rate": 0.8124
+              }
+            },
+            "gaps": {
+              "unknown_rate": {
+                "difference": 0.0546,
+                "ratio": 0.9328,
+                "max_group": "10+ scans",
+                "max": 0.8124,
+                "min_group": "0 scans",
+                "min": 0.7578,
+                "groups_compared": 3
+              }
+            }
+          },
+          "tags_and_text": {
+            "by_group": {
+              "0 scans": {
+                "n": 46674,
+                "unknown_rate": 0.0073
+              },
+              "1-9 scans": {
+                "n": 12825,
+                "unknown_rate": 0.0215
+              },
+              "10+ scans": {
+                "n": 501,
+                "unknown_rate": 0.0399
+              }
+            },
+            "gaps": {
+              "unknown_rate": {
+                "difference": 0.0326,
+                "ratio": 0.1825,
+                "max_group": "10+ scans",
+                "max": 0.0399,
+                "min_group": "0 scans",
+                "min": 0.0073,
+                "groups_compared": 3
+              }
+            }
+          },
+          "full": {
+            "by_group": {
+              "0 scans": {
+                "n": 46674,
+                "unknown_rate": 0.0071
+              },
+              "1-9 scans": {
+                "n": 12825,
+                "unknown_rate": 0.0211
+              },
+              "10+ scans": {
+                "n": 501,
+                "unknown_rate": 0.0399
+              }
+            },
+            "gaps": {
+              "unknown_rate": {
+                "difference": 0.0328,
+                "ratio": 0.1776,
+                "max_group": "10+ scans",
+                "max": 0.0399,
+                "min_group": "0 scans",
+                "min": 0.0071,
+                "groups_compared": 3
+              }
+            }
+          }
+        },
+        "correctness": {
+          "tags_only": {
+            "by_group": {
+              "0 scans": {
+                "n": 35162,
+                "n_decided": 26907,
+                "n_safe": 4288,
+                "n_unsafe": 30874,
+                "unknown_rate": 0.2348,
+                "accuracy_decided": 0.9981,
+                "false_safe_rate": 0.0,
+                "safe_found_rate": 0.0
+              },
+              "1-9 scans": {
+                "n": 13442,
+                "n_decided": 6855,
+                "n_safe": 5423,
+                "n_unsafe": 8019,
+                "unknown_rate": 0.49,
+                "accuracy_decided": 0.9936,
+                "false_safe_rate": 0.0,
+                "safe_found_rate": 0.0
+              },
+              "10+ scans": {
+                "n": 746,
+                "n_decided": 278,
+                "n_safe": 451,
+                "n_unsafe": 295,
+                "unknown_rate": 0.6273,
+                "accuracy_decided": 0.9676,
+                "false_safe_rate": 0.0,
+                "safe_found_rate": 0.0
+              }
+            },
+            "gaps": {
+              "unknown_rate": {
+                "difference": 0.3926,
+                "ratio": 0.3742,
+                "max_group": "10+ scans",
+                "max": 0.6273,
+                "min_group": "0 scans",
+                "min": 0.2348,
+                "groups_compared": 3
+              },
+              "accuracy_decided": {
+                "difference": 0.0305,
+                "ratio": 0.9694,
+                "max_group": "0 scans",
+                "max": 0.9981,
+                "min_group": "10+ scans",
+                "min": 0.9676,
+                "groups_compared": 3
+              },
+              "false_safe_rate": {
+                "difference": 0.0,
+                "ratio": null,
+                "max_group": "0 scans",
+                "max": 0.0,
+                "min_group": "0 scans",
+                "min": 0.0,
+                "groups_compared": 3
+              },
+              "safe_found_rate": {
+                "difference": 0.0,
+                "ratio": null,
+                "max_group": "0 scans",
+                "max": 0.0,
+                "min_group": "0 scans",
+                "min": 0.0,
+                "groups_compared": 3
+              }
+            }
+          },
+          "tags_and_text": {
+            "by_group": {
+              "0 scans": {
+                "n": 35162,
+                "n_decided": 34836,
+                "n_safe": 4288,
+                "n_unsafe": 30874,
+                "unknown_rate": 0.0093,
+                "accuracy_decided": 0.9773,
+                "false_safe_rate": 0.0226,
+                "safe_found_rate": 0.951
+              },
+              "1-9 scans": {
+                "n": 13442,
+                "n_decided": 13137,
+                "n_safe": 5423,
+                "n_unsafe": 8019,
+                "unknown_rate": 0.0227,
+                "accuracy_decided": 0.983,
+                "false_safe_rate": 0.018,
+                "safe_found_rate": 0.9478
+              },
+              "10+ scans": {
+                "n": 746,
+                "n_decided": 724,
+                "n_safe": 451,
+                "n_unsafe": 295,
+                "unknown_rate": 0.0295,
+                "accuracy_decided": 0.9793,
+                "false_safe_rate": 0.0136,
+                "safe_found_rate": 0.9446
+              }
+            },
+            "gaps": {
+              "unknown_rate": {
+                "difference": 0.0202,
+                "ratio": 0.3144,
+                "max_group": "10+ scans",
+                "max": 0.0295,
+                "min_group": "0 scans",
+                "min": 0.0093,
+                "groups_compared": 3
+              },
+              "accuracy_decided": {
+                "difference": 0.0057,
+                "ratio": 0.9942,
+                "max_group": "1-9 scans",
+                "max": 0.983,
+                "min_group": "0 scans",
+                "min": 0.9773,
+                "groups_compared": 3
+              },
+              "false_safe_rate": {
+                "difference": 0.0091,
+                "ratio": 0.5989,
+                "max_group": "0 scans",
+                "max": 0.0226,
+                "min_group": "10+ scans",
+                "min": 0.0136,
+                "groups_compared": 3
+              },
+              "safe_found_rate": {
+                "difference": 0.0065,
+                "ratio": 0.9932,
+                "max_group": "0 scans",
+                "max": 0.951,
+                "min_group": "10+ scans",
+                "min": 0.9446,
+                "groups_compared": 3
+              }
+            }
+          },
+          "full": {
+            "by_group": {
+              "0 scans": {
+                "n": 35162,
+                "n_decided": 34846,
+                "n_safe": 4288,
+                "n_unsafe": 30874,
+                "unknown_rate": 0.009,
+                "accuracy_decided": 0.9945,
+                "false_safe_rate": 0.0031,
+                "safe_found_rate": 0.9513
+              },
+              "1-9 scans": {
+                "n": 13442,
+                "n_decided": 13156,
+                "n_safe": 5423,
+                "n_unsafe": 8019,
+                "unknown_rate": 0.0213,
+                "accuracy_decided": 0.99,
+                "false_safe_rate": 0.0059,
+                "safe_found_rate": 0.9491
+              },
+              "10+ scans": {
+                "n": 746,
+                "n_decided": 725,
+                "n_safe": 451,
+                "n_unsafe": 295,
+                "unknown_rate": 0.0282,
+                "accuracy_decided": 0.9821,
+                "false_safe_rate": 0.0068,
+                "safe_found_rate": 0.9446
+              }
+            },
+            "gaps": {
+              "unknown_rate": {
+                "difference": 0.0192,
+                "ratio": 0.3193,
+                "max_group": "10+ scans",
+                "max": 0.0282,
+                "min_group": "0 scans",
+                "min": 0.009,
+                "groups_compared": 3
+              },
+              "accuracy_decided": {
+                "difference": 0.0124,
+                "ratio": 0.9875,
+                "max_group": "0 scans",
+                "max": 0.9945,
+                "min_group": "10+ scans",
+                "min": 0.9821,
+                "groups_compared": 3
+              },
+              "false_safe_rate": {
+                "difference": 0.0037,
+                "ratio": 0.4586,
+                "max_group": "10+ scans",
+                "max": 0.0068,
+                "min_group": "0 scans",
+                "min": 0.0031,
+                "groups_compared": 3
+              },
+              "safe_found_rate": {
+                "difference": 0.0067,
+                "ratio": 0.993,
+                "max_group": "0 scans",
+                "max": 0.9513,
+                "min_group": "10+ scans",
+                "min": 0.9446,
+                "groups_compared": 3
+              }
+            }
+          }
+        },
+        "coverage_by_profile": {
+          "vegan": {
+            "by_group": {
+              "0 scans": {
+                "n": 15558,
+                "unknown_rate": 0.0015
+              },
+              "1-9 scans": {
+                "n": 4275,
+                "unknown_rate": 0.0126
+              },
+              "10+ scans": {
+                "n": 167,
+                "unknown_rate": 0.018
+              }
+            },
+            "gaps": {
+              "unknown_rate": {
+                "difference": 0.0164,
+                "ratio": 0.0859,
+                "max_group": "10+ scans",
+                "max": 0.018,
+                "min_group": "0 scans",
+                "min": 0.0015,
+                "groups_compared": 3
+              }
+            }
+          },
+          "vegetarian": {
+            "by_group": {
+              "0 scans": {
+                "n": 15558,
+                "unknown_rate": 0.0024
+              },
+              "1-9 scans": {
+                "n": 4275,
+                "unknown_rate": 0.015
+              },
+              "10+ scans": {
+                "n": 167,
+                "unknown_rate": 0.0299
+              }
+            },
+            "gaps": {
+              "unknown_rate": {
+                "difference": 0.0276,
+                "ratio": 0.0794,
+                "max_group": "10+ scans",
+                "max": 0.0299,
+                "min_group": "0 scans",
+                "min": 0.0024,
+                "groups_compared": 3
+              }
+            }
+          },
+          "gluten_free": {
+            "by_group": {
+              "0 scans": {
+                "n": 15558,
+                "unknown_rate": 0.0174
+              },
+              "1-9 scans": {
+                "n": 4275,
+                "unknown_rate": 0.0356
+              },
+              "10+ scans": {
+                "n": 167,
+                "unknown_rate": 0.0719
+              }
+            },
+            "gaps": {
+              "unknown_rate": {
+                "difference": 0.0545,
+                "ratio": 0.2415,
+                "max_group": "10+ scans",
+                "max": 0.0719,
+                "min_group": "0 scans",
+                "min": 0.0174,
+                "groups_compared": 3
+              }
+            }
+          }
+        },
+        "correctness_by_profile": {
+          "vegan": {
+            "tags_only": {
+              "by_group": {
+                "0 scans": {
+                  "n": 9304,
+                  "n_decided": 5982,
+                  "n_safe": 950,
+                  "n_unsafe": 8354,
+                  "unknown_rate": 0.3571,
+                  "accuracy_decided": 0.994,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.0
+                },
+                "1-9 scans": {
+                  "n": 3644,
+                  "n_decided": 1740,
+                  "n_safe": 1185,
+                  "n_unsafe": 2459,
+                  "unknown_rate": 0.5225,
+                  "accuracy_decided": 0.9856,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.0
+                },
+                "10+ scans": {
+                  "n": 212,
+                  "n_decided": 94,
+                  "n_safe": 104,
+                  "n_unsafe": 108,
+                  "unknown_rate": 0.5566,
+                  "accuracy_decided": 0.9574,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.0
+                }
+              },
+              "gaps": {
+                "unknown_rate": {
+                  "difference": 0.1996,
+                  "ratio": 0.6415,
+                  "max_group": "10+ scans",
+                  "max": 0.5566,
+                  "min_group": "0 scans",
+                  "min": 0.3571,
+                  "groups_compared": 3
+                },
+                "accuracy_decided": {
+                  "difference": 0.0365,
+                  "ratio": 0.9632,
+                  "max_group": "0 scans",
+                  "max": 0.994,
+                  "min_group": "10+ scans",
+                  "min": 0.9574,
+                  "groups_compared": 3
+                },
+                "false_safe_rate": {
+                  "difference": 0.0,
+                  "ratio": null,
+                  "max_group": "0 scans",
+                  "max": 0.0,
+                  "min_group": "0 scans",
+                  "min": 0.0,
+                  "groups_compared": 3
+                },
+                "safe_found_rate": {
+                  "difference": 0.0,
+                  "ratio": null,
+                  "max_group": "0 scans",
+                  "max": 0.0,
+                  "min_group": "0 scans",
+                  "min": 0.0,
+                  "groups_compared": 3
+                }
+              }
+            },
+            "full": {
+              "by_group": {
+                "0 scans": {
+                  "n": 9304,
+                  "n_decided": 9281,
+                  "n_safe": 950,
+                  "n_unsafe": 8354,
+                  "unknown_rate": 0.0025,
+                  "accuracy_decided": 0.9861,
+                  "false_safe_rate": 0.0091,
+                  "safe_found_rate": 0.9242
+                },
+                "1-9 scans": {
+                  "n": 3644,
+                  "n_decided": 3602,
+                  "n_safe": 1185,
+                  "n_unsafe": 2459,
+                  "unknown_rate": 0.0115,
+                  "accuracy_decided": 0.9767,
+                  "false_safe_rate": 0.0171,
+                  "safe_found_rate": 0.9384
+                },
+                "10+ scans": {
+                  "n": 212,
+                  "n_decided": 209,
+                  "n_safe": 104,
+                  "n_unsafe": 108,
+                  "unknown_rate": 0.0142,
+                  "accuracy_decided": 0.9713,
+                  "false_safe_rate": 0.0185,
+                  "safe_found_rate": 0.9519
+                }
+              },
+              "gaps": {
+                "unknown_rate": {
+                  "difference": 0.0117,
+                  "ratio": 0.1747,
+                  "max_group": "10+ scans",
+                  "max": 0.0142,
+                  "min_group": "0 scans",
+                  "min": 0.0025,
+                  "groups_compared": 3
+                },
+                "accuracy_decided": {
+                  "difference": 0.0148,
+                  "ratio": 0.985,
+                  "max_group": "0 scans",
+                  "max": 0.9861,
+                  "min_group": "10+ scans",
+                  "min": 0.9713,
+                  "groups_compared": 3
+                },
+                "false_safe_rate": {
+                  "difference": 0.0094,
+                  "ratio": 0.4913,
+                  "max_group": "10+ scans",
+                  "max": 0.0185,
+                  "min_group": "0 scans",
+                  "min": 0.0091,
+                  "groups_compared": 3
+                },
+                "safe_found_rate": {
+                  "difference": 0.0277,
+                  "ratio": 0.9709,
+                  "max_group": "10+ scans",
+                  "max": 0.9519,
+                  "min_group": "0 scans",
+                  "min": 0.9242,
+                  "groups_compared": 3
+                }
+              }
+            }
+          },
+          "vegetarian": {
+            "tags_only": {
+              "by_group": {
+                "0 scans": {
+                  "n": 4658,
+                  "n_decided": 2062,
+                  "n_safe": 994,
+                  "n_unsafe": 3664,
+                  "unknown_rate": 0.5573,
+                  "accuracy_decided": 0.9966,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.0
+                },
+                "1-9 scans": {
+                  "n": 2167,
+                  "n_decided": 435,
+                  "n_safe": 1273,
+                  "n_unsafe": 894,
+                  "unknown_rate": 0.7993,
+                  "accuracy_decided": 0.9885,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.0
+                },
+                "10+ scans": {
+                  "n": 140,
+                  "n_decided": 12,
+                  "n_safe": 120,
+                  "n_unsafe": 20,
+                  "unknown_rate": 0.9143,
+                  "accuracy_decided": 1.0,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.0
+                }
+              },
+              "gaps": {
+                "unknown_rate": {
+                  "difference": 0.357,
+                  "ratio": 0.6096,
+                  "max_group": "10+ scans",
+                  "max": 0.9143,
+                  "min_group": "0 scans",
+                  "min": 0.5573,
+                  "groups_compared": 3
+                },
+                "accuracy_decided": {
+                  "difference": 0.0081,
+                  "ratio": 0.9919,
+                  "max_group": "0 scans",
+                  "max": 0.9966,
+                  "min_group": "1-9 scans",
+                  "min": 0.9885,
+                  "groups_compared": 2
+                },
+                "false_safe_rate": {
+                  "difference": 0.0,
+                  "ratio": null,
+                  "max_group": "0 scans",
+                  "max": 0.0,
+                  "min_group": "0 scans",
+                  "min": 0.0,
+                  "groups_compared": 2
+                },
+                "safe_found_rate": {
+                  "difference": 0.0,
+                  "ratio": null,
+                  "max_group": "0 scans",
+                  "max": 0.0,
+                  "min_group": "0 scans",
+                  "min": 0.0,
+                  "groups_compared": 3
+                }
+              }
+            },
+            "full": {
+              "by_group": {
+                "0 scans": {
+                  "n": 4658,
+                  "n_decided": 4635,
+                  "n_safe": 994,
+                  "n_unsafe": 3664,
+                  "unknown_rate": 0.0049,
+                  "accuracy_decided": 0.9948,
+                  "false_safe_rate": 0.0022,
+                  "safe_found_rate": 0.9628
+                },
+                "1-9 scans": {
+                  "n": 2167,
+                  "n_decided": 2128,
+                  "n_safe": 1273,
+                  "n_unsafe": 894,
+                  "unknown_rate": 0.018,
+                  "accuracy_decided": 0.992,
+                  "false_safe_rate": 0.0034,
+                  "safe_found_rate": 0.9615
+                },
+                "10+ scans": {
+                  "n": 140,
+                  "n_decided": 139,
+                  "n_safe": 120,
+                  "n_unsafe": 20,
+                  "unknown_rate": 0.0071,
+                  "accuracy_decided": 0.9928,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.9833
+                }
+              },
+              "gaps": {
+                "unknown_rate": {
+                  "difference": 0.0131,
+                  "ratio": 0.2744,
+                  "max_group": "1-9 scans",
+                  "max": 0.018,
+                  "min_group": "0 scans",
+                  "min": 0.0049,
+                  "groups_compared": 3
+                },
+                "accuracy_decided": {
+                  "difference": 0.0028,
+                  "ratio": 0.9972,
+                  "max_group": "0 scans",
+                  "max": 0.9948,
+                  "min_group": "1-9 scans",
+                  "min": 0.992,
+                  "groups_compared": 3
+                },
+                "false_safe_rate": {
+                  "difference": 0.0012,
+                  "ratio": 0.6507,
+                  "max_group": "1-9 scans",
+                  "max": 0.0034,
+                  "min_group": "0 scans",
+                  "min": 0.0022,
+                  "groups_compared": 2
+                },
+                "safe_found_rate": {
+                  "difference": 0.0218,
+                  "ratio": 0.9778,
+                  "max_group": "10+ scans",
+                  "max": 0.9833,
+                  "min_group": "1-9 scans",
+                  "min": 0.9615,
+                  "groups_compared": 3
+                }
+              }
+            }
+          },
+          "gluten_free": {
+            "tags_only": {
+              "by_group": {
+                "0 scans": {
+                  "n": 21200,
+                  "n_decided": 18863,
+                  "n_safe": 2344,
+                  "n_unsafe": 18856,
+                  "unknown_rate": 0.1102,
+                  "accuracy_decided": 0.9996,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.0
+                },
+                "1-9 scans": {
+                  "n": 7631,
+                  "n_decided": 4680,
+                  "n_safe": 2965,
+                  "n_unsafe": 4666,
+                  "unknown_rate": 0.3867,
+                  "accuracy_decided": 0.997,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.0
+                },
+                "10+ scans": {
+                  "n": 394,
+                  "n_decided": 172,
+                  "n_safe": 227,
+                  "n_unsafe": 167,
+                  "unknown_rate": 0.5635,
+                  "accuracy_decided": 0.9709,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.0
+                }
+              },
+              "gaps": {
+                "unknown_rate": {
+                  "difference": 0.4532,
+                  "ratio": 0.1956,
+                  "max_group": "10+ scans",
+                  "max": 0.5635,
+                  "min_group": "0 scans",
+                  "min": 0.1102,
+                  "groups_compared": 3
+                },
+                "accuracy_decided": {
+                  "difference": 0.0287,
+                  "ratio": 0.9713,
+                  "max_group": "0 scans",
+                  "max": 0.9996,
+                  "min_group": "10+ scans",
+                  "min": 0.9709,
+                  "groups_compared": 3
+                },
+                "false_safe_rate": {
+                  "difference": 0.0,
+                  "ratio": null,
+                  "max_group": "0 scans",
+                  "max": 0.0,
+                  "min_group": "0 scans",
+                  "min": 0.0,
+                  "groups_compared": 3
+                },
+                "safe_found_rate": {
+                  "difference": 0.0,
+                  "ratio": null,
+                  "max_group": "0 scans",
+                  "max": 0.0,
+                  "min_group": "0 scans",
+                  "min": 0.0,
+                  "groups_compared": 3
+                }
+              }
+            },
+            "full": {
+              "by_group": {
+                "0 scans": {
+                  "n": 21200,
+                  "n_decided": 20930,
+                  "n_safe": 2344,
+                  "n_unsafe": 18856,
+                  "unknown_rate": 0.0127,
+                  "accuracy_decided": 0.9981,
+                  "false_safe_rate": 0.0006,
+                  "safe_found_rate": 0.9573
+                },
+                "1-9 scans": {
+                  "n": 7631,
+                  "n_decided": 7426,
+                  "n_safe": 2965,
+                  "n_unsafe": 4666,
+                  "unknown_rate": 0.0269,
+                  "accuracy_decided": 0.996,
+                  "false_safe_rate": 0.0004,
+                  "safe_found_rate": 0.9481
+                },
+                "10+ scans": {
+                  "n": 394,
+                  "n_decided": 377,
+                  "n_safe": 227,
+                  "n_unsafe": 167,
+                  "unknown_rate": 0.0431,
+                  "accuracy_decided": 0.9841,
+                  "false_safe_rate": 0.0,
+                  "safe_found_rate": 0.9207
+                }
+              },
+              "gaps": {
+                "unknown_rate": {
+                  "difference": 0.0304,
+                  "ratio": 0.2952,
+                  "max_group": "10+ scans",
+                  "max": 0.0431,
+                  "min_group": "0 scans",
+                  "min": 0.0127,
+                  "groups_compared": 3
+                },
+                "accuracy_decided": {
+                  "difference": 0.0141,
+                  "ratio": 0.9859,
+                  "max_group": "0 scans",
+                  "max": 0.9981,
+                  "min_group": "10+ scans",
+                  "min": 0.9841,
+                  "groups_compared": 3
+                },
+                "false_safe_rate": {
+                  "difference": 0.0006,
+                  "ratio": 0.0,
+                  "max_group": "0 scans",
+                  "max": 0.0006,
+                  "min_group": "10+ scans",
+                  "min": 0.0,
+                  "groups_compared": 3
+                },
+                "safe_found_rate": {
+                  "difference": 0.0366,
+                  "ratio": 0.9617,
+                  "max_group": "0 scans",
+                  "max": 0.9573,
+                  "min_group": "10+ scans",
+                  "min": 0.9207,
+                  "groups_compared": 3
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "false_safe_examples": {
+      "vegan": [
+        {
+          "barcode": "5941355008844",
+          "name": "zuzu iaurt fructe padure",
+          "brand": "zuzu",
+          "category_group": "dairy_eggs"
+        },
+        {
+          "barcode": "0025990018415",
+          "name": "Kvarg vanilla",
+          "brand": "Lindahls",
+          "category_group": "dairy_eggs"
+        },
+        {
+          "barcode": "0815369012171",
+          "name": "Organic amber agave nectar",
+          "brand": "Cadia",
+          "category_group": "pantry_condiments"
+        },
+        {
+          "barcode": "0041415481435",
+          "name": "Fruit Bars Strawberry Flavored",
+          "brand": "Publix",
+          "category_group": "dairy_eggs"
+        },
+        {
+          "barcode": "0861140000325",
+          "name": "Garlic chive chevre and cracker sticks",
+          "brand": "",
+          "category_group": "dairy_eggs"
+        }
+      ],
+      "vegetarian": [
+        {
+          "barcode": "0638031615216",
+          "name": "Classic Meatloaf",
+          "brand": "Field Roast",
+          "category_group": "meat_seafood"
+        },
+        {
+          "barcode": "0851070006085",
+          "name": "Classic burger patties, classic",
+          "brand": "Upton's Naturals Co",
+          "category_group": "meat_seafood"
+        },
+        {
+          "barcode": "0630614000044",
+          "name": "Kombu",
+          "brand": "Rising Tide Sea Vegetables",
+          "category_group": "meat_seafood"
+        },
+        {
+          "barcode": "0845561000744",
+          "name": "Worthington, Loma Linda, Veja-Links Vegetable & Protein Grain Links",
+          "brand": "Atlantic Natural Foods Llc",
+          "category_group": "meat_seafood"
+        },
+        {
+          "barcode": "0761898647554",
+          "name": "Roasted Laver with Olive Oil",
+          "brand": "Choripdong",
+          "category_group": "meat_seafood"
+        }
+      ],
+      "gluten_free": [
+        {
+          "barcode": "0816926020066",
+          "name": "Kids dha omega-3s bars",
+          "brand": "",
+          "category_group": "snacks_sweets"
+        },
+        {
+          "barcode": "0816926020080",
+          "name": "Kids cinnamon roll bars",
+          "brand": "",
+          "category_group": "snacks_sweets"
+        },
+        {
+          "barcode": "0858246001714",
+          "name": "Pocket sandwich",
+          "brand": "Glutenfreeda Foods  Inc.",
+          "category_group": "other"
+        },
+        {
+          "barcode": "0850032528696",
+          "name": "Chocolate Chip Mini Crunchy Cookies",
+          "brand": "Partake",
+          "category_group": "uncategorized"
+        },
+        {
+          "barcode": "0810062522286",
+          "name": "Crunchy Lemon Cookies",
+          "brand": "Hungryroot",
+          "category_group": "snacks_sweets"
+        }
+      ]
+    },
+    "false_unsafe_examples": {
+      "vegan": [
+        {
+          "barcode": "0646670681851",
+          "name": "Vegan protein",
+          "brand": "Sprouts",
+          "category_group": "uncategorized"
+        },
+        {
+          "barcode": "0852346005962",
+          "name": "chocolate chip cookie dough protein bar",
+          "brand": "no cow",
+          "category_group": "snacks_sweets"
+        },
+        {
+          "barcode": "0037600883214",
+          "name": "CUP'N CRISP PEPPERONI",
+          "brand": "Hormel",
+          "category_group": "uncategorized"
+        },
+        {
+          "barcode": "0000075985271",
+          "name": "Mealtime for Baby Beef and gravy",
+          "brand": "Gerber",
+          "category_group": "other"
+        },
+        {
+          "barcode": "0713733286565",
+          "name": "snack nut bars",
+          "brand": "Meijer",
+          "category_group": "snacks_sweets"
+        }
+      ],
+      "vegetarian": [
+        {
+          "barcode": "0646670681851",
+          "name": "Vegan protein",
+          "brand": "Sprouts",
+          "category_group": "uncategorized"
+        },
+        {
+          "barcode": "8906021120487",
+          "name": "Chicken Curry Masala",
+          "brand": "Aachi",
+          "category_group": "pantry_condiments"
+        },
+        {
+          "barcode": "0037600883214",
+          "name": "CUP'N CRISP PEPPERONI",
+          "brand": "Hormel",
+          "category_group": "uncategorized"
+        },
+        {
+          "barcode": "0000075985271",
+          "name": "Mealtime for Baby Beef and gravy",
+          "brand": "Gerber",
+          "category_group": "other"
+        },
+        {
+          "barcode": "0860013066000",
+          "name": "Bison Meatloaf",
+          "brand": "Crave New World",
+          "category_group": "uncategorized"
+        }
+      ],
+      "gluten_free": [
+        {
+          "barcode": "0819246001043",
+          "name": "IntraMax",
+          "brand": "druckerlabs",
+          "category_group": "other"
+        },
+        {
+          "barcode": "0193968301163",
+          "name": "the Better Muffin Bar Soft Baked Oat Bars Banana Bread",
+          "brand": "Member's Mark",
+          "category_group": "uncategorized"
+        },
+        {
+          "barcode": "0850048358263",
+          "name": "Dark + White Chocolate Freeze-Dried Raspberries",
+          "brand": "tru fru",
+          "category_group": "uncategorized"
+        },
+        {
+          "barcode": "0053041410628",
+          "name": "Fiber Powder",
+          "brand": "",
+          "category_group": "uncategorized"
+        },
+        {
+          "barcode": "7897571500687",
+          "name": "Polpa de Coco 100g",
+          "brand": "Fruta Mil",
+          "category_group": "uncategorized"
+        }
+      ]
+    }
+  },
+  "headline": "Ingredient-text fallback and name/category checks cut diet_rules' unknown rate from 77% to 1.0% (false safe 0.0% \u2192 0.4%); the widest gap left is by category group: plant based substitutes 3.7% vs meals 0.3% unknown.",
+  "findings": [
+    "Catalog before mitigation: a plain top 100 by popularity is 74% American or untagged (1 tagged American, 73 with no cuisine keyword).",
+    "Catalog after mitigation (cuisine quotas): 100 dishes, 60% American (target 60%).",
+    "Every cuisine reached its quota.",
+    "Data behind each dish: other cuisines rest on a median of 51 Food.com recipes (American: 127); 3.3% of their ingredients were added by the LLM (American: 3.8%).",
+    "Coverage: on a fixed sample of 20,000 products, diet_rules could not decide 77% of verdicts from allergen tags alone; reading the ingredient text brings this to 1.1%, and the name/category checks to 1.0%.",
+    "Dangerous errors: products known to be unsafe were marked safe 0.0% of the time with tags only, 2.2% with the ingredient text, and 0.4% with the full rules.",
+    "Usefulness: the rules confirm 0% of labelled-safe products as safe before (tags alone never prove a product safe) and 95% after; when they decide, they match the labels 100% \u2192 99% of the time.",
+    "By category group, the unknown rate differs by up to 3.4 pts between groups with the full rules (plant based substitutes 3.7% vs meals 0.3%), narrower than the 46 pts gap with tags only; in plant based substitutes the gluten free user is affected most (6.9% unknown).",
+    "By brand type (store vs national), the unknown rate differs by up to 0.6 pts between groups with the full rules (national brand 1.3% vs store brand 0.7%), narrower than the 3.0 pts gap with tags only; in national brand the gluten free user is affected most (2.5% unknown).",
+    "By popularity (Open Food Facts scans), the unknown rate differs by up to 3.3 pts between groups with the full rules (10+ scans 4.0% vs 0 scans 0.7%), narrower than the 5.5 pts gap with tags only; in 10+ scans the gluten free user is affected most (7.2% unknown).",
+    "Highest false-safe slice with the full rules: pantry condiments (category group), 1.7% of 1,228 unsafe verdicts."
+  ],
+  "mitigation": [
+    "**Catalog: cuisine quotas** (`catalog.quotas`). The catalog is 60% American, down from 74% American or untagged in a plain top 100. Trade-off: the quotas pull in dishes backed by fewer source recipes (median 51 vs 127 for American dishes), so their ingredient shares rest on less data.",
+    "**diet_rules: ingredient-text fallback and name/category checks.** The unknown rate drops from 77% to 1.0% and labelled-safe products confirmed as safe rise from 0% to 95%. Trade-off: deciding more products costs some safety: the false-safe rate rises from 0.0% to 0.4% (4 more per 1,000 unsafe products). Ingredient text alone would mark 2.2% of unsafe products safe (e.g. cure-only bacon lists no meat); the name/category check brings this down to 0.4%.",
+    "**Not applied:** re-sampling, re-weighting and threshold tuning are levers for trained models; diet_rules has no training data and no score threshold. The equivalent safeguard is kept instead: unknown is never shown as safe, so a slice with more unknowns gets fewer suggestions, never less safe ones."
+  ]
+}

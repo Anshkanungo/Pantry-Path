@@ -1,0 +1,81 @@
+{
+  "_note": "Synthetic, hand-written in the shape of Kroger's Products API (search term -> data). Fake brands and barcodes; not real Kroger data.",
+  "eggs": [
+    {
+      "productId": "0001234500001",
+      "upc": "0001234500001",
+      "brand": "TestFarm",
+      "description": "TestFarm Grade A Large Eggs",
+      "categories": ["Dairy"],
+      "allergens": [
+        {"name": "Eggs and their derivates", "levelOfContainmentName": "Contains"},
+        {"name": "Milk and its derivates", "levelOfContainmentName": "Free from"}
+      ],
+      "allergensDescription": "Contains Eggs and their derivates.",
+      "aisleLocations": [{"description": "DAIRY", "number": "100", "side": "R"}],
+      "items": [{"itemId": "0001234500001", "size": "12 ct", "inventory": {"stockLevel": "HIGH"}}],
+      "nutritionInformation": [{"ingredientStatement": "EGGS."}]
+    }
+  ],
+  "heavy cream": [
+    {
+      "productId": "0001234500002",
+      "upc": "0001234500002",
+      "brand": "TestDairy",
+      "description": "TestDairy Heavy Whipping Cream",
+      "categories": ["Dairy"],
+      "allergens": [
+        {"name": "Milk and its derivates", "levelOfContainmentName": "Contains"},
+        {"name": "Tree Nuts and Their Derivatives", "levelOfContainmentName": "Free from"}
+      ],
+      "aisleLocations": [{"description": "DAIRY", "number": "100"}],
+      "items": [{"size": "1 pt", "inventory": {"stockLevel": "LOW"}}],
+      "nutritionInformation": [{"ingredientStatement": "CREAM, CARRAGEENAN."}]
+    },
+    {
+      "productId": "0001234500003",
+      "upc": "0001234500003",
+      "brand": "Store Brand",
+      "description": "Store Brand Heavy Cream",
+      "categories": ["Dairy"],
+      "allergens": [],
+      "allergensDescription": "Contains Milk and its derivates. May contain Almond And Almond Products.",
+      "aisleLocations": [],
+      "items": [{"size": "1 qt", "inventory": {"stockLevel": "TEMPORARILY_OUT_OF_STOCK"}}],
+      "nutritionInformation": null
+    }
+  ],
+  "pie crust": [
+    {
+      "productId": "0001234500004",
+      "upc": "0001234500004",
+      "brand": "TestBakery",
+      "description": "TestBakery Refrigerated Pie Crusts",
+      "categories": ["Baking Goods"],
+      "allergens": [
+        {"name": "Wheat and Their Derivatives", "levelOfContainmentName": "Contains"},
+        {"name": "Soybean and its Derivatives", "levelOfContainmentName": "May contain"},
+        {"name": "Peanuts and their derivates", "levelOfContainmentName": "Free from"},
+        {"name": "Barley  and Barley Products", "levelOfContainmentName": "Contains"},
+        {"name": "Oats", "levelOfContainmentName": "Not intentionally nor inherently included"}
+      ],
+      "aisleLocations": [{"description": "REFRIGERATED DOUGH", "number": "52"}],
+      "items": [{"size": "14.1 oz"}],
+      "nutritionInformation": [{"ingredientStatement": "ENRICHED WHEAT FLOUR, PALM OIL, SALT."}]
+    }
+  ],
+  "bacon": [
+    {
+      "productId": "0001234500005",
+      "upc": "0001234500005",
+      "brand": "TestSmokehouse",
+      "description": "TestSmokehouse Hickory Smoked Bacon",
+      "categories": ["Meat & Seafood"],
+      "allergens": [],
+      "aisleLocations": [{"description": "MEAT"}],
+      "items": [{"size": "16 oz", "inventory": {"stockLevel": "HIGH"}}],
+      "nutritionInformation": null
+    }
+  ],
+  "gruyere cheese": []
+}
