@@ -1,0 +1,72 @@
+{
+  "lasagna": {
+    "keep": true, "merge_into": null, "name": "Lasagna", "aliases": ["lasagne"],
+    "cuisine": "european",
+    "ingredients": [
+      {"name": "mozzarella cheese", "from_raw": ["mozzarella cheese"], "role": "core", "category": "dairy"},
+      {"name": "ricotta cheese", "from_raw": ["ricotta cheese"], "role": "core", "category": "dairy"},
+      {"name": "ground beef", "from_raw": ["ground beef"], "role": "core", "category": "meat"},
+      {"name": "lasagna noodles", "from_raw": ["lasagna noodles"], "role": "core", "category": "grain"},
+      {"name": "pasta sauce", "from_raw": ["pasta sauce"], "role": "core", "category": "condiment"},
+      {"name": "parmesan cheese", "from_raw": ["parmesan cheese"], "role": "common", "category": "dairy"},
+      {"name": "eggs", "from_raw": ["egg", "eggs"], "role": "common", "category": "egg"}
+    ],
+    "added": []
+  },
+  "classic-lasagna": {
+    "keep": true, "merge_into": "lasagna", "name": "classic lasagna", "aliases": ["lasagna classico"],
+    "cuisine": "european",
+    "ingredients": [
+      {"name": "ricotta cheese", "from_raw": ["ricotta cheese"], "role": "core", "category": "dairy"},
+      {"name": "mozzarella cheese", "from_raw": ["mozzarella cheese"], "role": "core", "category": "dairy"},
+      {"name": "ground beef", "from_raw": ["ground beef"], "role": "core", "category": "meat"}
+    ],
+    "added": []
+  },
+  "quiche-lorraine": {
+    "keep": true, "merge_into": null, "name": "quiche lorraine", "aliases": ["bacon quiche"],
+    "cuisine": "european",
+    "ingredients": [
+      {"name": "eggs", "from_raw": ["eggs"], "role": "core", "category": "egg"},
+      {"name": "bacon", "from_raw": ["bacon"], "role": "core", "category": "meat"},
+      {"name": "heavy cream", "from_raw": ["heavy cream"], "role": "core", "category": "dairy"},
+      {"name": "swiss cheese", "from_raw": ["swiss cheese"], "role": "common", "category": "dairy"},
+      {"name": "onion", "from_raw": ["onion"], "role": "common", "category": "produce"}
+    ],
+    "added": [
+      {"name": "pie crust", "role": "core", "category": "bakery", "why": "Food.com recipes leave out the crust."}
+    ]
+  },
+  "margarita": {
+    "keep": false, "merge_into": null, "name": "margarita", "aliases": [],
+    "cuisine": "latin_american", "ingredients": [], "added": []
+  },
+  "chicken-tikka-masala": {
+    "keep": true, "merge_into": null, "name": "chicken tikka masala", "aliases": ["tikka masala"],
+    "cuisine": "south_asian",
+    "ingredients": [
+      {"name": "boneless chicken breast", "from_raw": ["boneless skinless chicken breasts"], "role": "core", "category": "meat"},
+      {"name": "garam masala", "from_raw": ["garam masala"], "role": "core", "category": "spice_herb"},
+      {"name": "plain yogurt", "from_raw": ["plain yogurt"], "role": "core", "category": "dairy"},
+      {"name": "tomato sauce", "from_raw": ["tomato sauce"], "role": "core", "category": "condiment"},
+      {"name": "garlic", "from_raw": ["garlic"], "role": "common", "category": "produce"},
+      {"name": "ginger root", "from_raw": ["fresh ginger"], "role": "common", "category": "produce"},
+      {"name": "heavy cream", "from_raw": ["heavy cream"], "role": "common", "category": "dairy"}
+    ],
+    "added": []
+  },
+  "beef-tacos": {
+    "keep": true, "merge_into": null, "name": "beef tacos", "aliases": ["ground beef tacos"],
+    "cuisine": "latin_american",
+    "ingredients": [
+      {"name": "ground beef", "from_raw": ["ground beef"], "role": "core", "category": "meat"},
+      {"name": "taco seasoning", "from_raw": ["taco seasoning"], "role": "core", "category": "spice_herb"},
+      {"name": "cheddar cheese", "from_raw": ["cheddar cheese"], "role": "common", "category": "dairy"},
+      {"name": "lettuce", "from_raw": ["lettuce"], "role": "common", "category": "produce"},
+      {"name": "tomatoes", "from_raw": ["tomatoes"], "role": "common", "category": "produce"}
+    ],
+    "added": [
+      {"name": "taco shells", "role": "core", "category": "bakery", "why": "Shells or tortillas are missing from the source."}
+    ]
+  }
+}

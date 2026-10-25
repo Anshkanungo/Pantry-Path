@@ -1,0 +1,41 @@
+{
+  "_note": "Synthetic, hand-written in the shape of RedCircle API responses (search, product). Fake products, store and barcodes.",
+  "probe_search": {
+    "request_info": {"success": true, "credits_used": 1, "credits_remaining": 99},
+    "search_results": [
+      {"position": 1, "product": {"tcin": "10000001", "title": "Testbrand Whole Milk - 1gal", "brand": "Testbrand"}}
+    ]
+  },
+  "probe_product": {
+    "request_info": {"success": true, "credits_used": 2, "credits_remaining": 98},
+    "product": {"tcin": "10000001", "title": "Testbrand Whole Milk - 1gal", "brand": "Testbrand", "upc": "012345678905"},
+    "location_info": {
+      "address": "2 Sample Ave", "city": "Testville", "state": "Ohio",
+      "zipcode": "45219-1528", "store_name": "Testville Downtown", "store_id": "9999"
+    }
+  },
+  "search": {
+    "request_info": {"success": true},
+    "search_results": [
+      {"position": 1, "product": {"tcin": "20000001", "title": "Testbrand Gruyere Cheese - 6oz", "brand": "Testbrand"}},
+      {"position": 2, "product": {"tcin": "20000002", "title": "Otherbrand Swiss Gruyere - 8 oz", "brand": "Otherbrand"}}
+    ]
+  },
+  "product": {
+    "request_info": {"success": true},
+    "product": {
+      "tcin": "20000001",
+      "title": "Testbrand Gruyere Cheese - 6oz",
+      "brand": "Testbrand",
+      "upc": "012345678905",
+      "ingredients": "Pasteurized Milk, Salt, Cultures, Enzymes.",
+      "aisle": "D22",
+      "categories_flat": "Grocery > Dairy > Cheese",
+      "buybox_winner": {
+        "availability": {"raw": "OUT_OF_STOCK", "in_stock": false},
+        "fulfillment": {"pickup_info": {"stock_level": 7, "store_id": "9999"}}
+      }
+    },
+    "location_info": {"store_id": "9999", "store_name": "Testville Downtown"}
+  }
+}

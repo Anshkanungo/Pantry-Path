@@ -1,0 +1,134 @@
+{
+  "off": {
+    "rows": 411910,
+    "file_mb": 31.88,
+    "null_rate": {
+      "barcode": 0.0,
+      "code": 0.0,
+      "product_name": 0.009653,
+      "brands": 0.312753,
+      "categories_tags": 0.15768,
+      "allergens_tags": 0.387602,
+      "traces_tags": 0.977245,
+      "ingredients_text": 0.000272,
+      "ingredients_lang": 0.000272,
+      "labels_tags": 0.814219,
+      "ingredients_analysis_tags": 0.000595,
+      "unique_scans_n": 0.0,
+      "completeness": 0.0,
+      "last_modified_t": 0.0
+    },
+    "evidence_rate": {
+      "ingredients": 0.999728,
+      "allergens": 0.612398,
+      "both": 0.612126,
+      "either": 1.0
+    },
+    "allergen_coverage": {
+      "milk": 0.302675,
+      "egg": 0.091855,
+      "fish": 0.015533,
+      "shellfish": 0.009548,
+      "tree_nuts": 0.070345,
+      "peanuts": 0.044311,
+      "soy": 0.270117,
+      "sesame": 0.02652,
+      "gluten": 0.236066
+    },
+    "scans_tier": {
+      "0": 0.786094,
+      "1_9": 0.206234,
+      "10_plus": 0.007672
+    },
+    "ingredients_text_length": {
+      "min": 1,
+      "median": 196.0,
+      "p95": 787,
+      "max": 9280
+    }
+  },
+  "catalog": {
+    "dishes": 100,
+    "cuisine": {
+      "american": 60,
+      "european": 10,
+      "latin_american": 10,
+      "east_se_asian": 10,
+      "south_asian": 5,
+      "middle_eastern_african": 5
+    },
+    "ingredients_total": 1171,
+    "core": 436,
+    "common": 735,
+    "llm_added_share": 0.037575,
+    "ingredients_per_dish": {
+      "min": 5,
+      "median": 11.0,
+      "max": 22,
+      "mean": 11.71
+    },
+    "recipe_count": {
+      "min": 5,
+      "median": 87.5,
+      "max": 669
+    }
+  },
+  "catalog_build": {
+    "dishes": 100,
+    "min_dishes": 90,
+    "pool_dishes": 254,
+    "per_cuisine": {
+      "american": {
+        "quota": 60,
+        "available": 105,
+        "selected": 60,
+        "always_include": 5
+      },
+      "european": {
+        "quota": 10,
+        "available": 35,
+        "selected": 10,
+        "always_include": 5
+      },
+      "latin_american": {
+        "quota": 10,
+        "available": 23,
+        "selected": 10,
+        "always_include": 1
+      },
+      "east_se_asian": {
+        "quota": 10,
+        "available": 21,
+        "selected": 10,
+        "always_include": 3
+      },
+      "south_asian": {
+        "quota": 5,
+        "available": 16,
+        "selected": 5,
+        "always_include": 1
+      },
+      "middle_eastern_african": {
+        "quota": 5,
+        "available": 14,
+        "selected": 5,
+        "always_include": 1
+      }
+    },
+    "llm_added_share": 0.038,
+    "plain_top100_cuisine_hints": {
+      "american": 1,
+      "european": 13,
+      "latin_american": 7,
+      "east_se_asian": 4,
+      "south_asian": 1,
+      "middle_eastern_african": 1,
+      "unknown": 73
+    }
+  },
+  "outliers": {
+    "off_ingredients_text_length": 88,
+    "catalog_ingredients_per_dish": 7,
+    "catalog_recipe_count": 0
+  }
+}

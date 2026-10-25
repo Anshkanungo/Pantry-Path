@@ -1,0 +1,384 @@
+{
+  "suite": "catalog_ingredients",
+  "validated_at": "2026-10-25T01:50:14.073889+00:00",
+  "rows": 1171,
+  "success": true,
+  "critical_failures": 0,
+  "warnings": 0,
+  "checks": [
+    {
+      "expectation": "expect_column_values_to_not_be_null",
+      "column": "name",
+      "severity": "critical",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0,
+      "examples": [],
+      "error": null
+    },
+    {
+      "expectation": "expect_compound_columns_to_be_unique",
+      "column": [
+        "dish_id",
+        "name"
+      ],
+      "severity": "critical",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0,
+      "examples": [],
+      "error": null
+    },
+    {
+      "expectation": "expect_column_values_to_be_in_set",
+      "column": "role",
+      "severity": "critical",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0,
+      "examples": [],
+      "error": null
+    },
+    {
+      "expectation": "expect_column_values_to_not_be_null",
+      "column": "role",
+      "severity": "critical",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0,
+      "examples": [],
+      "error": null
+    },
+    {
+      "expectation": "expect_column_values_to_be_in_set",
+      "column": "category",
+      "severity": "critical",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0,
+      "examples": [],
+      "error": null
+    },
+    {
+      "expectation": "expect_column_values_to_not_be_null",
+      "column": "category",
+      "severity": "critical",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0,
+      "examples": [],
+      "error": null
+    },
+    {
+      "expectation": "expect_column_values_to_be_between",
+      "column": "share",
+      "severity": "critical",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0,
+      "examples": [],
+      "error": null
+    },
+    {
+      "expectation": "expect_column_values_to_not_be_null",
+      "column": "share",
+      "severity": "critical",
+      "success": true,
+      "observed_value": null,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0,
+      "examples": [],
+      "error": null
+    }
+  ],
+  "great_expectations": {
+    "success": true,
+    "results": [
+      {
+        "success": true,
+        "expectation_config": {
+          "type": "expect_column_values_to_not_be_null",
+          "kwargs": {
+            "batch_id": "catalog_ingredients_source-catalog_ingredients",
+            "column": "name"
+          },
+          "meta": {},
+          "severity": "critical"
+        },
+        "result": {
+          "element_count": 1171,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0,
+          "partial_unexpected_list": [],
+          "partial_unexpected_counts": [],
+          "partial_unexpected_index_list": []
+        },
+        "meta": {},
+        "exception_info": {
+          "raised_exception": false,
+          "exception_traceback": null,
+          "exception_message": null
+        }
+      },
+      {
+        "success": true,
+        "expectation_config": {
+          "type": "expect_compound_columns_to_be_unique",
+          "kwargs": {
+            "batch_id": "catalog_ingredients_source-catalog_ingredients",
+            "column_list": [
+              "dish_id",
+              "name"
+            ]
+          },
+          "meta": {},
+          "severity": "critical"
+        },
+        "result": {
+          "element_count": 1171,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0,
+          "partial_unexpected_list": [],
+          "missing_count": 0,
+          "missing_percent": 0.0,
+          "unexpected_percent_total": 0.0,
+          "unexpected_percent_nonmissing": 0.0,
+          "partial_unexpected_counts": [],
+          "partial_unexpected_index_list": []
+        },
+        "meta": {},
+        "exception_info": {
+          "raised_exception": false,
+          "exception_traceback": null,
+          "exception_message": null
+        }
+      },
+      {
+        "success": true,
+        "expectation_config": {
+          "type": "expect_column_values_to_be_in_set",
+          "kwargs": {
+            "batch_id": "catalog_ingredients_source-catalog_ingredients",
+            "column": "role",
+            "value_set": [
+              "core",
+              "common"
+            ]
+          },
+          "meta": {},
+          "severity": "critical"
+        },
+        "result": {
+          "element_count": 1171,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0,
+          "partial_unexpected_list": [],
+          "missing_count": 0,
+          "missing_percent": 0.0,
+          "unexpected_percent_total": 0.0,
+          "unexpected_percent_nonmissing": 0.0,
+          "partial_unexpected_counts": [],
+          "partial_unexpected_index_list": []
+        },
+        "meta": {},
+        "exception_info": {
+          "raised_exception": false,
+          "exception_traceback": null,
+          "exception_message": null
+        }
+      },
+      {
+        "success": true,
+        "expectation_config": {
+          "type": "expect_column_values_to_not_be_null",
+          "kwargs": {
+            "batch_id": "catalog_ingredients_source-catalog_ingredients",
+            "column": "role"
+          },
+          "meta": {},
+          "severity": "critical"
+        },
+        "result": {
+          "element_count": 1171,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0,
+          "partial_unexpected_list": [],
+          "partial_unexpected_counts": [],
+          "partial_unexpected_index_list": []
+        },
+        "meta": {},
+        "exception_info": {
+          "raised_exception": false,
+          "exception_traceback": null,
+          "exception_message": null
+        }
+      },
+      {
+        "success": true,
+        "expectation_config": {
+          "type": "expect_column_values_to_be_in_set",
+          "kwargs": {
+            "batch_id": "catalog_ingredients_source-catalog_ingredients",
+            "column": "category",
+            "value_set": [
+              "produce",
+              "dairy",
+              "egg",
+              "meat",
+              "seafood",
+              "grain",
+              "bakery",
+              "legume",
+              "nut_seed",
+              "oil_fat",
+              "spice_herb",
+              "condiment",
+              "sweetener",
+              "baking",
+              "beverage",
+              "other"
+            ]
+          },
+          "meta": {},
+          "severity": "critical"
+        },
+        "result": {
+          "element_count": 1171,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0,
+          "partial_unexpected_list": [],
+          "missing_count": 0,
+          "missing_percent": 0.0,
+          "unexpected_percent_total": 0.0,
+          "unexpected_percent_nonmissing": 0.0,
+          "partial_unexpected_counts": [],
+          "partial_unexpected_index_list": []
+        },
+        "meta": {},
+        "exception_info": {
+          "raised_exception": false,
+          "exception_traceback": null,
+          "exception_message": null
+        }
+      },
+      {
+        "success": true,
+        "expectation_config": {
+          "type": "expect_column_values_to_not_be_null",
+          "kwargs": {
+            "batch_id": "catalog_ingredients_source-catalog_ingredients",
+            "column": "category"
+          },
+          "meta": {},
+          "severity": "critical"
+        },
+        "result": {
+          "element_count": 1171,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0,
+          "partial_unexpected_list": [],
+          "partial_unexpected_counts": [],
+          "partial_unexpected_index_list": []
+        },
+        "meta": {},
+        "exception_info": {
+          "raised_exception": false,
+          "exception_traceback": null,
+          "exception_message": null
+        }
+      },
+      {
+        "success": true,
+        "expectation_config": {
+          "type": "expect_column_values_to_be_between",
+          "kwargs": {
+            "batch_id": "catalog_ingredients_source-catalog_ingredients",
+            "column": "share",
+            "min_value": 0.0,
+            "max_value": 1.0
+          },
+          "meta": {},
+          "severity": "critical"
+        },
+        "result": {
+          "element_count": 1171,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0,
+          "partial_unexpected_list": [],
+          "missing_count": 0,
+          "missing_percent": 0.0,
+          "unexpected_percent_total": 0.0,
+          "unexpected_percent_nonmissing": 0.0,
+          "partial_unexpected_counts": [],
+          "partial_unexpected_index_list": []
+        },
+        "meta": {},
+        "exception_info": {
+          "raised_exception": false,
+          "exception_traceback": null,
+          "exception_message": null
+        }
+      },
+      {
+        "success": true,
+        "expectation_config": {
+          "type": "expect_column_values_to_not_be_null",
+          "kwargs": {
+            "batch_id": "catalog_ingredients_source-catalog_ingredients",
+            "column": "share"
+          },
+          "meta": {},
+          "severity": "critical"
+        },
+        "result": {
+          "element_count": 1171,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0,
+          "partial_unexpected_list": [],
+          "partial_unexpected_counts": [],
+          "partial_unexpected_index_list": []
+        },
+        "meta": {},
+        "exception_info": {
+          "raised_exception": false,
+          "exception_traceback": null,
+          "exception_message": null
+        }
+      }
+    ],
+    "suite_name": "catalog_ingredients",
+    "suite_parameters": {},
+    "statistics": {
+      "evaluated_expectations": 8,
+      "successful_expectations": 8,
+      "unsuccessful_expectations": 0,
+      "success_percent": 100.0
+    },
+    "meta": {
+      "great_expectations_version": "1.24.1",
+      "batch_spec": {
+        "batch_data": "PandasDataFrame"
+      },
+      "batch_markers": {
+        "ge_load_time": "20261025T015014.033669Z",
+        "pandas_data_fingerprint": "6c9b46f7b43b3b9291fcd773af7c7c2e"
+      },
+      "active_batch_definition": {
+        "datasource_name": "catalog_ingredients_source",
+        "data_connector_name": "fluent",
+        "data_asset_name": "catalog_ingredients",
+        "batch_identifiers": {
+          "dataframe": "<DATAFRAME>"
+        }
+      }
+    },
+    "id": null
+  }
+}

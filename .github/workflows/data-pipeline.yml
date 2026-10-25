@@ -1,0 +1,57 @@
+name: Data pipeline tests
+
+on:
+  push:
+    branches:
+      - main
+      - "feature/**"
+    paths:
+      - "data-pipeline/**"
+      - "shared/**"
+      - "data/golden/**"
+      - ".github/workflows/data-pipeline.yml"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "data-pipeline/**"
+      - "shared/**"
+      - "data/golden/**"
+      - ".github/workflows/data-pipeline.yml"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: data-pipeline
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: data-pipeline/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt -e ../shared -e .
+
+      - name: Lint (PEP 8 with ruff)
+        run: |
+          ruff check src tests dags
+          ruff check ../shared --config ../shared/pyproject.toml
+
+      # Unit tests only: no network, no API keys, no data downloads.
+      # Airflow-only DAG tests skip here; they run inside the Docker image.
+      - name: Run tests
+        run: python -m pytest -q tests ../shared/tests --junitxml=pytest-report.xml
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: pytest-report
+          path: data-pipeline/pytest-report.xml

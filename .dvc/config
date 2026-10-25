@@ -1,0 +1,8 @@
+[core]
+    analytics = false
+    check_update = false
+    remote = pantrypath-public
+['remote "pantrypath-gcs"']
+    url = gs://pantry-path-dvc/dvcstore
+['remote "pantrypath-public"']
+    url = https://storage.googleapis.com/pantry-path-dvc/dvcstore

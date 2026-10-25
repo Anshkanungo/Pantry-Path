@@ -1,0 +1,265 @@
+{
+  "catalog_version": "2026-10-25",
+  "generated_at": "2026-10-25T01:50:10+00:00",
+  "dishes": 100,
+  "min_dishes": 90,
+  "pool_dishes": 254,
+  "per_cuisine": {
+    "american": {
+      "quota": 60,
+      "available": 105,
+      "selected": 60,
+      "always_include": 5
+    },
+    "european": {
+      "quota": 10,
+      "available": 35,
+      "selected": 10,
+      "always_include": 5
+    },
+    "latin_american": {
+      "quota": 10,
+      "available": 23,
+      "selected": 10,
+      "always_include": 1
+    },
+    "east_se_asian": {
+      "quota": 10,
+      "available": 21,
+      "selected": 10,
+      "always_include": 3
+    },
+    "south_asian": {
+      "quota": 5,
+      "available": 16,
+      "selected": 5,
+      "always_include": 1
+    },
+    "middle_eastern_african": {
+      "quota": 5,
+      "available": 14,
+      "selected": 5,
+      "always_include": 1
+    }
+  },
+  "shortfalls": {},
+  "always_include": {
+    "selected": [
+      "pancake",
+      "chili",
+      "chocolate-chip-cookie",
+      "beef-stew",
+      "tuna-salad-sandwich",
+      "lasagna",
+      "shrimp-scampi",
+      "quiche-lorraine",
+      "spaghetti-carbonara",
+      "pesto-pasta",
+      "caesar-salad",
+      "fried-rice",
+      "pad-thai",
+      "california-roll",
+      "chicken-tikka-masala",
+      "hummus"
+    ],
+    "changed_by_llm": [
+      {
+        "dish_id": "buttermilk-pancake",
+        "outcome": "merged by the LLM into pancake"
+      },
+      {
+        "dish_id": "chili-con-carne",
+        "outcome": "merged by the LLM into chili"
+      },
+      {
+        "dish_id": "vegetable-fried-rice",
+        "outcome": "merged by the LLM into fried-rice"
+      }
+    ]
+  },
+  "dropped": [
+    "remoulade-sauce",
+    "tzatziki",
+    "tofu",
+    "tahini",
+    "preserved-lemon",
+    "chicken",
+    "chicken-breast",
+    "fresh-peach-cobbler"
+  ],
+  "merged": [
+    {
+      "dish_id": "spanish-rice",
+      "into": "mexican-rice",
+      "reason": "llm"
+    },
+    {
+      "dish_id": "stove-top-macaroni-and-cheese",
+      "into": "macaroni-and-cheese",
+      "reason": "llm"
+    },
+    {
+      "dish_id": "buttermilk-pancake",
+      "into": "pancake",
+      "reason": "llm"
+    },
+    {
+      "dish_id": "sour-cream-banana-bread",
+      "into": "banana-bread",
+      "reason": "llm"
+    },
+    {
+      "dish_id": "chinese-fried-rice",
+      "into": "fried-rice",
+      "reason": "llm"
+    },
+    {
+      "dish_id": "soft-chocolate-chip-cookie",
+      "into": "chocolate-chip-cookie",
+      "reason": "llm"
+    },
+    {
+      "dish_id": "baked-pork-chop",
+      "into": "pork-chop",
+      "reason": "llm"
+    },
+    {
+      "dish_id": "chocolate-cake",
+      "into": "dark-chocolate-cake",
+      "reason": "llm"
+    },
+    {
+      "dish_id": "meatball",
+      "into": "italian-meatball",
+      "reason": "llm"
+    },
+    {
+      "dish_id": "award-winning-chili",
+      "into": "chili",
+      "reason": "llm"
+    },
+    {
+      "dish_id": "apple-crumble",
+      "into": "apple-crisp",
+      "reason": "llm"
+    },
+    {
+      "dish_id": "soft-peanut-butter-cookie",
+      "into": "peanut-butter-cookie",
+      "reason": "llm"
+    },
+    {
+      "dish_id": "tuna-noodle-casserole",
+      "into": "tuna-casserole",
+      "reason": "llm"
+    },
+    {
+      "dish_id": "chili-con-carne-with-bean",
+      "into": "chili",
+      "reason": "llm"
+    },
+    {
+      "dish_id": "moist-banana-nut-bread",
+      "into": "banana-bread",
+      "reason": "llm"
+    },
+    {
+      "dish_id": "chicken-curry-in-a-hurry",
+      "into": "chicken-curry",
+      "reason": "llm"
+    },
+    {
+      "dish_id": "mexican-casserole",
+      "into": "taco-casserole",
+      "reason": "llm"
+    },
+    {
+      "dish_id": "corned-beef-dinner",
+      "into": "corned-beef-and-cabbage",
+      "reason": "llm"
+    },
+    {
+      "dish_id": "indian-butter-chicken",
+      "into": "butter-chicken",
+      "reason": "llm"
+    },
+    {
+      "dish_id": "naan-bread",
+      "into": "naan",
+      "reason": "llm"
+    },
+    {
+      "dish_id": "chinese-egg-roll",
+      "into": "egg-roll",
+      "reason": "llm"
+    },
+    {
+      "dish_id": "beef-and-broccoli",
+      "into": "beef-and-broccoli-stir-fry",
+      "reason": "llm"
+    },
+    {
+      "dish_id": "curry-chicken",
+      "into": "chicken-curry",
+      "reason": "llm"
+    },
+    {
+      "dish_id": "chicken-makhani",
+      "into": "butter-chicken",
+      "reason": "llm"
+    },
+    {
+      "dish_id": "chili-con-carne",
+      "into": "chili",
+      "reason": "llm"
+    },
+    {
+      "dish_id": "moroccan-chicken-stew",
+      "into": "moroccan-chicken",
+      "reason": "llm"
+    },
+    {
+      "dish_id": "garlic-hummus",
+      "into": "hummus",
+      "reason": "llm"
+    },
+    {
+      "dish_id": "lemon-roast-potato",
+      "into": "greek-potato",
+      "reason": "llm"
+    },
+    {
+      "dish_id": "chicken-gumbo",
+      "into": "gumbo",
+      "reason": "llm"
+    },
+    {
+      "dish_id": "vegetable-fried-rice",
+      "into": "fried-rice",
+      "reason": "llm"
+    },
+    {
+      "dish_id": "tabouli",
+      "into": "tabbouleh",
+      "reason": "llm"
+    },
+    {
+      "dish_id": "red-beans-and-rice",
+      "into": "red-bean",
+      "reason": "same name"
+    }
+  ],
+  "failed": [],
+  "llm_added_share": 0.038,
+  "dishes_over_llm_added_limit": [],
+  "plain_top100_cuisine_hints": {
+    "american": 1,
+    "european": 13,
+    "latin_american": 7,
+    "east_se_asian": 4,
+    "south_asian": 1,
+    "middle_eastern_african": 1,
+    "unknown": 73
+  },
+  "notes": []
+}

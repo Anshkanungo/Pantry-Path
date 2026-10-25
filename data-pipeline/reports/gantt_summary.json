@@ -1,0 +1,224 @@
+[
+  {
+    "dag_id": "build_reference_data_serial",
+    "run_id": "manual__2026-10-25T01:40:38.796951+00:00",
+    "state": "success",
+    "wall_s": 675.0,
+    "busy_s": 550.9,
+    "tasks": {
+      "refine_dish": {
+        "instances": 254,
+        "busy_s": 280.3,
+        "span_s": 392.1,
+        "max_parallel": 1
+      },
+      "download_off": {
+        "instances": 1,
+        "busy_s": 122.3,
+        "span_s": 122.3,
+        "max_parallel": 1
+      },
+      "bias_report": {
+        "instances": 1,
+        "busy_s": 89.2,
+        "span_s": 89.2,
+        "max_parallel": 1
+      },
+      "filter_off": {
+        "instances": 1,
+        "busy_s": 21.1,
+        "span_s": 21.1,
+        "max_parallel": 1
+      },
+      "clean_recipes": {
+        "instances": 1,
+        "busy_s": 12.4,
+        "span_s": 12.4,
+        "max_parallel": 1
+      },
+      "group_dishes": {
+        "instances": 1,
+        "busy_s": 11.2,
+        "span_s": 11.2,
+        "max_parallel": 1
+      },
+      "validate_off": {
+        "instances": 1,
+        "busy_s": 4.2,
+        "span_s": 4.2,
+        "max_parallel": 1
+      },
+      "dvc_version": {
+        "instances": 1,
+        "busy_s": 3.3,
+        "span_s": 3.3,
+        "max_parallel": 1
+      },
+      "validate_catalog": {
+        "instances": 1,
+        "busy_s": 2.9,
+        "span_s": 2.9,
+        "max_parallel": 1
+      },
+      "compute_stats": {
+        "instances": 1,
+        "busy_s": 1.8,
+        "span_s": 1.8,
+        "max_parallel": 1
+      },
+      "select_dishes": {
+        "instances": 1,
+        "busy_s": 0.7,
+        "span_s": 0.7,
+        "max_parallel": 1
+      },
+      "assemble_catalog": {
+        "instances": 1,
+        "busy_s": 0.4,
+        "span_s": 0.4,
+        "max_parallel": 1
+      },
+      "download_foodcom": {
+        "instances": 1,
+        "busy_s": 0.3,
+        "span_s": 0.3,
+        "max_parallel": 1
+      },
+      "load_sqlite": {
+        "instances": 1,
+        "busy_s": 0.3,
+        "span_s": 0.3,
+        "max_parallel": 1
+      },
+      "check_drift": {
+        "instances": 1,
+        "busy_s": 0.2,
+        "span_s": 0.2,
+        "max_parallel": 1
+      },
+      "notify": {
+        "instances": 1,
+        "busy_s": 0.2,
+        "span_s": 0.2,
+        "max_parallel": 1
+      },
+      "dish_ids": {
+        "instances": 1,
+        "busy_s": 0.1,
+        "span_s": 0.1,
+        "max_parallel": 1
+      }
+    }
+  },
+  {
+    "dag_id": "build_reference_data",
+    "run_id": "scheduled__2026-10-25T00:00:00+00:00",
+    "state": "success",
+    "wall_s": 273.7,
+    "busy_s": 660.0,
+    "tasks": {
+      "refine_dish": {
+        "instances": 254,
+        "busy_s": 382.5,
+        "span_s": 140.0,
+        "max_parallel": 4
+      },
+      "download_off": {
+        "instances": 1,
+        "busy_s": 123.8,
+        "span_s": 123.8,
+        "max_parallel": 1
+      },
+      "bias_report": {
+        "instances": 1,
+        "busy_s": 89.2,
+        "span_s": 89.2,
+        "max_parallel": 1
+      },
+      "filter_off": {
+        "instances": 1,
+        "busy_s": 23.6,
+        "span_s": 23.6,
+        "max_parallel": 1
+      },
+      "clean_recipes": {
+        "instances": 1,
+        "busy_s": 13.6,
+        "span_s": 13.6,
+        "max_parallel": 1
+      },
+      "group_dishes": {
+        "instances": 1,
+        "busy_s": 12.0,
+        "span_s": 12.0,
+        "max_parallel": 1
+      },
+      "validate_off": {
+        "instances": 1,
+        "busy_s": 4.7,
+        "span_s": 4.7,
+        "max_parallel": 1
+      },
+      "dvc_version": {
+        "instances": 1,
+        "busy_s": 3.6,
+        "span_s": 3.6,
+        "max_parallel": 1
+      },
+      "validate_catalog": {
+        "instances": 1,
+        "busy_s": 2.8,
+        "span_s": 2.8,
+        "max_parallel": 1
+      },
+      "compute_stats": {
+        "instances": 1,
+        "busy_s": 1.7,
+        "span_s": 1.7,
+        "max_parallel": 1
+      },
+      "select_dishes": {
+        "instances": 1,
+        "busy_s": 0.9,
+        "span_s": 0.9,
+        "max_parallel": 1
+      },
+      "download_foodcom": {
+        "instances": 1,
+        "busy_s": 0.4,
+        "span_s": 0.4,
+        "max_parallel": 1
+      },
+      "assemble_catalog": {
+        "instances": 1,
+        "busy_s": 0.4,
+        "span_s": 0.4,
+        "max_parallel": 1
+      },
+      "load_sqlite": {
+        "instances": 1,
+        "busy_s": 0.3,
+        "span_s": 0.3,
+        "max_parallel": 1
+      },
+      "check_drift": {
+        "instances": 1,
+        "busy_s": 0.2,
+        "span_s": 0.2,
+        "max_parallel": 1
+      },
+      "notify": {
+        "instances": 1,
+        "busy_s": 0.2,
+        "span_s": 0.2,
+        "max_parallel": 1
+      },
+      "dish_ids": {
+        "instances": 1,
+        "busy_s": 0.1,
+        "span_s": 0.1,
+        "max_parallel": 1
+      }
+    }
+  }
+]

@@ -11,3 +11,16 @@ dist/
 .DS_Store
 Thumbs.db
 
+
+# Data pipeline
+data-pipeline/.venv/
+data-pipeline/data/raw/
+data-pipeline/data/interim/
+# data-pipeline/data/processed/: DVC lists its tracked outputs in data/processed/.gitignore
+data-pipeline/logs/*
+!data-pipeline/logs/.gitkeep
+data-pipeline/results/*
+!data-pipeline/results/.gitkeep
+data-pipeline/reports/stats_prev.json
+.ruff_cache/
+.pytest_cache/

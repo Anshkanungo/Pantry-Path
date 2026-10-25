@@ -1,0 +1,11 @@
+# DVC for the data pipeline.
+#
+# The pipeline itself runs in Airflow (dags/build_reference_data.py), not as DVC
+# stages: its last data task runs `dvc add` + `dvc push` on the processed outputs
+# (see dvc.tracked in config/pipeline.yaml), which writes the .dvc pointer files you
+# commit with git.
+#
+# This file declares the run statistics as a DVC metric, so you can compare data
+# versions:  dvc metrics show    |    dvc metrics diff HEAD~1
+metrics:
+  - reports/stats.json

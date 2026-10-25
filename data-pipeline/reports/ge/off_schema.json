@@ -1,0 +1,126 @@
+{
+  "suite": "off_schema",
+  "validated_at": "2026-10-25T01:43:06.177241+00:00",
+  "rows": 0,
+  "success": true,
+  "critical_failures": 0,
+  "warnings": 0,
+  "checks": [
+    {
+      "expectation": "expect_table_columns_to_match_set",
+      "column": null,
+      "severity": "critical",
+      "success": true,
+      "observed_value": [
+        "allergens_tags",
+        "barcode",
+        "brands",
+        "categories_tags",
+        "code",
+        "completeness",
+        "ingredients_analysis_tags",
+        "ingredients_lang",
+        "ingredients_text",
+        "labels_tags",
+        "last_modified_t",
+        "product_name",
+        "traces_tags",
+        "unique_scans_n"
+      ],
+      "unexpected_count": null,
+      "unexpected_percent": null,
+      "examples": [],
+      "error": null
+    }
+  ],
+  "great_expectations": {
+    "success": true,
+    "results": [
+      {
+        "success": true,
+        "expectation_config": {
+          "type": "expect_table_columns_to_match_set",
+          "kwargs": {
+            "batch_id": "off_schema_source-off_schema",
+            "column_set": [
+              "barcode",
+              "code",
+              "product_name",
+              "brands",
+              "categories_tags",
+              "allergens_tags",
+              "traces_tags",
+              "ingredients_text",
+              "labels_tags",
+              "ingredients_analysis_tags",
+              "unique_scans_n",
+              "completeness",
+              "last_modified_t"
+            ],
+            "exact_match": false
+          },
+          "meta": {},
+          "severity": "critical"
+        },
+        "result": {
+          "observed_value": [
+            "allergens_tags",
+            "barcode",
+            "brands",
+            "categories_tags",
+            "code",
+            "completeness",
+            "ingredients_analysis_tags",
+            "ingredients_lang",
+            "ingredients_text",
+            "labels_tags",
+            "last_modified_t",
+            "product_name",
+            "traces_tags",
+            "unique_scans_n"
+          ],
+          "details": {
+            "mismatched": {
+              "unexpected": [
+                "ingredients_lang"
+              ]
+            }
+          }
+        },
+        "meta": {},
+        "exception_info": {
+          "raised_exception": false,
+          "exception_traceback": null,
+          "exception_message": null
+        }
+      }
+    ],
+    "suite_name": "off_schema",
+    "suite_parameters": {},
+    "statistics": {
+      "evaluated_expectations": 1,
+      "successful_expectations": 1,
+      "unsuccessful_expectations": 0,
+      "success_percent": 100.0
+    },
+    "meta": {
+      "great_expectations_version": "1.24.1",
+      "batch_spec": {
+        "batch_data": "PandasDataFrame"
+      },
+      "batch_markers": {
+        "ge_load_time": "20261025T014306.168814Z",
+        "pandas_data_fingerprint": "d41d8cd98f00b204e9800998ecf8427e"
+      },
+      "active_batch_definition": {
+        "datasource_name": "off_schema_source",
+        "data_connector_name": "fluent",
+        "data_asset_name": "off_schema",
+        "batch_identifiers": {
+          "dataframe": "<DATAFRAME>"
+        }
+      }
+    },
+    "id": null
+  }
+}
