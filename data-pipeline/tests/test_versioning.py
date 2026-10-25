@@ -138,3 +138,36 @@ def test_dvc_errors_become_pipeline_errors(cfg, alerts, monkeypatch):
     cfg.path("data/processed/dish_profiles.json").write_text("{}")
     with pytest.raises(PipelineError, match="dvc add"):
         versioning.run(cfg)  # the temp folder is not a DVC repository
+
+
+def test_pull_llm_cache_restores_the_saved_replies(repo_cfg, alerts, tmp_path_factory):
+    storage = tmp_path_factory.mktemp("remote")
+    dvc("remote", "add", "-d", "pantrypath-gcs", str(storage), cwd=repo_cfg.home)
+    versioning.run(repo_cfg)  # version + push the replies, as the owner's run does
+    cache = repo_cfg.path("data/processed/llm_cache")
+    for reply in cache.iterdir():
+        reply.unlink()
+    cache.rmdir()  # a fresh clone: pointer committed, replies not on disk
+
+    result = versioning.run_pull_llm_cache(repo_cfg)
+
+    assert result == {"pulled": True, "saved_replies": 1}
+    assert (cache / "3f2a.json").read_text() == '{"reply": "{}"}'
+
+
+def test_pull_llm_cache_without_a_pointer_does_nothing(repo_cfg, alerts):
+    assert versioning.run_pull_llm_cache(repo_cfg) == {
+        "pulled": False, "reason": "no pointer file"}
+
+
+def test_pull_llm_cache_failure_warns_instead_of_failing(repo_cfg, alerts, monkeypatch):
+    repo_cfg.path("data/processed/llm_cache.dvc").write_text("outs: []\n")
+
+    def broken(*args, **kwargs):
+        raise PipelineError("`dvc pull` failed: network unreachable")
+
+    monkeypatch.setattr(versioning, "dvc", broken)
+    result = versioning.run_pull_llm_cache(repo_cfg)
+
+    assert result["pulled"] is False and "network unreachable" in result["reason"]
+    assert [a[0] for a in alerts] == ["Saved LLM replies not pulled"]

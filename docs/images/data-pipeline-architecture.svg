@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="504.0" height="222" preserveAspectRatio="xMinYMin meet" viewBox="0 0 504 222" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="504.0" height="222"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-222)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="64.0" y="180" width="98.75" height="40" rx="5" ry="5" style="stroke: rgb(36%,56%,40%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(93%,96%,93%); fill-rule: evenodd;"/>
+			<text x="83.968310546875" y="202.01" style="font-family: Helvetica, Arial, sans-serif; font-size: 7.4px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,404) scale(1,-1)">Food.com recipes</text>
+			<text x="90.338525390625" y="192.81" style="font-family: Helvetica, Arial, sans-serif; font-size: 7.4px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,385) scale(1,-1)">522k (Kaggle)</text>
+			<rect x="177.75" y="180" width="98.75" height="40" rx="5" ry="5" style="stroke: rgb(36%,56%,40%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(93%,96%,93%); fill-rule: evenodd;"/>
+			<text x="203.777783203125" y="202.01" style="font-family: Helvetica, Arial, sans-serif; font-size: 7.4px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,404) scale(1,-1)">Clean + group</text>
+			<text x="209.436181640625" y="192.81" style="font-family: Helvetica, Arial, sans-serif; font-size: 7.4px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,385) scale(1,-1)">into dishes</text>
+			<path d="M 163.75,200 L 176.75,200 Z" style="stroke: rgb(36%,56%,40%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="176.75 200, 171.75 197.4, 171.75 202.6" style="stroke: rgb(36%,56%,40%); stroke-linecap: butt; stroke-width: 0.5; fill: rgb(36%,56%,40%); fill-rule: evenodd;"/>
+			<rect x="291.5" y="180" width="98.75" height="40" rx="5" ry="5" style="stroke: rgb(36%,56%,40%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(93%,96%,93%); fill-rule: evenodd;"/>
+			<text x="321.5439453125" y="206.60999999999999" style="font-family: Helvetica, Arial, sans-serif; font-size: 7.4px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,413) scale(1,-1)">LLM refines</text>
+			<text x="315.7771484375" y="197.41" style="font-family: Helvetica, Arial, sans-serif; font-size: 7.4px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,394) scale(1,-1)">254 candidates</text>
+			<text x="307.1486328125" y="188.20999999999998" style="font-family: Helvetica, Arial, sans-serif; font-size: 7.4px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,376) scale(1,-1)">(cached, 4 at a time)</text>
+			<path d="M 277.5,200 L 290.5,200 Z" style="stroke: rgb(36%,56%,40%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="290.5 200, 285.5 197.4, 285.5 202.6" style="stroke: rgb(36%,56%,40%); stroke-linecap: butt; stroke-width: 0.5; fill: rgb(36%,56%,40%); fill-rule: evenodd;"/>
+			<rect x="405.25" y="180" width="98.75" height="40" rx="5" ry="5" style="stroke: rgb(36%,56%,40%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(93%,96%,93%); fill-rule: evenodd;"/>
+			<text x="432.625537109375" y="206.60999999999999" style="font-family: Helvetica, Arial, sans-serif; font-weight: bold; font-size: 7.4px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,413) scale(1,-1)">Dish catalog</text>
+			<text x="423.563427734375" y="197.41" style="font-family: Helvetica, Arial, sans-serif; font-size: 7.4px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,394) scale(1,-1)">100 dishes, quotas</text>
+			<text x="426.764794921875" y="188.20999999999998" style="font-family: Helvetica, Arial, sans-serif; font-size: 7.4px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,376) scale(1,-1)">(JSON + SQLite)</text>
+			<path d="M 391.25,200 L 404.25,200 Z" style="stroke: rgb(36%,56%,40%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="404.25 200, 399.25 197.4, 399.25 202.6" style="stroke: rgb(36%,56%,40%); stroke-linecap: butt; stroke-width: 0.5; fill: rgb(36%,56%,40%); fill-rule: evenodd;"/>
+			<text x="0" y="197.0" style="font-family: Helvetica, Arial, sans-serif; font-weight: bold; font-size: 8.2px;fill: rgb(18%,41%,23%); stroke:none;" transform="translate(0,394) scale(1,-1)">Weekly batch</text>
+			<rect x="64.0" y="130" width="98.75" height="40" rx="5" ry="5" style="stroke: rgb(36%,56%,40%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(93%,96%,93%); fill-rule: evenodd;"/>
+			<text x="84.788525390625" y="152.01" style="font-family: Helvetica, Arial, sans-serif; font-size: 7.4px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,304) scale(1,-1)">Open Food Facts</text>
+			<text x="86.0224609375" y="142.81" style="font-family: Helvetica, Arial, sans-serif; font-size: 7.4px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,285) scale(1,-1)">8 GB daily dump</text>
+			<rect x="177.75" y="130" width="98.75" height="40" rx="5" ry="5" style="stroke: rgb(36%,56%,40%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(93%,96%,93%); fill-rule: evenodd;"/>
+			<text x="197.096826171875" y="156.60999999999999" style="font-family: Helvetica, Arial, sans-serif; font-size: 7.4px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,313) scale(1,-1)">Keep US products</text>
+			<text x="204.706396484375" y="147.41" style="font-family: Helvetica, Arial, sans-serif; font-size: 7.4px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,294) scale(1,-1)">with evidence</text>
+			<text x="211.091064453125" y="138.20999999999998" style="font-family: Helvetica, Arial, sans-serif; font-size: 7.4px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,276) scale(1,-1)">(DuckDB)</text>
+			<path d="M 163.75,150 L 176.75,150 Z" style="stroke: rgb(36%,56%,40%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="176.75 150, 171.75 147.4, 171.75 152.6" style="stroke: rgb(36%,56%,40%); stroke-linecap: butt; stroke-width: 0.5; fill: rgb(36%,56%,40%); fill-rule: evenodd;"/>
+			<rect x="291.5" y="130" width="98.75" height="40" rx="5" ry="5" style="stroke: rgb(36%,56%,40%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(93%,96%,93%); fill-rule: evenodd;"/>
+			<text x="327.504052734375" y="152.01" style="font-family: Helvetica, Arial, sans-serif; font-size: 7.4px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,304) scale(1,-1)">Validate</text>
+			<text x="306.944482421875" y="142.81" style="font-family: Helvetica, Arial, sans-serif; font-size: 7.4px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,285) scale(1,-1)">(Great Expectations)</text>
+			<path d="M 277.5,150 L 290.5,150 Z" style="stroke: rgb(36%,56%,40%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="290.5 150, 285.5 147.4, 285.5 152.6" style="stroke: rgb(36%,56%,40%); stroke-linecap: butt; stroke-width: 0.5; fill: rgb(36%,56%,40%); fill-rule: evenodd;"/>
+			<rect x="405.25" y="130" width="98.75" height="40" rx="5" ry="5" style="stroke: rgb(36%,56%,40%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(93%,96%,93%); fill-rule: evenodd;"/>
+			<text x="422.34755859375" y="156.60999999999999" style="font-family: Helvetica, Arial, sans-serif; font-weight: bold; font-size: 7.4px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,313) scale(1,-1)">Allergen snapshot</text>
+			<text x="426.031298828125" y="147.41" style="font-family: Helvetica, Arial, sans-serif; font-size: 7.4px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,294) scale(1,-1)">411,910 products</text>
+			<text x="439.201708984375" y="138.20999999999998" style="font-family: Helvetica, Arial, sans-serif; font-size: 7.4px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,276) scale(1,-1)">(Parquet)</text>
+			<path d="M 391.25,150 L 404.25,150 Z" style="stroke: rgb(36%,56%,40%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="404.25 150, 399.25 147.4, 399.25 152.6" style="stroke: rgb(36%,56%,40%); stroke-linecap: butt; stroke-width: 0.5; fill: rgb(36%,56%,40%); fill-rule: evenodd;"/>
+			<text x="0" y="147.0" style="font-family: Helvetica, Arial, sans-serif; font-size: 7.6px;fill: rgb(37%,38%,40%); stroke:none;" transform="translate(0,294) scale(1,-1)">(Airflow)</text>
+			<rect x="64" y="70" width="440.0" height="34" rx="5" ry="5" style="stroke: rgb(36%,56%,40%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(93%,96%,93%); fill-rule: evenodd;"/>
+			<text x="236.0732421875" y="89.04" style="font-family: Helvetica, Arial, sans-serif; font-weight: bold; font-size: 7.6px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,178) scale(1,-1)">Then, after both branches:</text>
+			<text x="99.41982421875" y="79.64" style="font-family: Helvetica, Arial, sans-serif; font-size: 7.6px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,159) scale(1,-1)">load SQLite  →  stats, drift, outliers  →  bias report (Fairlearn)  →  DVC push to gs://pantry-path-dvc  →  notify</text>
+			<path d="M 454.625,130 L 454.625,105 Z" style="stroke: rgb(36%,56%,40%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="454.625 105, 452.025 110, 457.225 110" style="stroke: rgb(36%,56%,40%); stroke-linecap: butt; stroke-width: 0.5; fill: rgb(36%,56%,40%); fill-rule: evenodd;"/>
+			<path d="M 510,200 L 510,87 Z" style="stroke: rgb(36%,56%,40%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 504,200 L 510,200 Z" style="stroke: rgb(36%,56%,40%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 510,87 L 504.5,87 Z" style="stroke: rgb(36%,56%,40%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="504.5 87, 509.5 89.6, 509.5 84.4" style="stroke: rgb(36%,56%,40%); stroke-linecap: butt; stroke-width: 0.5; fill: rgb(36%,56%,40%); fill-rule: evenodd;"/>
+			<text x="64" y="53" style="font-family: Helvetica, Arial, sans-serif; font-style: italic; font-size: 7.6px;fill: rgb(37%,38%,40%); stroke:none;" transform="translate(0,106) scale(1,-1)">The request flow reads the catalog and the snapshot; Kroger data is only ever held in memory.</text>
+			<rect x="64.0" y="4" width="76.0" height="40" rx="5" ry="5" style="stroke: rgb(78%,63%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,96%,87%); fill-rule: evenodd;"/>
+			<text x="79.63017578125" y="26.01" style="font-family: Helvetica, Arial, sans-serif; font-size: 7.4px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,52) scale(1,-1)">&quot;quiche&quot;, ZIP,</text>
+			<text x="80.199267578125" y="16.810000000000002" style="font-family: Helvetica, Arial, sans-serif; font-size: 7.4px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,33) scale(1,-1)">allergies, diet</text>
+			<rect x="155.0" y="4" width="76.0" height="40" rx="5" ry="5" style="stroke: rgb(78%,63%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,96%,87%); fill-rule: evenodd;"/>
+			<text x="161.12001953125" y="26.01" style="font-family: Helvetica, Arial, sans-serif; font-size: 7.4px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,52) scale(1,-1)">Find dish in catalog</text>
+			<text x="159.07490234375" y="16.810000000000002" style="font-family: Helvetica, Arial, sans-serif; font-size: 7.4px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,33) scale(1,-1)">(LLM only if missing)</text>
+			<path d="M 141,24 L 154,24 Z" style="stroke: rgb(78%,63%,29%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="154 24, 149 21.4, 149 26.6" style="stroke: rgb(78%,63%,29%); stroke-linecap: butt; stroke-width: 0.5; fill: rgb(78%,63%,29%); fill-rule: evenodd;"/>
+			<rect x="246.0" y="4" width="76.0" height="40" rx="5" ry="5" style="stroke: rgb(78%,63%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,96%,87%); fill-rule: evenodd;"/>
+			<text x="256.649267578125" y="26.01" style="font-family: Helvetica, Arial, sans-serif; font-size: 7.4px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,52) scale(1,-1)">Kroger: 3 stores,</text>
+			<text x="252.94384765625" y="16.810000000000002" style="font-family: Helvetica, Arial, sans-serif; font-size: 7.4px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,33) scale(1,-1)">products in parallel</text>
+			<path d="M 232,24 L 245,24 Z" style="stroke: rgb(78%,63%,29%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="245 24, 240 21.4, 240 26.6" style="stroke: rgb(78%,63%,29%); stroke-linecap: butt; stroke-width: 0.5; fill: rgb(78%,63%,29%); fill-rule: evenodd;"/>
+			<rect x="337.0" y="4" width="76.0" height="40" rx="5" ry="5" style="stroke: rgb(78%,63%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,96%,87%); fill-rule: evenodd;"/>
+			<text x="345.586083984375" y="30.610000000000003" style="font-family: Helvetica, Arial, sans-serif; font-size: 7.4px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,61) scale(1,-1)">Allergen evidence</text>
+			<text x="355.768310546875" y="21.410000000000004" style="font-family: Helvetica, Arial, sans-serif; font-size: 7.4px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,42) scale(1,-1)">+ diet_rules</text>
+			<text x="362.25234375" y="12.21" style="font-family: Helvetica, Arial, sans-serif; font-size: 7.4px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,24) scale(1,-1)">verdicts</text>
+			<path d="M 323,24 L 336,24 Z" style="stroke: rgb(78%,63%,29%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="336 24, 331 21.4, 331 26.6" style="stroke: rgb(78%,63%,29%); stroke-linecap: butt; stroke-width: 0.5; fill: rgb(78%,63%,29%); fill-rule: evenodd;"/>
+			<rect x="428.0" y="4" width="76.0" height="40" rx="5" ry="5" style="stroke: rgb(78%,63%,29%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,96%,87%); fill-rule: evenodd;"/>
+			<text x="447.2904296875" y="26.01" style="font-family: Helvetica, Arial, sans-serif; font-weight: bold; font-size: 7.4px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,52) scale(1,-1)">result.json</text>
+			<text x="439.4712890625" y="16.810000000000002" style="font-family: Helvetica, Arial, sans-serif; font-size: 7.4px;fill: rgb(12%,13%,15%); stroke:none;" transform="translate(0,33) scale(1,-1)">(expires in 24 h)</text>
+			<path d="M 414,24 L 427,24 Z" style="stroke: rgb(78%,63%,29%); stroke-linecap: butt; stroke-width: 1;"/>
+			<polygon points="427 24, 422 21.4, 422 26.6" style="stroke: rgb(78%,63%,29%); stroke-linecap: butt; stroke-width: 0.5; fill: rgb(78%,63%,29%); fill-rule: evenodd;"/>
+			<text x="0" y="21.0" style="font-family: Helvetica, Arial, sans-serif; font-weight: bold; font-size: 8.2px;fill: rgb(60%,41%,0%); stroke:none;" transform="translate(0,42) scale(1,-1)">Per request</text>
+			<text x="0" y="11.0" style="font-family: Helvetica, Arial, sans-serif; font-size: 7.6px;fill: rgb(37%,38%,40%); stroke:none;" transform="translate(0,22) scale(1,-1)">(~5 s)</text>
+		</g>
+	</g>
+</svg>

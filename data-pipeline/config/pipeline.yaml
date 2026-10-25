@@ -213,9 +213,13 @@ bias:
     - walmart
     - safeway
 
-# Alerts: always logged; emailed when ALERT_EMAIL_TO and ALERT_SMTP_* are set in .env
+# Alerts: always logged, and emailed to email_to. Sending needs one secret in .env:
+# ALERT_SMTP_PASSWORD, a Gmail app password for smtp_user. ALERT_EMAIL_TO and
+# ALERT_SMTP_USER in .env override the two addresses below.
 alerts:
   email_enabled: true
+  email_to: anshkanungo17@gmail.com
+  smtp_user: anshkanungo17@gmail.com
   smtp_host: smtp.gmail.com
   smtp_port: 587
   subject_prefix: "[Pantry Path pipeline]"

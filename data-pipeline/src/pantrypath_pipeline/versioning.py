@@ -130,3 +130,31 @@ def run(cfg: Config, **_: Any) -> dict:
             send_alert("DVC push skipped: no remote", message, level="warning", cfg=cfg)
     return {"versioned": targets, "missing": missing, "changed_pointers": changed,
             "remote": remote, "pushed": pushed}
+
+
+def run_pull_llm_cache(cfg: Config, **_: Any) -> dict:
+    """Fetch the saved LLM replies (llm.cache_dir) from the DVC remote before refining.
+
+    The catalog's LLM step ran once (Claude Opus 5.5, 2026-10-24); every later run, the
+    weekly one or a teammate's, replays these replies, so it needs no LLM key and costs
+    nothing. The default remote is the public bucket over HTTPS, so no login is needed.
+    A failed pull only warns: refine then uses whatever replies are local, or the key.
+    DVC never overwrites a local folder that has changed (e.g. new replies), so this is
+    safe to run every time.
+    """
+    rel = cfg["llm"]["cache_dir"]
+    ptr = pointer(cfg, rel)
+    if not ptr.exists():
+        log.warning("No %s yet, so there are no saved LLM replies to pull", ptr.name)
+        return {"pulled": False, "reason": "no pointer file"}
+    try:
+        dvc("pull", str(ptr.relative_to(cfg.home)), cwd=cfg.home, timeout=600)
+    except PipelineError as exc:
+        message = (f"Could not pull the saved LLM replies; refine_dish will use the local "
+                   f"replies or the LLM key. {exc}")
+        log.warning(message)
+        send_alert("Saved LLM replies not pulled", message, level="warning", cfg=cfg)
+        return {"pulled": False, "reason": str(exc)[:300]}
+    replies = sum(1 for _ in cfg.path(rel).glob("*.json"))
+    log.info("Saved LLM replies ready: %d in %s", replies, rel)
+    return {"pulled": True, "saved_replies": replies}

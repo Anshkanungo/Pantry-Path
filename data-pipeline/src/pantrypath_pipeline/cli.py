@@ -30,6 +30,7 @@ STEPS = {
     "clean-recipes": "pantrypath_pipeline.preprocess.recipes:run",
     "group-dishes": "pantrypath_pipeline.preprocess.dishes:run_group",
     "select-dishes": "pantrypath_pipeline.preprocess.dishes:run_select",
+    "pull-llm-cache": "pantrypath_pipeline.versioning:run_pull_llm_cache",
     "refine-dish": "pantrypath_pipeline.refine:run_one",
     "refine-all": "pantrypath_pipeline.refine:run_all",
     "assemble-catalog": "pantrypath_pipeline.catalog_build:run",
