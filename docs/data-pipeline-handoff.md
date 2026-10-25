@@ -1,6 +1,6 @@
 # Pantry Path data pipeline: what the team gets
 
-**Owner:** Ansh · **Updated:** 2026-10-25 · **Status:** built, tested and running. Branch `feature/data-pipeline`; numbers below come from the runs on 2026-10-24/25.
+**Updated:** 2026-10-25 · **Status:** built, tested and running. Branch `feature/data-pipeline`; numbers below come from the runs on 2026-10-24/25.
 **Related:**
 - results and findings: `docs/data-pipeline-report.md` (+ `.pdf`)
 - setup and commands: `data-pipeline/README.md`
@@ -58,7 +58,7 @@ Not data products, but useful:
 
 **Never stored anywhere:** Kroger data. Kroger's API terms forbid keeping copies, so it lives in memory during a request only (15-minute cache).
 
-**Getting the data:** clone the repo, then `dvc pull` from the repo root (DVC comes with `data-pipeline/requirements.txt`). DVC pulls from the public-read bucket `gs://pantry-path-dvc` (GCP project `pantry-path`) over plain HTTPS, so no Google login is needed; it takes a few seconds. Only the pipeline's service account can push.
+**Getting the data:** run the Airflow DAG `build_reference_data` (`data-pipeline/README.md` section 1), which builds everything and fetches the saved LLM replies itself. Or, in a Python environment with `data-pipeline/requirements.txt` installed (it includes DVC), run `dvc pull` from the repo root. DVC pulls from the public-read bucket `gs://pantry-path-dvc` (GCP project `pantry-path`) over plain HTTPS, so no Google login is needed; it takes a few seconds. Only the pipeline's service account can push.
 
 ## 4. The request flow
 
@@ -227,14 +227,17 @@ Order of precedence: **unsafe beats unknown beats safe.** Evidence comes from Kr
 3. **The LLM may come before `result.json`, never after it in a way that changes verdicts.** The final answer can explain and suggest substitutes but must not flip a verdict.
 4. **Attribution:** product data from Open Food Facts is under the Open Database License (ODbL). Show "Product data: Open Food Facts (openfoodfacts.org)" wherever it appears, and keep derived files under ODbL.
 5. **No fine-tuning on LLM-written content.** Catalog content written by the LLM is tagged (`added_by_llm`, `source: llm`); use it for prototyping and evaluation only until we've checked the provider's terms.
-6. **Need a contract change?** Ask Ansh. `schema_version` lets it evolve without breaking you.
+6. **Need a contract change?** Open an issue or PR. `schema_version` lets it evolve without breaking you.
 
 ## 11. Operations
 
 - **Weekly DAG `build_reference_data`** (Airflow 3.3 in Docker; UI at http://localhost:8080). Two branches run in parallel (Open Food Facts; Food.com → LLM → catalog), then load, stats, drift check, bias report, DVC versioning and a success notification.
 - **Quality checks:** Great Expectations suites on both outputs, outlier checks, drift against the previous run. Blocking problems fail the run; warnings send an alert.
-- **Alerts:** always logged; emailed when the alert email settings are in `.env`.
-- **Reruns are reproducible:** LLM replies are cached and versioned, so without an LLM key the pipeline replays them and builds the identical catalog for free. Graders can also skip the 8 GB download (`off.source: dvc`).
+- **Alerts:** always logged and emailed to the address in `config/pipeline.yaml` (`alerts.email_to`). Sending needs the Gmail app password in `.env` (`ALERT_SMTP_PASSWORD`).
+- **Reruns are reproducible and free:**
+  - The catalog's LLM step ran once (Claude Opus 5.5, $6.08).
+  - The DAG pulls those saved replies (`pull_llm_cache`) and replays them, so nobody needs an LLM key or pays again. Weekly runs only refresh the Open Food Facts snapshot.
+  - `off.source: dvc` skips the 8 GB download.
 - **Adding a store provider:** one class in `data-pipeline/src/pantrypath_pipeline/providers/` + one line in `config/pipeline.yaml`.
 - **Adding an allergen or diet:** extend the enums and rules in `diet_rules.py` + tests; `schema_version` bump if the contract changes.
 

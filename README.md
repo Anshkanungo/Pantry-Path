@@ -54,6 +54,8 @@ Large datasets are not stored in git. They are versioned with DVC.
 
 ## Installation
 
+The data pipeline is set up and run on its own, with Airflow: see [data-pipeline/README.md](data-pipeline/README.md). The steps below are for the app.
+
 Prerequisites: Python 3.11+, Node.js 20+ and Git. For the model, Ollama for local development, or a GPU machine with vLLM.
 
 1. Clone the repository:
@@ -78,7 +80,7 @@ Prerequisites: Python 3.11+, Node.js 20+ and Git. For the model, Ollama for loca
    ```sh
    ollama pull qwen2.5:7b-instruct
    ```
-6. Get the versioned datasets, once the DVC remote is set up:
+6. Get the versioned datasets (the DVC remote is public, so no login is needed):
    ```sh
    dvc pull
    ```
