@@ -1,0 +1,402 @@
+{
+  "$defs": {
+    "Allergen": {
+      "description": "The 9 major US allergens (FALCPA + FASTER Act) plus gluten.",
+      "enum": [
+        "milk",
+        "egg",
+        "fish",
+        "shellfish",
+        "tree_nuts",
+        "peanuts",
+        "wheat",
+        "soy",
+        "sesame",
+        "gluten"
+      ],
+      "title": "Allergen",
+      "type": "string"
+    },
+    "Category": {
+      "description": "Coarse grocery category, used to narrow product searches.",
+      "enum": [
+        "produce",
+        "dairy",
+        "egg",
+        "meat",
+        "seafood",
+        "grain",
+        "bakery",
+        "legume",
+        "nut_seed",
+        "oil_fat",
+        "spice_herb",
+        "condiment",
+        "sweetener",
+        "baking",
+        "beverage",
+        "other"
+      ],
+      "title": "Category",
+      "type": "string"
+    },
+    "Cuisine": {
+      "enum": [
+        "american",
+        "european",
+        "latin_american",
+        "east_se_asian",
+        "south_asian",
+        "middle_eastern_african"
+      ],
+      "title": "Cuisine",
+      "type": "string"
+    },
+    "Diet": {
+      "enum": [
+        "vegan",
+        "vegetarian",
+        "none"
+      ],
+      "title": "Diet",
+      "type": "string"
+    },
+    "DishInfo": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "cuisine": {
+          "$ref": "#/$defs/Cuisine"
+        },
+        "source": {
+          "enum": [
+            "catalog",
+            "llm"
+          ],
+          "title": "Source",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "cuisine",
+        "source"
+      ],
+      "title": "DishInfo",
+      "type": "object"
+    },
+    "IngredientResult": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "role": {
+          "$ref": "#/$defs/Role"
+        },
+        "category": {
+          "$ref": "#/$defs/Category"
+        },
+        "products": {
+          "items": {
+            "$ref": "#/$defs/Product"
+          },
+          "title": "Products",
+          "type": "array"
+        }
+      },
+      "required": [
+        "name",
+        "role",
+        "category"
+      ],
+      "title": "IngredientResult",
+      "type": "object"
+    },
+    "Meta": {
+      "properties": {
+        "generated_at": {
+          "format": "date-time",
+          "title": "Generated At",
+          "type": "string"
+        },
+        "expires_at": {
+          "format": "date-time",
+          "title": "Expires At",
+          "type": "string"
+        },
+        "providers_used": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Providers Used",
+          "type": "array"
+        },
+        "catalog_version": {
+          "title": "Catalog Version",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "generated_at",
+        "expires_at",
+        "catalog_version"
+      ],
+      "title": "Meta",
+      "type": "object"
+    },
+    "Product": {
+      "properties": {
+        "store_id": {
+          "title": "Store Id",
+          "type": "string"
+        },
+        "barcode": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "GTIN-13, digits only",
+          "title": "Barcode"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "brand": {
+          "default": "",
+          "title": "Brand",
+          "type": "string"
+        },
+        "size": {
+          "default": "",
+          "title": "Size",
+          "type": "string"
+        },
+        "in_stock": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "In Stock"
+        },
+        "aisle": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Aisle"
+        },
+        "verdict": {
+          "$ref": "#/$defs/VerdictKind"
+        },
+        "reason": {
+          "title": "Reason",
+          "type": "string"
+        },
+        "evidence_source": {
+          "enum": [
+            "kroger",
+            "target",
+            "off",
+            "none"
+          ],
+          "title": "Evidence Source",
+          "type": "string"
+        }
+      },
+      "required": [
+        "store_id",
+        "name",
+        "verdict",
+        "reason",
+        "evidence_source"
+      ],
+      "title": "Product",
+      "type": "object"
+    },
+    "RequestInfo": {
+      "properties": {
+        "query": {
+          "minLength": 1,
+          "title": "Query",
+          "type": "string"
+        },
+        "zip": {
+          "pattern": "^\\d{5}$",
+          "title": "Zip",
+          "type": "string"
+        },
+        "avoid": {
+          "items": {
+            "$ref": "#/$defs/Allergen"
+          },
+          "title": "Avoid",
+          "type": "array"
+        },
+        "diet": {
+          "$ref": "#/$defs/Diet",
+          "default": "none"
+        }
+      },
+      "required": [
+        "query",
+        "zip"
+      ],
+      "title": "RequestInfo",
+      "type": "object"
+    },
+    "Role": {
+      "description": "core: the dish isn't itself without it. common: in many versions, but not all.",
+      "enum": [
+        "core",
+        "common"
+      ],
+      "title": "Role",
+      "type": "string"
+    },
+    "Store": {
+      "properties": {
+        "store_id": {
+          "title": "Store Id",
+          "type": "string"
+        },
+        "chain": {
+          "title": "Chain",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "address": {
+          "title": "Address",
+          "type": "string"
+        },
+        "lat": {
+          "title": "Lat",
+          "type": "number"
+        },
+        "lon": {
+          "title": "Lon",
+          "type": "number"
+        },
+        "distance_miles": {
+          "minimum": 0,
+          "title": "Distance Miles",
+          "type": "number"
+        }
+      },
+      "required": [
+        "store_id",
+        "chain",
+        "name",
+        "address",
+        "lat",
+        "lon",
+        "distance_miles"
+      ],
+      "title": "Store",
+      "type": "object"
+    },
+    "Summary": {
+      "properties": {
+        "ingredients_total": {
+          "minimum": 0,
+          "title": "Ingredients Total",
+          "type": "integer"
+        },
+        "with_safe_product": {
+          "minimum": 0,
+          "title": "With Safe Product",
+          "type": "integer"
+        },
+        "without_safe_product": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Without Safe Product",
+          "type": "array"
+        }
+      },
+      "required": [
+        "ingredients_total",
+        "with_safe_product"
+      ],
+      "title": "Summary",
+      "type": "object"
+    },
+    "VerdictKind": {
+      "enum": [
+        "safe",
+        "unsafe",
+        "unknown"
+      ],
+      "title": "VerdictKind",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "request": {
+      "$ref": "#/$defs/RequestInfo"
+    },
+    "dish": {
+      "$ref": "#/$defs/DishInfo"
+    },
+    "stores": {
+      "items": {
+        "$ref": "#/$defs/Store"
+      },
+      "title": "Stores",
+      "type": "array"
+    },
+    "ingredients": {
+      "items": {
+        "$ref": "#/$defs/IngredientResult"
+      },
+      "title": "Ingredients",
+      "type": "array"
+    },
+    "summary": {
+      "$ref": "#/$defs/Summary"
+    },
+    "meta": {
+      "$ref": "#/$defs/Meta"
+    }
+  },
+  "required": [
+    "request",
+    "dish",
+    "stores",
+    "ingredients",
+    "summary",
+    "meta"
+  ],
+  "title": "Pantry Path result.json v1.0",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Output of the Pantry Path data pipeline for one request. Generated from pantrypath_core.result.Result; regenerate instead of editing by hand."
+}

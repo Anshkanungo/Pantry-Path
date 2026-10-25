@@ -1,0 +1,176 @@
+{
+  "source": "Open Food Facts",
+  "retrieved": "2026-10-03",
+  "products": [
+    {
+      "barcode": "0190646640026",
+      "name": "Oat Milk",
+      "brand": "Oatly",
+      "expected_diet": "vegan",
+      "evidence": {
+        "ingredients_text": "Oat base (water, oats). Contains 2% or less of: low erucic acid rapeseed oil, dipotassium phosphate, calcium carbonate, tricalcium - phosphate, sea salt, dicalcium phosphate, riboflavin, vitamin A, vitamin D2, vitamin B12.",
+        "allergens": [
+          "gluten"
+        ],
+        "traces": [],
+        "complete": true
+      }
+    },
+    {
+      "barcode": "0016000107106",
+      "name": "All Purpose Flour",
+      "brand": "Gold Medal",
+      "expected_diet": "vegan",
+      "evidence": {
+        "ingredients_text": "Bleached Wheat Flour, Niacin (a B vitamin), Iron, Thiamin Mononitrate (vitamin B\u2081), Riboflavin (vitamin B2), Enzymes, Folic Acid (a B vitamin).",
+        "allergens": [
+          "gluten"
+        ],
+        "traces": [],
+        "complete": true
+      }
+    },
+    {
+      "barcode": "0041390001055",
+      "name": "Soy Sauce",
+      "brand": "Kikkoman",
+      "expected_diet": "vegan",
+      "evidence": {
+        "ingredients_text": "Water, Soybeans, Wheat, Salt, Lactic acid, Sodium benzoate Brewing starter (Aspergillus sojae).",
+        "allergens": [
+          "gluten",
+          "soybeans"
+        ],
+        "traces": [],
+        "complete": true
+      }
+    },
+    {
+      "barcode": "0025484000124",
+      "name": "Organic Tofu Extra Firm",
+      "brand": "nasoya",
+      "expected_diet": "vegan",
+      "evidence": {
+        "ingredients_text": "WATER, ORGANIC WHOLE SOYBEANS, NIGARI (SEA WATER EXTRACT), CALCIUM SULFATE.",
+        "allergens": [
+          "soybeans"
+        ],
+        "traces": [],
+        "complete": true
+      }
+    },
+    {
+      "barcode": "0076808280739",
+      "name": "Penne",
+      "brand": "Barilla",
+      "expected_diet": "vegan",
+      "evidence": {
+        "ingredients_text": "SEMOLINA (WHEAT), DURUM WHEAT FLOUR. VITAMINS/MINERALS: VITAMIN B3 (NIACIN), IRON (FERROUS SULFATE), VITAMIN B1 (THIAMINE MONONITRATE), VITAMIN B2 (RIBOFLAVIN), FOLIC ACID. CONTAINS WHEAT INGREDIENTS.",
+        "allergens": [
+          "gluten"
+        ],
+        "traces": [
+          "eggs",
+          "gluten"
+        ],
+        "complete": true
+      }
+    },
+    {
+      "barcode": "0096619173969",
+      "name": "Imported French Brie",
+      "brand": "Kirkland Signature",
+      "expected_diet": "vegetarian",
+      "evidence": {
+        "ingredients_text": "pasteurized cow's milk, lactic starter, salt, microbial rennet",
+        "allergens": [
+          "milk"
+        ],
+        "traces": [],
+        "complete": true
+      }
+    },
+    {
+      "barcode": "0096619032938",
+      "name": "Organic Raw & Unfiltered Honey",
+      "brand": "Kirkland Signature",
+      "expected_diet": "vegetarian",
+      "evidence": {
+        "ingredients_text": "Organic raw honey",
+        "allergens": [],
+        "traces": [],
+        "complete": true
+      }
+    },
+    {
+      "barcode": "0078742127071",
+      "name": "Large White Eggs",
+      "brand": "Great Value",
+      "expected_diet": "vegetarian",
+      "evidence": {
+        "ingredients_text": "Eggs",
+        "allergens": [
+          "eggs"
+        ],
+        "traces": [],
+        "complete": true
+      }
+    },
+    {
+      "barcode": "0029714170106",
+      "name": "Swordfish Firm & Mild Steaks",
+      "brand": "Orca Bay",
+      "expected_diet": "non-vegetarian",
+      "evidence": {
+        "ingredients_text": "SWORDFISH (XIPHIAS GLADIUS).",
+        "allergens": [
+          "fish"
+        ],
+        "traces": [],
+        "complete": true
+      }
+    },
+    {
+      "barcode": "0042238302211",
+      "name": "Goldbears",
+      "brand": "Haribo",
+      "expected_diet": "non-vegetarian",
+      "evidence": {
+        "ingredients_text": "Glucose syrup (from wheat or corn), sugar, gelatin, dextrose (from wheat or corn), contains less than 2% of: citric acid, artificial and natural flavors, sunflower oil, white beeswax, yellow beeswax, yellow 5, red 40, blue 1",
+        "allergens": [
+          "gelatin",
+          "gluten"
+        ],
+        "traces": [],
+        "complete": true
+      }
+    },
+    {
+      "barcode": "0039000086639",
+      "name": "Vienna Sausage",
+      "brand": "Libby's",
+      "expected_diet": "non-vegetarian",
+      "evidence": {
+        "ingredients_text": "MECHANICALLY SEPARATED CHICKEN, CHICKEN BROTH, WATER, 2% SALT, SPICES, BEEF, PORK, SUGAR, SODIUM PHOSPHATE, SODIUM ERYTHORBATE, FLAVORING, SODIUM NITRITE, GARLIC POWDER.",
+        "allergens": [
+          "beef",
+          "pork"
+        ],
+        "traces": [],
+        "complete": true
+      }
+    },
+    {
+      "barcode": "0096619977819",
+      "name": "ALBACORE SOLID WHITE TUNA IN WATER",
+      "brand": "KIRKLAND",
+      "expected_diet": "non-vegetarian",
+      "evidence": {
+        "ingredients_text": "Albacore Tuna, Water, Sea Salt, Sodium Acid Pyrophosphate.",
+        "allergens": [],
+        "traces": [],
+        "complete": true
+      }
+    }
+  ]
+}

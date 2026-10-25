@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pantrypath-core"
+version = "0.1.0"
+description = "Models and diet rules shared by the Pantry Path data pipeline and backend"
+requires-python = ">=3.11"
+dependencies = ["pydantic>=2.9,<3"]
+
+[tool.setuptools]
+packages = ["pantrypath_core"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B"]
+# (str, Enum) keeps the style of schema.py; StrEnum would change str() output
+ignore = ["UP042"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["pantrypath_core"]
+
