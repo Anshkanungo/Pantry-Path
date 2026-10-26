@@ -66,7 +66,7 @@ We check both outputs with Great Expectations. The Open Food Facts suites run 12
 
 The latest run had no critical failures and one warning: 35 products where Open Food Facts reports a completeness score above 1. The catalog suites run 20 checks, covering things like dish count, cuisine quotas, at least three ingredients per dish and valid categories. None failed.
 
-Each run also writes statistics that DVC can compare between versions, checks drift against the previous run, and flags outliers. The last run flagged 94 outliers: 87 very long ingredient lists and 7 dishes with an unusual number of ingredients. Problems are logged and also emailed to the project address once the Gmail app password is set. Blocking problems fail the run. Warnings only alert.
+Each run also writes statistics that DVC can compare between versions, checks drift against the previous run, and flags outliers. The last run flagged 94 outliers: 87 very long ingredient lists and 7 dishes with an unusual number of ingredients. Problems are logged and emailed to the project address. We tested both kinds on 2026-10-26: the outlier check sent "WARNING: 94 outlier(s) found", and a step with a missing input sent "ERROR: step check-drift failed". Blocking problems fail the run. Warnings only alert. Anyone can get the alerts in their own inbox by putting a Gmail address and its app password in `.env` (see the README).
 
 ## Bias
 

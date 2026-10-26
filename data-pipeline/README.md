@@ -97,7 +97,7 @@ flowchart LR
 | `KROGER_CLIENT_ID`, `KROGER_CLIENT_SECRET` | Requests (section 2) | The batch pipeline runs fine; requests can't |
 | `LLM_API_KEY` (+ optional `LLM_PROVIDER`, `LLM_MODEL`) | Only dishes the saved replies don't cover: new dishes at request time, or a changed prompt. Any provider works: Anthropic, Gemini or OpenAI | The saved replies are replayed |
 | `REDCIRCLE_API_KEY` | Optional Target fallback in requests | Kroger only |
-| `ALERT_SMTP_PASSWORD` (a Gmail app password); optional `ALERT_EMAIL_TO`, `ALERT_SMTP_USER` | Emailing alerts. The recipient and sender are set in `config/pipeline.yaml` (`alerts.email_to`, `alerts.smtp_user`) | Alerts are logged only |
+| `ALERT_SMTP_USER`, `ALERT_SMTP_PASSWORD`, `ALERT_EMAIL_TO` | Emailing alerts to your own inbox: a Gmail address, its app password, and where alerts go (set all three; see section 6). Left empty, sender and recipient are the project address in `config/pipeline.yaml` | Alerts are logged only |
 
 ## 2. Run a request
 
@@ -221,7 +221,8 @@ data-pipeline/
 - **Statistics:** `reports/stats.json`, numbers only so `dvc metrics diff` can compare runs: row counts, null and evidence rates, allergen coverage, popularity tiers, cuisine counts, ingredients per dish, LLM-added share.
 - **Outliers:** ingredients per dish, recipes per dish and ingredient-statement length are checked with an IQR rule (on a log scale for the skewed ones). Offenders go to `reports/outliers.json` with a warning alert.
 - **Drift:** `reports/drift.json` compares each run with the previous one. A row-count change over 10% or a rate shift over 5 points is a warning; a row-count change over 30% fails the run.
-- **Alerts:** always logged and emailed to the address in `alerts.email_to` (`config/pipeline.yaml`). Sending needs one secret in `.env`, `ALERT_SMTP_PASSWORD` (a Gmail app password); without it, alerts are logged with a note saying so. A failed task alerts through the DAG's failure callback.
+- **Alerts:** always logged, and emailed to the address in `alerts.email_to` (`config/pipeline.yaml`) with the subject `[Pantry Path pipeline] LEVEL: what happened`. A failed task alerts through the DAG's failure callback. We tested both kinds on 2026-10-26: the outlier check emailed "WARNING: 94 outlier(s) found", and a step run with a missing input emailed "ERROR: step check-drift failed". Sending needs a Gmail app password in `.env`. Without one, alerts are only logged, with a note saying so, and the run carries on.
+  - **To get the alerts in your own inbox:** turn on 2-Step Verification for a Gmail account, create an app password at https://myaccount.google.com/apppasswords, and set three values in the repo-root `.env`: `ALERT_SMTP_USER` (that Gmail address), `ALERT_SMTP_PASSWORD` (the app password) and `ALERT_EMAIL_TO` (where alerts should go). They override the project addresses in the config.
 
 ## 7. Bias detection and mitigation
 
@@ -292,7 +293,7 @@ Tests cover every step: edge cases such as missing values, HTML entities, Unicod
 | 5 | DVC | `.dvc/config` (public bucket `gs://pantry-path-dvc`), `data/processed/*.dvc`, `dvc.yaml` metrics, the `dvc_version` step | `dvc pull` works anonymously; `dvc metrics diff` compares runs |
 | 6 | Flow optimization (Gantt) | `reports/gantt_*.svg`, `reports/gantt_summary.md` | 11.2 → 4.6 min (−59%), section 8 |
 | 7 | Schema and statistics | `validate/expectations.py` (Great Expectations suites), `reports/ge/`, `validate/stats.py` → `reports/stats.json` | OFF: 12 checks; catalog: 20 checks |
-| 8 | Anomalies and alerts | Critical/warning checks, `reports/outliers.json`, `reports/drift.json`, `alerts.py` (log + email) | 94 outliers flagged as warnings; drift OK |
+| 8 | Anomalies and alerts | Critical/warning checks, `reports/outliers.json`, `reports/drift.json`, `alerts.py` (log + email) | 94 outliers flagged as warnings; drift OK; alert emails tested on 2026-10-26 (an anomaly and a failure) |
 | 9 | Bias (data slicing) | `bias.py` (Fairlearn `MetricFrame`), [`reports/bias_report.md`](reports/bias_report.md), held-out evaluation (section 7) | Cuisine quotas; unknown rate 77% → 0.6% with ingredient-text fallback; held-out catalog recall 89.8%; limits stated |
 | 10 | Tests | `tests/` + `shared/tests/` (25 files, 734 tests), CI workflow | Missing values, edge cases, anomalies, synthetic API responses, held-out splits |
 | 11 | Reproducibility | Pinned `requirements.txt`, Docker image, public DVC remote, saved LLM replies pulled by the DAG (section 1) | A fresh clone run through Airflow with no keys rebuilt the identical catalog |

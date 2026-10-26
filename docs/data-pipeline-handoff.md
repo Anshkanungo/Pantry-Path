@@ -235,7 +235,7 @@ Order of precedence: **unsafe beats unknown beats safe.** Evidence comes from Kr
 
 - **Weekly DAG `build_reference_data`** (Airflow 3.3 in Docker; UI at http://localhost:8080). Two branches run in parallel (Open Food Facts; Food.com → LLM → catalog), then load, stats, drift check, bias report, DVC versioning and a success notification.
 - **Quality checks:** Great Expectations suites on both outputs, outlier checks, drift against the previous run. Blocking problems fail the run; warnings send an alert.
-- **Alerts:** always logged and emailed to the address in `config/pipeline.yaml` (`alerts.email_to`). Sending needs the Gmail app password in `.env` (`ALERT_SMTP_PASSWORD`).
+- **Alerts:** always logged and emailed to the project address in `config/pipeline.yaml` (`alerts.email_to`); tested on 2026-10-26. To get them yourself, set `ALERT_SMTP_USER` (your Gmail), `ALERT_SMTP_PASSWORD` (its app password) and `ALERT_EMAIL_TO` in `.env`.
 - **Reruns are reproducible and free:**
   - The catalog's LLM step ran once (Claude Opus 5.5, $6.08).
   - The DAG pulls those saved replies (`pull_llm_cache`) and replays them, so nobody needs an LLM key or pays again. Weekly runs only refresh the Open Food Facts snapshot.
